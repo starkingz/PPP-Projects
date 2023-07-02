@@ -5,7 +5,7 @@
 using namespace std;
 
 /**
- * main - Read numbers and calculate according to the inputted operation sign
+ * main - Read numbers and calculate according to the inputted operation sign;
  * 
  * Return: 0 always (success)
 */
