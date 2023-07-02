@@ -1,3 +1,4 @@
+//Chapter 3: All Object Types and Values Excercises. Uncomment each set to execute
 #include <iostream>
 #include <string>
 using namespace std;
