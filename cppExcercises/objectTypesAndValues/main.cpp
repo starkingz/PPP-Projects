@@ -58,28 +58,28 @@ using namespace std;
 * and ratio of two floating-point values 
 ******************************************************************/
 
-int main(){
-    cout << "Enter two floating-point value: ";
-    double val1, val2 = 0;
-    cin >> val1 >> val2;
+// int main(){
+//     cout << "Enter two floating-point value: ";
+//     double val1, val2 = 0;
+//     cin >> val1 >> val2;
 
-        if (val1 > val2)
-    cout << "Largest value: " << val1 << endl;
-    else 
-    cout << "Largest value: " << val2 << endl;
-    if (val1 < val2)
-    cout << "Smallest value: " << val1 << endl;
-    else
-    cout << "Smallest value: " << val2 << endl;
-    if (val1 == val2)
-    cout << "Similar value: " << val1 << " " << val2 << endl;
+//         if (val1 > val2)
+//     cout << "Largest value: " << val1 << endl;
+//     else 
+//     cout << "Largest value: " << val2 << endl;
+//     if (val1 < val2)
+//     cout << "Smallest value: " << val1 << endl;
+//     else
+//     cout << "Smallest value: " << val2 << endl;
+//     if (val1 == val2)
+//     cout << "Similar value: " << val1 << " " << val2 << endl;
     
-    cout << "Sum == " << val1 + val2 << endl;
-    cout << "difference == " << val1 - val2 << endl;
-    cout << "product == " << val1 * val2 << endl;
-    cout << "Ratio == " << val1 << ":" << val2 << endl;
-    return 0;
-}
+//     cout << "Sum == " << val1 + val2 << endl;
+//     cout << "difference == " << val1 - val2 << endl;
+//     cout << "product == " << val1 * val2 << endl;
+//     cout << "Ratio == " << val1 << ":" << val2 << endl;
+//     return 0;
+// }
 
 /***********************************************************************
  *  Program that prompts the user to enter three integers
