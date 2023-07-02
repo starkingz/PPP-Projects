@@ -1,3 +1,4 @@
+// Experimente: comment every line of code
 #include <iostream> // Header directive
 using namespace std; //standard namespace
 
