@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
-
+/**
+ * main - Prints a step by step tutorials on how to cook okra soup
+ * 
+ * Return: always 0 (success)
+*/
 int main(){
-    //Cooking Okra soup
+    //Ingredients
     cout << "Ingredients for cooking okra soup: " << endl;
     cout << "\nSliced Okra: " << endl;
     cout << "1 kg of meat" << endl;
