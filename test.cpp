@@ -484,23 +484,37 @@ using namespace std;
 *  
 *  Return: 0;
 */
-int main()
-{
-        int j = 0;
-        int arr[1000];
-        cin >> j;
-        for (int h = 0; h < j; h++)
-        {
-                cin >> arr[h]; // read array value multiple times
-        }
+// int main()
+// {
+//         int j = 0;
+//         int arr[1000];
+//         cin >> j;
+//         for (int h = 0; h < j; h++)
+//         {
+//                 cin >> arr[h]; // read array value multiple times
+//         }
 
-        for (int i = j - 1; i >= 0; i--)
-        {
-        cout << arr[i];
-        // if (!(arr[i] > arr[j])) /* code not working */
-        putchar(' ');
-        }
-        putchar('\n');
+//         for (int i = j - 1; i >= 0; i--)
+//         {
+//         cout << arr[i];
+//         // if (!(arr[i] > arr[j])) /* code not working */
+//         putchar(' ');
+//         }
+//         putchar('\n');
         
 
-}
+// }
+
+/**
+ * Print the respective a-z english word of a read input digit as , 1 < n < 9;
+*/
+// int main()
+// {
+// 	string s[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+// 	int n;
+// 	cin >> n;
+// 	if (n > 9)
+// 	cout << "Greater than 9\n";
+// 	else
+// 	cout << s[n];
+// }
