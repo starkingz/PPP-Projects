@@ -518,3 +518,38 @@ using namespace std;
 // 	else
 // 	cout << s[n];
 // }
+
+// /**
+//  * // Traversing a vector METHOD 01
+//  * main - a program that traverse an int vector type using tradition for-loop;
+//  * 
+//  * Return: 0 
+// */
+// int main()
+// {
+//         vector <int> number = {5, 7, 9, 10};
+//         int i;
+//         int len = number.size();
+
+//         for (i = 0; i < len; i++)
+//         cout << number[i] << endl;
+
+//         return 0;
+// }
+
+/**
+ * // Traversing a vector METHOD 02
+ * main - Traverse a string vector type using range for-loop
+ * 
+ * Return 0
+*/
+int main()
+{
+        vector <string> str = {"hello", "how", "are", "you?"};
+
+        for (string i : str) // range-for-loop
+        cout << i << " ";
+        cout << endl;
+
+        return 0;
+}
