@@ -543,13 +543,31 @@ using namespace std;
  * 
  * Return 0
 */
+// int main()
+// {
+//         vector <string> str = {"hello", "how", "are", "you?"};
+
+//         for (string i : str) // range-for-loop
+//         cout << i << " ";
+//         cout << endl;
+
+//         return 0;
+// }
+/**
+ * main - growing a vector
+ * 
+ * Return: 0 always success
+*/
 int main()
 {
-        vector <string> str = {"hello", "how", "are", "you?"};
-
-        for (string i : str) // range-for-loop
-        cout << i << " ";
-        cout << endl;
-
+        vector <double> d;
+        double vd; 
+        
+        while (cout << "Enter a new number: " && cin >> vd) {
+        d.push_back(vd);
+        int len = d.size();
+        for (int i = 0; i < len; i++)
+        cout << "d[" << i << "] : " << d[i] << endl;
+        }
         return 0;
 }
