@@ -558,16 +558,16 @@ using namespace std;
  * 
  * Return: 0 always success
 */
-int main()
-{
-        vector <double> d;
-        double vd; 
+// int main()
+// {
+//         vector <double> d;
+//         double vd; 
         
-        while (cout << "Enter a new number: " && cin >> vd) {
-        d.push_back(vd);
-        int len = d.size();
-        for (int i = 0; i < len; i++)
-        cout << "d[" << i << "] : " << d[i] << endl;
-        }
-        return 0;
-}
+//         while (cout << "Enter a new number: " && cin >> vd) {
+//         d.push_back(vd);
+//         int len = d.size();
+//         for (int i = 0; i < len; i++)
+//         cout << "d[" << i << "] : " << d[i] << endl;
+//         }
+//         return 0;
+// }
