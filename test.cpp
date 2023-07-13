@@ -574,27 +574,61 @@ using namespace std;
 
 /**
  * main - calculate the mean and median of a temperature
+ * Date: 7/13/2023
  * 
  * Return: 0;
 */
 
+// int main()
+// {
+//         vector <double> temps;
+
+//         for (double temp; cin >> temp;) {
+//                 temps.push_back(temp);
+
+//                 // Calculate the mean of the temperature
+//                 double sum = 0;
+//                 for (int x : temps)
+//                 sum += x;
+//                 cout << "Average temparature: " << sum/temps.size() << endl;
+
+//                 //Calculate the median of the temperature
+//                 sort(temps.begin(), temps.end());
+//                 cout << "Median temperature: " << temps[temps.size()/2] << endl;
+//         }
+
+//         return 0;
+// }
+
+/**
+ * main - simple dictionary: list sorted words
+ * Date: 7/14/2023
+ * 
+ * Return 0
+*/
 int main()
 {
-        vector <double> temps;
+        vector <string> words;
 
-        for (double temp; cin >> temp;) {
-                temps.push_back(temp);
+        for (string temp; cin >> temp;) {
+                words.push_back(temp);
 
-                // Calculate the mean of the temperature
-                double sum = 0;
-                for (int x : temps)
-                sum += x;
-                cout << "Average temparature: " << sum/temps.size() << endl;
+                int len = words.size();
+                cout << "Number of words: " << len << endl;
 
-                //Calculate the median of the temperature
-                sort(temps.begin(), temps.end());
-                cout << "Median temperature: " << temps[temps.size()/2] << endl;
+                sort(words.begin(), words.end()); // sort vector elements
+                
+                for (int i = 0; i < len; ++i) {
+                if (i == 0 || words[i - 1] != words[i]) // do not repeat a word 
+                cout << words[i] << endl;
+                }
+                int sum = 0;
+                for (int i = 0; i < len; i++) {
+                if (words[i - 1] == words[i])
+                ++sum; // sum of repeated words
+                }
+                cout << "Number of repeated words: " << sum << endl; 
         }
-
+        
         return 0;
 }
