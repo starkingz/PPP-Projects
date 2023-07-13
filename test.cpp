@@ -571,3 +571,30 @@ using namespace std;
 //         }
 //         return 0;
 // }
+
+/**
+ * main - calculate the mean and median of a temperature
+ * 
+ * Return: 0;
+*/
+
+int main()
+{
+        vector <double> temps;
+
+        for (double temp; cin >> temp;) {
+                temps.push_back(temp);
+
+                // Calculate the mean of the temperature
+                double sum = 0;
+                for (int x : temps)
+                sum += x;
+                cout << "Average temparature: " << sum/temps.size() << endl;
+
+                //Calculate the median of the temperature
+                sort(temps.begin(), temps.end());
+                cout << "Median temperature: " << temps[temps.size()/2] << endl;
+        }
+
+        return 0;
+}
