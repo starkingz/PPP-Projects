@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <iomanip>
+#include <algorithm>
 using namespace std;
 
 /**
@@ -110,30 +111,60 @@ using namespace std;
  * 
  * Return: 0  
 */
+// int main()
+// {
+//         double a = 0, b = 0;
+//         const double formula = 1.0 / 100;
+
+//         while (cin >> a >> b){
+//                 if (a < b) {
+//                         cout << "The smaller value is: " << fixed << setprecision(2) << a << endl;
+//                         cout << "The larger value is: " << fixed << setprecision(2) << b << endl;
+//                         if (a == b - formula) {
+//                                 cout << "The numbers are almost equal\n";
+//                         }       
+//                 }
+//                 else if (b < a) {
+//                         cout << "The smaller value is: " << fixed << setprecision(2) << b << endl;
+//                         cout << "The larger value is: " << fixed << setprecision(2) << a << endl;
+//                         if (b == a - formula) {
+//                                 cout << "The numbers are almost equal\n";
+//                         }
+//                 }
+//                 else
+//                 cout << "The numbers are equal" << endl;
+//         }
+//         return 0;
+// }
+/**
+ * main - write out largest number so far and smallest number so far
+ * 
+ * Return: 0
+*/
 int main()
 {
-        double a, b;
-        const double formula = 1.0 / 100;
+        cout << "Enter a number: ";
+        bool first = true;
+        double largest = 0;
+        double smallest = 0;
+        double number = 0;
+        
+        while (cin >> number) { // for (double number; cin >> number;) -> /* altenative */
+                // Assign first values and Write them out 
+                if (first == true ) {
+                        first = false;
+                        smallest = number;
+                        largest = number;
+                        cout << number << " the largest so far\n";
+                }
+                else if (number > largest) {
+                        largest = number; // new value?
+                        cout << largest << " the largest so far\n";
+                }
+                else if (number < smallest) {
+                        smallest = number; // new value?
+                        cout << smallest << " the smallest so far\n";
 
-        while (cin >> a >> b){
-                if (a < b) {
-                        cout << "The smaller value is: " << fixed << setprecision(2) << a << endl;
-                        cout << "The larger value is: " << fixed << setprecision(2) << b << endl;
-                        if (a == b - formula) {
-                                cout << "The numbers are almost equal\n";
-                        }
-                        
                 }
-                else if (b < a) {
-                        cout << "The smaller value is: " << fixed << setprecision(2) << b << endl;
-                        cout << "The larger value is: " << fixed << setprecision(2) << a << endl;
-                        if (b == a - formula) {
-                                cout << "The numbers are almost equal\n";
-                        }
-                }
-                else
-                cout << "The numbers are equal" << endl;
         }
-        return 0;
 }
-
