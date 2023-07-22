@@ -558,19 +558,19 @@ using namespace std;
  * 
  * Return: 0 always success
 */
-// int main()
-// {
-//         vector <double> d;
-//         double vd; 
+int main()
+{
+        vector <double> d;
+        double vd; 
         
-//         while (cout << "Enter a new number: " && cin >> vd) {
-//         d.push_back(vd);
-//         int len = d.size();
-//         for (int i = 0; i < len; i++)
-//         cout << "d[" << i << "] : " << d[i] << endl;
-//         }
-//         return 0;
-// }
+        while (cout << "Enter a new number: " && cin >> vd) {
+        d.push_back(vd);
+        }
+        int len = d.size();
+        for (int i = 0; i < len; i++)
+        cout << "d[" << i << "] : " << d[i] << endl;
+        return 0;
+}
 
 /**
  * main - calculate the mean and median of a temperature
@@ -606,29 +606,29 @@ using namespace std;
  * 
  * Return 0
 */
-int main()
-{
-        vector <string> words;
+// int main()
+// {
+//         vector <string> words;
 
-        for (string temp; cin >> temp;) {
-                words.push_back(temp);
+//         for (string temp; cin >> temp;) {
+//                 words.push_back(temp);
 
-                int len = words.size();
-                cout << "Number of words: " << len << endl;
+//                 int len = words.size();
+//                 cout << "Number of words: " << len << endl;
 
-                sort(words.begin(), words.end()); // sort vector elements
+//                 sort(words.begin(), words.end()); // sort vector elements
                 
-                for (int i = 0; i < len; ++i) {
-                if (i == 0 || words[i - 1] != words[i]) // do not repeat a word 
-                cout << words[i] << endl;
-                }
-                int sum = 0;
-                for (int i = 0; i < len; i++) {
-                if (words[i - 1] == words[i])
-                ++sum; // sum of repeated words
-                }
-                cout << "Number of repeated words: " << sum << endl; 
-        }
+//                 for (int i = 0; i < len; ++i) {
+//                 if (i == 0 || words[i - 1] != words[i]) // do not repeat a word 
+//                 cout << words[i] << endl;
+//                 }
+//                 int sum = 0;
+//                 for (int i = 0; i < len; i++) {
+//                 if (words[i - 1] == words[i])
+//                 ++sum; // sum of repeated words
+//                 }
+//                 cout << "Number of repeated words: " << sum << endl; 
+//         }
         
-        return 0;
-}
+//         return 0;
+// }
