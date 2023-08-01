@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {
         std::vector <string> words;
-        std::string disliked[] = {"Broccoli", "Word", "hello"};
+        std::string disliked[] = {"Broccoli", "Word",  "laziness", "procastination", "hello"};
 
         for (std::string word; cout << "Input: " && std::cin >> word;) {
                 words.push_back(word);
@@ -38,3 +38,4 @@ int main()
         }
         return 0;
 }
+// Re-check this code, re-write/solve with pseudo code in mind. Vector not in the picture
