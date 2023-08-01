@@ -268,20 +268,20 @@ using namespace std;
 /*********************************************************
  * Conversion of degrees Censius to degrees Fahrenheit
 // *********************************************************/
-int main()
-{
-    cout << "- Conversion from degree censius to degree fahrenheit" 
-    << endl << endl;    
-    cout << "Enter a value in degree Censius:\n";
-    double dc;
-    cin >> dc;
-    double df = 9/5.0 * dc + 32;
-    cout << "Result: " << df << " degrees Fahrenheit" << endl;
-    cout << endl;
-    cout << "- End of conversion" << endl;
+// int main()
+// {
+//     cout << "- Conversion from degree censius to degree fahrenheit" 
+//     << endl << endl;    
+//     cout << "Enter a value in degree Censius:\n";
+//     double dc;
+//     cin >> dc;
+//     double df = 9/5.0 * dc + 32;
+//     cout << "Result: " << df << " degrees Fahrenheit" << endl;
+//     cout << endl;
+//     cout << "- End of conversion" << endl;
 
-    return 0;
-}
+//     return 0;
+// }
 
 /************************************************************
  * main - illustrating an empty if statement
