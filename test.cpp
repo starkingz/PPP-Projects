@@ -268,16 +268,21 @@ using namespace std;
 /*********************************************************
  * Conversion of degrees Censius to degrees Fahrenheit
 // *********************************************************/
-// int main()
-// {
-//     cout << "Enter a value in degree Censius:\n";
-//     double dc;
-//     cin >> dc;
-//     double df = 9/5.0 * dc + 32;
-//     cout << "Result: " << df << " degrees Fahrenheit" << endl;
+int main()
+{
+    cout << "- Conversion from degree censius to degree fahrenheit" 
+    << endl << endl;    
+    cout << "Enter a value in degree Censius:\n";
+    double dc;
+    cin >> dc;
+    double df = 9/5.0 * dc + 32;
+    cout << "Result: " << df << " degrees Fahrenheit" << endl;
+    cout << endl;
+    cout << "- End of conversion" << endl;
 
-//     return 0;
-// }
+    return 0;
+}
+
 /************************************************************
  * main - illustrating an empty if statement
  * Description: Empty if statement executes but..
@@ -558,19 +563,19 @@ using namespace std;
  * 
  * Return: 0 always success
 */
-int main()
-{
-        vector <double> d;
-        double vd; 
+// int main()
+// {
+//         vector <double> d;
+//         double vd; 
         
-        while (cout << "Enter a new number: " && cin >> vd) {
-        d.push_back(vd);
-        }
-        int len = d.size();
-        for (int i = 0; i < len; i++)
-        cout << "d[" << i << "] : " << d[i] << endl;
-        return 0;
-}
+//         while (cout << "Enter a new number: " && cin >> vd) {
+//         d.push_back(vd);
+//         }
+//         int len = d.size();
+//         for (int i = 0; i < len; i++)
+//         cout << "d[" << i << "] : " << d[i] << endl;
+//         return 0;
+// }
 
 /**
  * main - calculate the mean and median of a temperature
@@ -612,6 +617,7 @@ int main()
 
 //         for (string temp; cin >> temp;) {
 //                 words.push_back(temp);
+//         }
 
 //                 int len = words.size();
 //                 cout << "Number of words: " << len << endl;
@@ -628,7 +634,6 @@ int main()
 //                 ++sum; // sum of repeated words
 //                 }
 //                 cout << "Number of repeated words: " << sum << endl; 
-//         }
         
 //         return 0;
 // }
