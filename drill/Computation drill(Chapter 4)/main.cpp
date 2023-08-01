@@ -141,30 +141,58 @@ using namespace std;
  * 
  * Return: 0
 */
+// int main()
+// {
+//         cout << "Enter a number: ";
+//         bool first = true;
+//         double largest = 0;
+//         double smallest = 0;
+//         double number = 0;
+        
+//         while (cin >> number) { // for (double number; cin >> number;) -> /* altenative */
+//                 // Assign first values and Write them out 
+//                 if (first == true ) {
+//                         first = false;
+//                         smallest = number;
+//                         largest = number;
+//                         cout << number << " the largest so far\n";
+//                 }
+//                 else if (number > largest) {
+//                         largest = number; // new value?
+//                         cout << largest << " the largest so far\n";
+//                 }
+//                 else if (number < smallest) {
+//                         smallest = number; // new value?
+//                         cout << smallest << " the smallest so far\n";
+
+//                 }
+//         }
+// }
+
+
 int main()
 {
-        cout << "Enter a number: ";
-        bool first = true;
-        double largest = 0;
-        double smallest = 0;
+        cout << "-------------------- UNITS CONVERSION -------------------- \n";
+        cout << "Enter a value and unit: ";
         double number = 0;
-        
-        while (cin >> number) { // for (double number; cin >> number;) -> /* altenative */
-                // Assign first values and Write them out 
-                if (first == true ) {
-                        first = false;
-                        smallest = number;
-                        largest = number;
-                        cout << number << " the largest so far\n";
-                }
-                else if (number > largest) {
-                        largest = number; // new value?
-                        cout << largest << " the largest so far\n";
-                }
-                else if (number < smallest) {
-                        smallest = number; // new value?
-                        cout << smallest << " the smallest so far\n";
+        const double in = 2.54; // 1in = 2.54cm
+        const double m = 100; // 1m = 100cm
+        const double ft = 12; // 1ft == 12in
+        string unit = "";
 
+        while (cin >> number >> unit) {
+                if (unit == "cm") {
+                        cout << number * m << unit << " == " << number << "m" << endl;
+                }
+                else if (unit == "in") {
+                        cout << number << unit << " == " << number * in << "cm" << endl;
+                }
+                else if (unit == "ft") {
+                        cout << number << unit << " == " << number * ft << "in" << endl;
+                }
+                else if (unit == "m") {
+                        cout << number << unit << " == " << number * m << "cm" << endl;
                 }
         }
+        return 0;
 }
