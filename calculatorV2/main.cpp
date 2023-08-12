@@ -59,7 +59,7 @@ int main()
 	} 
 	else {
 		cout << "Invalid response, try again!\n";
-		break;
+		// break;
 	}
     		cout << "Do you want to continue calculating with " << result << "? (y / n / e [end])\n";
 		cin >> response;

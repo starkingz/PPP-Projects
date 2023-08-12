@@ -637,3 +637,44 @@ using namespace std;
         
 //         return 0;
 // }
+
+/**
+ * max - maximum value between two integer values
+ * @val1: first paremeter
+ * @val2: second paremeter
+ * 
+ * return: max value
+*/
+int max(int, int); // Function declaration
+
+// Function definition
+int max(int val1, int val2)
+{
+        int max_num = 0;
+
+        if (val1 < val2)
+        max_num = val2;
+        else
+        max_num = val1;
+
+        return max_num;
+}
+
+/**
+ * main - entry point
+ * 
+ * return: 0 always
+*/
+int main()
+{
+        int a = 0;
+        int b = 0;
+
+        cout << "Enter two values: ";
+        cin >> a >> b;
+        int max_num = 0;
+        max_num = max(a, b);
+        cout << "Max(" << a << "," << b << ") is " << max_num << endl;
+
+        return 0;
+}
