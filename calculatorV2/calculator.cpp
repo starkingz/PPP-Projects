@@ -3,7 +3,7 @@
 using namespace std;
 
 /*******************************************************************************************
- * calculate_two_numbers - Calculates two numbers(double/integer) according to the read operation sign
+ * calculate_two_numbers - Calculates two numbers(double/integer) according to the operation sign
  * @num1: First integer input
  * @sign: Operation sign input
  * @num2: Second integer input
