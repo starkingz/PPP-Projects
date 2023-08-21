@@ -4,6 +4,12 @@ using namespace std;
 // Function declaration
 int square(int n);
 
+/*
+ * square: add x to it x times (calcualate the square of a number)
+ * @x: x to be added
+ * 
+ * Return: result
+*/
 // Function definition
 int square(int x)
 {
