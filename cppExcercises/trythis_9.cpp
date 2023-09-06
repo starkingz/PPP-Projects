@@ -8,34 +8,44 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 /**
  * main - 'bleeps' out disliked words
  * Date: 7/14/2023
+ * modified: 9/2/2023
  * 
  * Return: 0
 */
 int main()
 {
-        std::vector <string> words;
-        std::string disliked[] = {"Broccoli", "Word",  "laziness", "procastination", "hello"};
+        int len, i, j;
+        vector <string> disliked {"Broccoli", "Hatred", "lies", "dishonesty"};
+        vector <string> words;
+        vector <string> liked;
+        string replace {"BLEEP"};
+        string word;
 
-        for (std::string word; cout << "Input: " && std::cin >> word;) {
-                words.push_back(word);
+        while (cout << "Enter a word" && cin >> word) {
+                len = disliked.size();
 
-                int len = words.size();
-                for (int i = 0; i < len; i++) {
+                for (i = 0; i < len; ++i) {
+                        liked.push_back(word);
 
-                        // int len2 = disliked.size();
-                        if (words[i] == disliked[0] || words[i] == disliked[1] || words[i] == disliked[2]) {
-                                std::cout << "BLEEP\n";
-                        } 
-                        else {
-                                std::cout << words[i] << std::endl;
-                        }
+                        if (i == 0 || liked[i - 1] != liked[i])
+                        words.push_back(word);
+                        if (word == disliked[i])
+                        words.push_back(replace); 
                 }
+        }
+
+        len = words.size();
+        for (j = 0; j < len; ++j) {
+                if (words[j + 1] != replace)
+                cout << words[j] << endl;
         }
         return 0;
 }
 // Re-check this code, re-write/solve with pseudo code in mind. Vector not in the picture
+// Code working properly

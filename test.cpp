@@ -645,36 +645,99 @@ using namespace std;
  * 
  * return: max value
 */
-int max(int, int); // Function declaration
+// int max(int, int); // Function declaration
 
-// Function definition
-int max(int val1, int val2)
-{
-        int max_num = 0;
+// // Function definition
+// int max(int val1, int val2)
+// {
+//         int max_num = 0;
 
-        if (val1 < val2)
-        max_num = val2;
-        else
-        max_num = val1;
+//         if (val1 < val2)
+//         max_num = val2;
+//         else
+//         max_num = val1;
 
-        return max_num;
-}
+//         return max_num;
+// }
 
-/**
- * main - entry point
- * 
- * return: 0 always
-*/
+// /**
+//  * main - entry point
+//  * 
+//  * return: 0 always
+// */
+// int main()
+// {
+//         int a = 0;
+//         int b = 0;
+
+//         cout << "Enter two values: ";
+//         cin >> a >> b;
+//         int max_num = 0;
+//         max_num = max(a, b);
+//         cout << "Max(" << a << "," << b << ") is " << max_num << endl;
+
+//         return 0;
+// }
+
+// int main()
+// {
+//         vector <int> v;
+//         int num;
+//         int smallest = 0;
+//         int largest = 0;
+
+//         while (cin >> num) {
+//                 v.push_back(num); 
+
+//                 for (int i = 0; i < v.size(); i++) {
+//                         if (i ==  0) {
+//                                 smallest = v[i];
+//                                 cout << num << " largest so far!\n"; 
+//                         }
+//                         if (i == 0 || (v[i - 1] < v[i] && v[i] > largest)) {
+//                                 largest = v[i];
+//                         }
+//                         else if ((v[i] < smallest && v[i] < largest)) {
+//                                 smallest = v[i];
+//                         }
+//                         else if (((v[i] < v[i - 1]) && (v[i] < smallest))) {
+//                                 smallest = v[i];
+//                         }
+//                         else {
+
+//                         }
+//                 }
+//                 if (num > largest) {
+//                         cout << largest << " largest so far!\n";
+//                 }
+//                 else if (num < smallest) {
+//                         cout << smallest << " largest so far!\n";
+//                 }       
+//         }
+//         return 0;
+// }
+
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
 int main()
 {
-        int a = 0;
-        int b = 0;
+        vector <string> words;
+        string temp {""};
+        int i;
 
-        cout << "Enter two values: ";
-        cin >> a >> b;
-        int max_num = 0;
-        max_num = max(a, b);
-        cout << "Max(" << a << "," << b << ") is " << max_num << endl;
+        while (cin >> temp)
+                words.push_back(temp);
+        cout << "Number of words: " << words.size() << endl;
+
+        sort(words.begin(), words.end());
+        for (i = 0; i < words.size(); ++i) {
+                if (i == 0 || words[i - 1] != words[i]) 
+                cout << words[i] << endl;
+        }
 
         return 0;
 }
