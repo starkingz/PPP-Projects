@@ -263,8 +263,8 @@ int main()
         while ( /* cout << "Enter a number (Type '|' to end): " */ cin >> num >> unit) {
 
                 if (unit == "m" || unit == "cm" || unit == "in" || unit == "ft") {
-                        sum += num;
-                        ++count;
+                        sum += num;     // Sum every input
+                        ++count;        // Count every right input 
                         converted = convert_to_meter(num, unit);
                         if (first == true) {            // only for first input value
                                 first = false;
