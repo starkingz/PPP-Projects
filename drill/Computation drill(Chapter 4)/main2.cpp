@@ -220,6 +220,90 @@ using namespace std;
 //         return 0;
 // }
 
+// double convert_to_meter(double, string);
+
+// double convert_to_meter(double val, string unit)
+// {
+//         const double per_m = 100;       // 1m == 100cm
+//         const double per_cm = 1 / per_m;     // 1cm == 0.01m
+//         const double per_in = 2.54;     // 1in == 2.54cm
+//         const double per_ft = 12;       // 1ft == 12in
+//         double result = 0;
+
+//         if (unit == "cm")
+//                 result = per_cm * val;
+//         else if (unit == "in")
+//                 result = per_in * per_cm * val;
+//         else if (unit == "ft")
+//                 result = per_ft * per_in * per_cm * val;
+//         else if (unit == "m")
+//                 result = val;
+//         else
+//                 result = 0;
+//         return result;
+// }
+
+// int main()
+// {
+//         bool first {true};
+//         // bool start {true};
+//         double num;
+//         double largest {0};
+//         double smallest {0};
+//         string largest_unit {""};
+//         string smallest_unit {""};
+//         double largest_num {0};
+//         double smallest_num {0};
+//         double converted {0};
+//         string unit {""};
+//         double sum = {0};
+//         int count {0};
+
+//         cout << "Enter a number with a unit (Type '|' to end): ";
+//         while ( /* cout << "Enter a number (Type '|' to end): " */ cin >> num >> unit) {
+
+//                 if (unit == "m" || unit == "cm" || unit == "in" || unit == "ft") {
+//                         sum += num;     // Sum every input
+//                         ++count;        // Count every right input 
+//                         converted = convert_to_meter(num, unit);
+//                         if (first == true) {            // only for first input value
+//                                 first = false;
+//                                 smallest = converted;
+//                                 largest = converted;
+//                                 smallest_unit = unit;
+//                                 largest_unit = unit;
+//                                 largest_num = num;
+//                                 smallest_num = num;
+//                                 cout << num  << unit << " the smallest and largest so far\n";
+//                         }
+//                         else if (converted < smallest) {
+//                                 smallest = converted;
+//                                 smallest_unit = unit;
+//                                 smallest_num = num;
+//                                 cout << num  << unit << " the smallest so far\n";
+//                         }
+//                         else if (converted > largest) {
+//                                 largest = converted;
+//                                 largest_unit = unit;
+//                                 largest_num = num;
+//                                 cout << num << unit << " the largest so far\n";
+//                         }
+//                         else {
+//                                 cout << num << unit << endl;
+//                         }
+//                 }
+//                 else {
+//                 cout << "Wrong unit representation\n";
+//                 }
+//         }
+//         cout << "The smallest: " << smallest_num << smallest_unit << endl;
+//         cout << "The largest: " << largest_num << largest_unit << endl;
+//         cout << "The number  of values: " << count << endl;
+//         cout << "Sum of values: " << sum << "m" << endl;
+
+//         return 0;
+// }
+
 double convert_to_meter(double, string);
 
 double convert_to_meter(double val, string unit)
@@ -258,6 +342,9 @@ int main()
         string unit {""};
         double sum = {0};
         int count {0};
+        vector <double> valmeter;
+        int i, len;
+        char meter {'m'};
 
         cout << "Enter a number with a unit (Type '|' to end): ";
         while ( /* cout << "Enter a number (Type '|' to end): " */ cin >> num >> unit) {
@@ -266,6 +353,7 @@ int main()
                         sum += num;     // Sum every input
                         ++count;        // Count every right input 
                         converted = convert_to_meter(num, unit);
+                        valmeter.push_back(converted);
                         if (first == true) {            // only for first input value
                                 first = false;
                                 smallest = converted;
@@ -299,7 +387,12 @@ int main()
         cout << "The smallest: " << smallest_num << smallest_unit << endl;
         cout << "The largest: " << largest_num << largest_unit << endl;
         cout << "The number  of values: " << count << endl;
-        cout << "Sum of values: " << sum << "m" << endl;
+        cout << "Sum of values: " << sum << meter << endl;
+
+        len = valmeter.size();
+        for (i = 0; i < len; i++) {
+                cout << "Value [" << i + 1 << "]: " << valmeter[i] << meter << endl; 
+        }
 
         return 0;
 }
