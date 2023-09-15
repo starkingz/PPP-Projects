@@ -220,9 +220,9 @@ using namespace std;
 //         return 0;
 // }
 
-double unit_converter(double, string);
+double convert_to_meter(double, string);
 
-double unit_converter(double val, string unit)
+double convert_to_meter(double val, string unit)
 {
         const double per_m = 100;       // 1m == 100cm
         const double per_cm = 1 / per_m;     // 1cm == 0.01m
@@ -257,15 +257,15 @@ int main()
         double converted {0};
         string unit {""};
         double sum = {0};
-        int num_of_val {0};
+        int count {0};
 
         cout << "Enter a number with a unit (Type '|' to end): ";
         while ( /* cout << "Enter a number (Type '|' to end): " */ cin >> num >> unit) {
 
                 if (unit == "m" || unit == "cm" || unit == "in" || unit == "ft") {
                         sum += num;
-                        ++num_of_val;
-                        converted = unit_converter(num, unit);
+                        ++count;
+                        converted = convert_to_meter(num, unit);
                         if (first == true) {            // only for first input value
                                 first = false;
                                 smallest = converted;
@@ -298,7 +298,7 @@ int main()
         }
         cout << "The smallest: " << smallest_num << smallest_unit << endl;
         cout << "The largest: " << largest_num << largest_unit << endl;
-        cout << "The number  of values: " << num_of_val << endl;
+        cout << "The number  of values: " << count << endl;
         cout << "Sum of values: " << sum << "m" << endl;
 
         return 0;
