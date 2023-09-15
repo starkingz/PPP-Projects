@@ -27,7 +27,7 @@ int main()
         string replace {"BLEEP"};
         string word;
 
-        while (cout << "Enter a word" && cin >> word) {
+        while (cout << "Enter a word: " && cin >> word) {
                 len = disliked.size();
 
                 for (i = 0; i < len; ++i) {
