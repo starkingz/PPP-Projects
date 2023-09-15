@@ -284,8 +284,8 @@ int main()
                         }
                         else if (converted > largest) {
                                 largest = converted;
-                                smallest_unit = unit;
-                                smallest_num = num;
+                                largest_unit = unit;
+                                largest_num = num;
                                 cout << num << unit << " the largest so far\n";
                         }
                         else {
