@@ -72,7 +72,7 @@ int word2digit(string val)
 // function declaration
 string set_result_name(char);
 
-function definition
+// function definition
 string set_result_name(char sign)
 {
         string name {" "};
