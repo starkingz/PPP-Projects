@@ -9,7 +9,7 @@
 using namespace std;
 
 /**
- * compute2values - read three argument and compute base on the operator sign
+ * compute2values - read three argument and compute base on the math symbol
  * @val1: first argument
  * @val2: second argument
  * @oper_sign: character to represent operator sign
@@ -66,14 +66,14 @@ int word2digit(string val)
 }
 
 /**
- * setname - read operator sign and return the result name
+ * setname - read basic math symbols and return the result name
  * @sign: name to set
 */
 // function declaration
 string set_result_name(char);
 
 // function definition
-string set_result_name(char sign)
+string setnme(char sign)
 {
         string name {" "};
         switch (sign) {
@@ -125,7 +125,7 @@ int main()
 
         string result_name {" "};
         // function call
-        result_name = set_result_name(oper_sign);
+        result_name = setnme(oper_sign); // set result name 
 
         cout << "The " << result_name << " of " << val1 << " and "
              << val2 << " is " << result << endl;
