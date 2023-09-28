@@ -112,7 +112,7 @@ int main()
 
         cout << "Enter two single-digit values followed by an operator sign:";
         cout << " (either digits or spelled out) \n";
-        cout << "Only avalaible operator signs: \n+\n -\n *\n /\n\n";
+        cout << "Only avalaible operator signs: \n+\n-\n*\n/\n";
         cin >> strval1 >> strval2 >> oper_sign;
 
         int result {0};
