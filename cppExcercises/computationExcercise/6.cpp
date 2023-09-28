@@ -9,10 +9,10 @@
 using namespace std;
 
 /**
- * compute2values - read three arguments and calcualate two numbers
+ * compute2values - read three argument and compute base on the operator sign
  * @val1: first argument
  * @val2: second argument
- * @oper_sign: character to represent operation
+ * @oper_sign: character to represent operator sign
  * 
  * Return: computed value
 */
