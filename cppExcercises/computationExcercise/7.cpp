@@ -18,6 +18,7 @@ int main()
                 if (first == true) {
                         first = false;
                         cout << "Current number of grains: " << current << endl << endl;
+                        previous = current;
                 }
                 else {
                         current += current;
