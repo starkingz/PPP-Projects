@@ -28,12 +28,14 @@ int main()
         cout << "ROCK [1], PAPER [2], SCISSORS [3] GAMEPLAY\n";
         string val;
         int len = comp_vals.size();
+        int snum {0};
 
-        int snum = get_number(val);
+        
         if (playagain == "yes") {
                 for (int i = 0; i < len; i++) {
-                        cout << "Rock, Paper, Scissors shoot: " << endl;
+                        cout << "Rock, Paper, Scissors shoot: " << endl;                        
                         cin >> val;
+                        snum = get_number(val);
 
                         switch (snum) {
                                 case 1:
