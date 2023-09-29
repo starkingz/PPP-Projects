@@ -13,7 +13,7 @@ int main()
         int val;
         int len = comp_vals.size();
 
-        if (playagain == yes) {
+        if (playagain == "yes") {
         for (int i = 0; i < len; i++) {
                 cout << "Rock, paper, scissor shoot: " << endl;
                 cin >> val;
