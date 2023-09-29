@@ -15,7 +15,7 @@ int main()
 
         if (playagain == "yes") {
                 for (int i = 0; i < len; i++) {
-                        cout << "Rock, paper, scissors shoot: " << endl;
+                        cout << "Rock, Paper, Scissors shoot: " << endl;
                         cin >> val;
 
                         switch (val) {
