@@ -81,6 +81,8 @@ int main()
                 }
                 cout << "Do you want to play again? (yes/no)\n";
                 cin >> playagain;
+                if (playagain != "yes")
+                cout << "Game over.\n";
                 if (i == len - 1) {
                         cout << "Game Over.\n";
                 }
