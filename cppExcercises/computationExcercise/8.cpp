@@ -46,7 +46,7 @@ int main()
                                 break;
                                 case 2:
                                 cout << "You play: PAPER\n"
-                                     << "Computer plays: PAPER"
+                                     << "Computer plays: PAPER\n"
                                      << "Draw.\n";
                                 break;
                                 default:
