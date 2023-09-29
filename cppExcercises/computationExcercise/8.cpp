@@ -91,4 +91,8 @@ int main()
         else {
                 cout << "Game Over.\n";
         }
+
+        return 0
+
+        
 }
