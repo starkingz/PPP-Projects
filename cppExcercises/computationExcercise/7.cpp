@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
         // int num = {1};
-        double previous {1};
+        double previous {0};
         double current {1};
         int count = 0;
         int i;
