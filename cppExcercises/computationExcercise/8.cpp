@@ -92,7 +92,7 @@ int main()
                 cout << "Game Over.\n";
         }
 
-        return 0
+        return 0;
 
-        
+
 }
