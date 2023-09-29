@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-        bool playagain {yes};
+        string playagain {"yes"};
         vector <int> comp_vals {1, 2, 1, 1, 3, 1, 2, 3, 3, 1, 3};
         cout << "ROCK [1], PAPER [2], SCISSOR [3] GAMEPLAY\n";
         // cout << "Rock, paper, scissor shoot: " << endl;
@@ -81,10 +81,8 @@ int main()
                 }
                 cout << "Do you want to play again? (yes/no)\n";
                 cin >> playagain;
-                switch (i) {
-                        case len:
+                if (i == len - 1) {
                         cout << "Game Over.\n";
-                        break;
                 }
         }
         }
