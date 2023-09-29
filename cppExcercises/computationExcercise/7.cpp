@@ -1,9 +1,16 @@
+// Chapter 4 - Computation
+// Excercise 8
+// Date: 29/09/2023
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 using namespace std;
 
+/**
+ * main - calculate how many squares are required to give the inventor at least 1000 ...
+ * ... grains of rice, at least 1,000,000 grains, and at least 1,000,000,000 grains.
+*/
 int main()
 {
         bool first {true};
