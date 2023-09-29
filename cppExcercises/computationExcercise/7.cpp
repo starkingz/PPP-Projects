@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
         // int num = {1};
-        double previous {0};
+        double previous {1};
         double current {1};
         int count = 0;
         int i;
@@ -17,7 +17,7 @@ int main()
                 cout << "Current square: " << count << "\n";
                 current += current;
                 cout << "Current number of grains: " << current << endl;
-                cout << "Previous number of grains: " << previous << endl;
+                cout << "Previous number of grains: " << previous << endl << endl;
                 previous = current;
                 
         }
