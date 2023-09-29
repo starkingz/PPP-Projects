@@ -14,14 +14,14 @@ int main()
 
         for (int i = 0; i < len; i++) {
                 cout << "Rock, paper, scissor shoot: " << endl;
-                cin >> endl;
+                cin >> val;
                 switch (val) {
                         case 1:
                         switch (comp_vals[i]) {
                                 case 1:
                                 cout << "Draw.\n";
                                 break;
-                                case: 2:
+                                case 2:
                                 cout << "Computer wins.\n";
                                 break;
                                 default:
