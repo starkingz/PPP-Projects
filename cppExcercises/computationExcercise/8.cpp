@@ -8,7 +8,7 @@ int get_number(string);
 
 int get_number(string s)
 {
-        string val;
+        int val;
 
         if (s == "Rock" || s == "rock")
         val = 1;
