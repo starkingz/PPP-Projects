@@ -4,21 +4,38 @@
 #include <algorithm>
 using namespace std;
 
+int get_number(string);
+
+int get_number(string s)
+{
+        string val;
+
+        if (s == "Rock" || s == "rock")
+        val = 1;
+        else if (s == "Paper" || s == "paper")
+        val = 2;
+        else if (s == "Scissors" || s == "scissors")
+        val = 3;
+        
+        return val;
+}
+
 int main()
 {
         string playagain {"yes"};
         vector <int> comp_vals {1, 2, 1, 1, 3, 1, 2, 3, 3, 1, 3};
 
         cout << "ROCK [1], PAPER [2], SCISSORS [3] GAMEPLAY\n";
-        int val;
+        string val;
         int len = comp_vals.size();
 
+        int snum = get_number(val);
         if (playagain == "yes") {
                 for (int i = 0; i < len; i++) {
                         cout << "Rock, Paper, Scissors shoot: " << endl;
                         cin >> val;
 
-                        switch (val) {
+                        switch (snum) {
                                 case 1:
                                 switch (comp_vals[i]) {
                                         case 1:
@@ -92,7 +109,7 @@ int main()
                                 break;
                         }
                         else {
-                                cout "Incorrect input, try again.\n";
+                                cout << "Incorrect input, try again.\n";
                         }
 
                         // end of loop
