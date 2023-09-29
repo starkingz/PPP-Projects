@@ -29,6 +29,9 @@ int main()
         string val;
         int len = comp_vals.size();
         int snum {0};
+        int draw {0};
+        int yourwins {0};
+        int computerwins {0};
 
         
         if (playagain == "yes") {
@@ -44,16 +47,19 @@ int main()
                                         cout << "You play: ROCK\n"
                                              << "Computer plays: ROCK\n"
                                              << "Draw.\n";
+                                             ++draw;
                                         break;
                                         case 2:
                                         cout << "You play: ROCK\n"
                                              << "Computer plays: PAPER"
                                              << "Computer wins.\n";
+                                             ++computerwins;
                                         break;
                                         default:
                                         cout << "You play: ROCK\n"
                                              << "Computer plays: SCISSORS\n"
                                              << "You win.\n";
+                                             ++yourwins;
                                         break;
                                 }
                                 break;
@@ -63,16 +69,19 @@ int main()
                                         cout << "You play: PAPER\n"
                                              << "Computer plays: ROCK\n"
                                              << "You win.\n";
+                                             ++yourwins;
                                         break;
                                         case 2:
                                         cout << "You play: PAPER\n"
                                              << "Computer plays: PAPER\n"
                                              << "Draw.\n";
+                                             ++draw;
                                         break;
                                         default:
                                         cout << "You play: PAPER\n"
                                              << "Computer plays: SCISSORS\n"
                                              << "Computer wins.\n";
+                                             ++computerwins;
                                         break;
                                 }
                                 break;
@@ -82,16 +91,19 @@ int main()
                                         cout << "You play: SCISSORS\n"
                                              << "Computer plays: ROCK\n"
                                              << "Computer wins.\n";
+                                             ++computerwins;
                                         break;
                                         case 2:
                                         cout << "You play: SCISSORS\n"
                                              << "Computer plays: PAPER\n"
                                              << "You win.\n";
+                                             ++yourwins;
                                         break;
                                         case 3:
                                         cout << "You play: SCISSORS\n"
                                              << "Computer plays: SCISSORS\n"
                                              << "Draw.\n";
+                                             ++draw;
                                         break;
                                 }
                                 break;
@@ -119,7 +131,7 @@ int main()
                         cout << "Game Over.\n";
                 }
         }
-
+        cout << "You win: " << yourwins << ", computer wins: " << computerwins << " and draw: " << draw << endl;
         return 0;
 
 
