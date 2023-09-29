@@ -7,8 +7,8 @@ using namespace std;
 int main()
 {
         bool first {true};
-        double previous {0};
-        double current {1};
+        int previous {0};
+        int current {1};
         int count = 0;
         int i;
 
