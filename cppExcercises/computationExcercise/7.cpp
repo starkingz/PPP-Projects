@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-        // int num = {1};
+        bool first {true};
         double previous {0};
         double current {1};
         int count = 0;
@@ -15,10 +15,16 @@ int main()
         for (i = 1; i <= 64; i++) {
                 ++count;
                 cout << "Current square: " << count << "\n";
-                current += current;
-                cout << "Current number of grains: " << current << endl;
-                cout << "Previous number of grains: " << previous << endl << endl;
-                previous = current;
+                if (first == true) {
+                        first = false;
+                        cout << "Current number of grains: " << current << endl << endl;
+                }
+                else {
+                        current += current;
+                        cout << "Current number of grains: " << current << endl;
+                        cout << "Previous number of grains: " << previous << endl << endl;
+                        previous = current;
+                }
                 
         }
         return 0;
