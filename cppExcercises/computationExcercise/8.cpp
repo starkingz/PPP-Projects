@@ -8,7 +8,7 @@ int main()
 {
         vector <int> comp_vals {1, 2, 1, 1, 3, 1, 2, 3, 3, 1, 3};
         cout << "ROCK [1], PAPER [2], SCISSOR [3] GAMEPLAY\n";
-        cout << "Rock, paper, scissor shoot: " << endl;
+        // cout << "Rock, paper, scissor shoot: " << endl;
         int val;
         int len = comp_vals.size();
 
@@ -55,6 +55,10 @@ int main()
                                 break;
                         }
                         break;
+                        default:
+                        cout << "Invalid value.\n";
+                        break;
                 }
+                cout << "Play again.\n";
         }
 }
