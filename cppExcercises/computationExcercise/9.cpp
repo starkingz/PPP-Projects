@@ -21,7 +21,7 @@ int main()
                 primes.push_back(prime);
         }
 
-        len = primes.size()
+        len = primes.size();
         for (j = 0; j < len; ++j) {
                 cout << "primes[" << i << "] == " << primes[i] << endl;
         }
