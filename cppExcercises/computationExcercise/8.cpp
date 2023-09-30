@@ -1,11 +1,17 @@
+// Chapter 4 - Computation
+// Excercise 10
+// Date: 30/09/2023
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-int get_number(string);
-
+/**
+ * get_number - convert read strings to numbers
+ * 
+ * Return: val
+ */
 int get_number(string s)
 {
         int val;
@@ -19,13 +25,17 @@ int get_number(string s)
         
         return val;
 }
-
+/**
+ * main - Create a simple game (rock, paper, scissor)
+ * 
+ * return 0
+*/
 int main()
 {
         string playagain {"yes"};
-        vector <int> comp_vals {1, 2, 1, 1, 3, 1, 2, 3, 3, 1, 3};
+        vector <int> comp_vals {1, 2, 1, 1, 3, 1, 2, 3, 3, 1, 3}; // create random answers
 
-        cout << "ROCK [1], PAPER [2], SCISSORS [3] GAMEPLAY\n";
+        cout << "GAMEPLAY\n";
         string val;
         int len = comp_vals.size();
         int snum {0};
