@@ -14,13 +14,15 @@ using namespace std;
 */
 bool get_prime(int n)
 {
-        // int num {0};
-        // int val {0};
-        
+        int i;
+
+        // not greater 1
         if (n <= 1)
         return false;
-        for (int i = 2; i <= n / 2; ++i) {
-                if (n % i == 0)
+
+        // start from 2
+        for (i = 2; i <= n / 2; ++i) {
+                if (n % i == 0) // check if n is divisible
                 return false;
         }
         return true;
@@ -34,20 +36,17 @@ int main()
 {
         vector <int> primes;
         int i, j, len;
-        // int prime {0};
         
-        primes.push_back(2);
+        primes.push_back(2); // Put the smallest prime into vector
+
         for (i = 3; i <= 100; i++) {
-                // if (i > 1) {
                         if (get_prime(i))
-                        primes.push_back(i);
-                // }
+                        primes.push_back(i); // put i into vector
         }
 
-        len = primes.size();
+        len = primes.size(); // size of vector
         cout << "Primes between 1 and 100: \n";
         for (j = 0; j < len; ++j) {
-                // if (primes[j] != 0)
                 cout << primes[j] << endl;
         }
 
