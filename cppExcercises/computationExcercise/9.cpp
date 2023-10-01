@@ -1,46 +1,54 @@
+// Chapter 4 - Computation
+// Excercise 11
+// Date: 01/10/2023
 #include <iostream>
 #include <algorithm>
 #include <string>
 #include <vector>
 using namespace std;
 
-int get_prime(int n)
+/**
+ * main - compute prime numbers
+ * 
+ * Return: either true or false
+*/
+bool get_prime(int n)
 {
-        int val {0};
-        int num;
-        // int i = 0;
-
-        if (n == 2 || n == 3 || n == 5)
-        val = 1;
+        // int num {0};
+        // int val {0};
         
-        if ((n % 2 == 1 && n % 3 == 1) || (n % 5 == 1 && n % 2 == 1)) {
-                val = 1;
+        if (n <= 1)
+        return false;
+        for (int i = 2; i <= n / 2; ++i) {
+                if (n % i == 0)
+                return false;
         }
-        if (val == 1) {
-                num = n;
-        }
-
-        return num;
-
+        return true;
 
 }
 
+/**
+ * main - read a positive number and print the primes
+*/
 int main()
 {
         vector <int> primes;
         int i, j, len;
-        int prime {0};
+        // int prime {0};
         
-        for (i = 1; i <= 100; i++) {
+        primes.push_back(2);
+        for (i = 3; i <= 100; i++) {
                 // if (i > 1) {
-                        prime = get_prime(i);
-                        primes.push_back(prime);
+                        if (get_prime(i))
+                        primes.push_back(i);
                 // }
         }
 
         len = primes.size();
-        for (j = 1; j <= len; ++j) {
-                cout << "primes[" << j << "] == " << primes[j] << endl;
+        cout << "Primes between 1 and 100: \n";
+        for (j = 0; j < len; ++j) {
+                // if (primes[j] != 0)
+                cout << primes[j] << endl;
         }
 
         return 0;
