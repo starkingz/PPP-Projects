@@ -7,11 +7,17 @@ using namespace std;
 int main()
 {
         vector <int> vals;
+        vector <int> modes;
         int mode {0};
-
-        cout << "Enter a sequence of number (Find mode): ";
+        bool first {true};
+        
+        cout << "Program to find the mode of positive series of intgers\n";
+        cout << "Enter a positive sequence of numbers: ";
         int val;
         while (cin >> val) {
+                if (val < 0)
+                first = false;
+                else
                 vals.push_back(val);
         }
 
@@ -24,7 +30,7 @@ int main()
         for (i = 0; i < len; i++) {
                 if (i == 0 || vals[i] == vals[i - 1]) {
                         ++count;
-                        if (max < count) {
+                        if (max < count || max == count) {
                                 max = count;
                                 mode = vals[i];
                         }
@@ -35,10 +41,10 @@ int main()
                 }
         }
 
-        // len = mode.size();
-        // for (i = 0; i < len; i++) {
-                cout << "Mode: " << mode << endl;
-        // }
+        if (first != true)
+        cout << "Positive sequence of numbers only!\n";
+        else
+        cout << "Mode: " << mode << endl;
 
         return 0;
 
