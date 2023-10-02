@@ -45,6 +45,7 @@ int main()
 
         // start from 3 to max [3:max]
         for (i = 3; i <= max; i++) {
+                
                         if (get_prime(i))
                         primes.push_back(i); // put i into vector
         }
