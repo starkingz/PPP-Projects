@@ -1,3 +1,6 @@
+// Chapter 4 - Computation
+// Excercise 18
+// Date: 06/10/2023
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -27,10 +30,10 @@ int main()
         double a {0.0};
         cin >> a;
         while (a == 0) {
-        cout << "a can't be 0\n";
-        cout << "Try again!\n";
-        cout << "co-efficient a: ";
-        cin >> a;
+                cout << "a can't be 0\n";
+                cout << "Try again!\n";
+                cout << "co-efficient a: ";
+                cin >> a;
         }
         cout << "co-efficient b: ";
         double b {0.0};
