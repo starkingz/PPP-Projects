@@ -7,6 +7,11 @@
 #include <vector>
 using namespace std;
 
+/**
+ * sqroot - find the square root of a number
+ * @n: input value
+ * Return: i or 0
+*/
 double sqroot(double n)
 {
         for (double i = 0; i <= n; ++i) {
@@ -17,14 +22,25 @@ double sqroot(double n)
         return 0;
 }
 
+/**
+ * square - multiply value by itself
+ * @n: input value
+ * Return: result
+*/
 double square(double n)
 {
         return n * n;
 }
 
+/**
+ * main - solve quadratic equation with the form (square(x)) + bx + c = 0 ...
+ * ... using the quadratic equation formula
+ * 
+ * Return: 0 always (success)
+*/
 int main()
 {
-        cout << " ---------- Quadratic expression form a(square(x)) + bx + c = 0 -----------\n"
+        cout << " ---------- Quadratic expression stardard form ax^2 + bx + c = 0 -----------\n"
              <<  "Enter three co-efficients:\n";
         cout << "co-efficient a: ";
         double a {0.0};
@@ -46,16 +62,18 @@ int main()
         double x2 {0.0};
         double discriminant {(square(b) - (4 * a * c))};
 
+        // Quadratic formula - x = [ -b (+-) sqrt(b^2 - 4ac) ] / 2a
         x1 = -b + sqroot(discriminant) / (2 * a);
         x2 = -b - sqroot(discriminant) / (2 * a);
 
+        // if imaginery number
         if (discriminant < 0) {
                 x1 = -b / (2 * a);
                 x2 = sqroot(-discriminant) / (2 * a);
-                cout << "Answer: " << x1  << " +/- " << x2 << "i"<< endl;
+                cout << "\nAnswer: x = " << x1  << " (+-) " << x2 << "i"<< endl;
         }
         else
-        cout << "Answer: " << x1 << " or " << x2 << endl;
+        cout << "\nAnswer: x = " << x1 << " or " << x2 << endl;
 
         return 0;
 
