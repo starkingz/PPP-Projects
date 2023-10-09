@@ -11,7 +11,7 @@ int main()
         vector <int> scores;
         string strterminate {"NoName"};
         int iterminate {0};
-        bool first {true};
+        bool exit {false};
 
         cout << "Enter set of names and scores: (Terminate with NoName 0) \n";
         string name {" "};
@@ -21,25 +21,24 @@ int main()
                 names.push_back(name);
 
                 if (name == strterminate && score == iterminate ) {
-                        cout << "Exited\n";
-                        break;
+                        exit = true;
                 }
                 int len = names.size();
                 for (int i = 0; i < len - 1; i++) {                        
                         if (name == names[i]) { // check for repeated name
                                 cout << "Error! Name already exists\n"; // Error mess
-                                first = false;
+                                exit = true;
                                 break;
                         }                      
                 }
-                if (first != true) {
-                        break; // terminate after error message
+                if (exit != false) {
+                        break; // terminate code
                 }
                 else {
                         uniq_names.push_back(name);
                         scores.push_back(score);
                 }
-                first = true;
+                exit = false;
         }
 
         cout << "\n\nPaired values: \n";
