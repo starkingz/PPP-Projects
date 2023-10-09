@@ -43,6 +43,7 @@ int main()
 
         cout << "\n\nPaired values: \n";
         int len {0};
+        
         len = uniq_names.size();
         for (int i = 0; i < len; ++i) {
                 cout << uniq_names[i] << " " << scores[i] << endl;
