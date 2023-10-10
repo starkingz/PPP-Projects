@@ -9,7 +9,7 @@
 using namespace std;
 
 /**
- * main - read and ouput set of names and scores
+ * main - read set of names and scores and find score through name
 */
 int main()
 {
