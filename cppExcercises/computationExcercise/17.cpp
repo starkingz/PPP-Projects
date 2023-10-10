@@ -1,9 +1,15 @@
+// Chapter 4 - Computation
+// Excercise 19
+// Date: 10/10/2023
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
+/**
+ * main - read and ouput set of names and scores
+*/
 int main()
 {
         vector <string> uniq_names;
@@ -12,6 +18,7 @@ int main()
         string strterminate {"NoName"};
         int iterminate {0};
         bool exit {false};
+        int len {0};
 
         cout << "Enter set of names and scores: (Terminate with NoName 0) \n";
         string name {" "};
@@ -23,7 +30,7 @@ int main()
                 if (name == strterminate && score == iterminate ) {
                         exit = true;
                 }
-                int len = names.size();
+                len = names.size();
                 for (int i = 0; i < len - 1; i++) {                        
                         if (name == names[i]) { // check for repeated name
                                 cout << "Error! Name already exists\n"; // Error mess
@@ -42,8 +49,7 @@ int main()
         }
 
         cout << "\n\nPaired values: \n";
-        int len {0};
-        
+
         len = uniq_names.size();
         for (int i = 0; i < len; ++i) {
                 cout << uniq_names[i] << " " << scores[i] << endl;
