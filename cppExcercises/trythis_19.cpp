@@ -37,7 +37,6 @@ void print()
 */
 
 int main()
-try
 {
         print();
 
