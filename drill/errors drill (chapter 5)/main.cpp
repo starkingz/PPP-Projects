@@ -338,7 +338,7 @@
 // }
 
 // /**
-//  * main - insert code fragments into code frame (12.)
+//  * main - insert code fragments into code frame (13.)
 //  * 
 //  * Return: always 0 (success)
 // */
@@ -368,8 +368,39 @@
 // }
 
 
+// /**
+//  * main - insert code fragments into code frame (14.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment14 - vector<char> v(5); for (int i=0; i<=v.size(); ++i) ; cout << "Success!\n";
+//         vector<char> v(1);
+        
+//         int length = v.size();
+//         for (int i = 0; i < length; ++i)
+//                 cout << "Success!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
+
 /**
- * main - insert code fragments into code frame (12.)
+ * main - insert code fragments into code frame (15.)
  * 
  * Return: always 0 (success)
 */
@@ -377,12 +408,11 @@
 int main()
 try
 {
-        // fragment14 - vector<char> v(5); for (int i=0; i<=v.size(); ++i) ; cout << "Success!\n";
-        vector<char> v(1);
-        
-        int length = v.size();
-        for (int i = 0; i < length; ++i)
-                cout << "Success!\n";
+        // fragment15 - string s = "Success!\n"; for (int i=0; i<6; ++i) cout << s[i];
+        string s = "Success!\n";
+
+        for (int i = 0; i < 10; ++i) 
+                cout << s[i];
         keep_window_open();
         return 0;
 }
