@@ -428,8 +428,37 @@
 // }
 
 
+// /**
+//  * main - insert code fragments into code frame (16.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment16 - if (true) then cout << "Success!\n"; else cout << "Fail!\n";
+//         if (true) 
+//                 cout << "Success!\n"; 
+//         else 
+//                 cout << "Fail!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
 /**
- * main - insert code fragments into code frame (16.)
+ * main - insert code fragments into code frame (17.)
  * 
  * Return: always 0 (success)
 */
@@ -437,11 +466,12 @@
 int main()
 try
 {
-        // fragment16 - if (true) then cout << "Success!\n"; else cout << "Fail!\n";
-        if (true) 
-                cout << "Success!\n"; 
-        else 
-                cout << "Fail!\n";
+        // fragment17 - int x = 2000; char c = x; if (c==2000) cout << "Success!\n";
+        int x = 2000; 
+        int c = x; 
+        
+        if (c == 2000)
+                cout << "Success!\n";
         keep_window_open();
         return 0;
 }
