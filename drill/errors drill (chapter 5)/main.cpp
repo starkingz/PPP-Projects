@@ -399,8 +399,37 @@
 
 
 
+// /**
+//  * main - insert code fragments into code frame (15.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment15 - string s = "Success!\n"; for (int i=0; i<6; ++i) cout << s[i];
+//         string s = "Success!\n";
+
+//         for (int i = 0; i < 10; ++i) 
+//                 cout << s[i];
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
 /**
- * main - insert code fragments into code frame (15.)
+ * main - insert code fragments into code frame (16.)
  * 
  * Return: always 0 (success)
 */
@@ -408,11 +437,11 @@
 int main()
 try
 {
-        // fragment15 - string s = "Success!\n"; for (int i=0; i<6; ++i) cout << s[i];
-        string s = "Success!\n";
-
-        for (int i = 0; i < 10; ++i) 
-                cout << s[i];
+        // fragment16 - if (true) then cout << "Success!\n"; else cout << "Fail!\n";
+        if (true) 
+                cout << "Success!\n"; 
+        else 
+                cout << "Fail!\n";
         keep_window_open();
         return 0;
 }
