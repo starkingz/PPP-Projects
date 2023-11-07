@@ -309,6 +309,34 @@
 // }
 
 
+// /**
+//  * main - insert code fragments into code frame (12.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment12 - string s = "ape"; if (s+"fool") cout < "Success!\n";
+//         string s = "ape";
+
+//         if (s != "fool") 
+//                 cout << "Success!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
 /**
  * main - insert code fragments into code frame (12.)
  * 
@@ -318,11 +346,13 @@
 int main()
 try
 {
-        // fragment12 - string s = "ape"; if (s+"fool") cout < "Success!\n";
-        string s = "ape";
+        // fragment13 - vector<char> v(5); for (int i=0; 0<v.size(); ++i) ; cout << "Success!\n";
+        vector<char> v(5); 
 
-        if (s != "fool") 
+        for (int i=0; i<v.size(); ++i) {
                 cout << "Success!\n";
+                break;
+        }
         keep_window_open();
         return 0;
 }
