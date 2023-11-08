@@ -583,8 +583,38 @@
 
 
 
+// /**
+//  * main - insert code fragments into code frame (21.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment21 - int x = 2; double d = 5/(x–2); if (d==2*x+0.5) cout << "Success!\n";
+//         int x = 2; 
+//         double d = 18.0 / (x + 2);
+
+//         if (d == 2 * x + 0.5) 
+//                 cout << "Success!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
 /**
- * main - insert code fragments into code frame (21.)
+ * main - insert code fragments into code frame (22.)
  * 
  * Return: always 0 (success)
 */
@@ -592,12 +622,11 @@
 int main()
 try
 {
-        // fragment21 - int x = 2; double d = 5/(x–2); if (d==2*x+0.5) cout << "Success!\n";
-        int x = 2; 
-        double d = 18.0 / (x + 2);
+        // fragment22 - string<char> s = "Success!\n"; for (int i=0; i<=10; ++i) cout << s[i];
+        string s= "Success!\n";
 
-        if (d == 2 * x + 0.5) 
-                cout << "Success!\n";
+        for (int i=0; i<=10; ++i)
+                cout << s[i];
         keep_window_open();
         return 0;
 }
