@@ -643,6 +643,40 @@
 
 
 
+// /**
+//  * main - insert code fragments into code frame (23.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment23 - i=0; while (i<10) ++j; if (j<i) cout << "Success!\n";
+//         int i = 0;
+//         int j = 9;
+
+//         while (i < 10)
+//         ++i;
+
+//         if (j < i)
+//                 cout << "Success!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
+
 /**
  * main - insert code fragments into code frame (23.)
  * 
@@ -653,13 +687,10 @@ int main()
 try
 {
         // fragment23 - i=0; while (i<10) ++j; if (j<i) cout << "Success!\n";
-        int i = 0;
-        int j = 9;
-
-        while (i < 10)
-        ++i;
-
-        if (j < i)
+        int x = 4;
+        double d = 5 / (x - 2);
+        
+        if (d != 2 * x + 0.5)
                 cout << "Success!\n";
         keep_window_open();
         return 0;
