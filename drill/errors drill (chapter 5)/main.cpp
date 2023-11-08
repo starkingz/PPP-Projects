@@ -488,8 +488,69 @@
 
 
 
+// /**
+//  * main - insert code fragments into code frame (18.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment18 - string s = "Success!\n"; for (int i=0; i<10; ++i) cout << s[i];
+//         string s = "Success!\n"; 
+
+//         for (int i = 0; i < 10; ++i) 
+//                 cout << s[i];
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
+
+// /**
+//  * main - insert code fragments into code frame (19.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment19 - string s = "Success!\n"; for (int i=0; i<10; ++i) cout << s[i];
+//         vector <int> v(1);
+//         int len = v.size();
+
+//         for (int i=0; i < len; ++i) 
+//                 cout << "Success!\n";
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
+
 /**
- * main - insert code fragments into code frame (18.)
+ * main - insert code fragments into code frame (20.)
  * 
  * Return: always 0 (success)
 */
@@ -497,11 +558,15 @@
 int main()
 try
 {
-        // fragment18 - string s = "Success!\n"; for (int i=0; i<10; ++i) cout << s[i];
-        string s = "Success!\n"; 
+        // fragment20 - int i=0; int j = 9; while (i<10) ++j; if (j<i) cout << "Success!\n";
+        int i = 0; 
+        int j = 9; 
+        
+        while (i < 10) 
+        ++i;
 
-        for (int i = 0; i < 10; ++i) 
-                cout << s[i];
+        if (j < i) 
+        cout << "Success!\n";
         keep_window_open();
         return 0;
 }
