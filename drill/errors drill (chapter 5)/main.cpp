@@ -613,8 +613,38 @@
 // }
 
 
+// /**
+//  * main - insert code fragments into code frame (22.)
+//  * 
+//  * Return: always 0 (success)
+// */
+
+// int main()
+// try
+// {
+//         // fragment22 - string<char> s = "Success!\n"; for (int i=0; i<=10; ++i) cout << s[i];
+//         string s= "Success!\n";
+
+//         for (int i=0; i<=10; ++i)
+//                 cout << s[i];
+//         keep_window_open();
+//         return 0;
+// }
+// catch (exception& e) {
+//         cerr << "error: " << e.what() << '\n';
+//         keep_window_open();
+//         return 1;
+// }
+// catch (...) {
+//         cerr << "Oops! unknown exception\n";
+//         keep_window_open();
+//         return 2;
+// }
+
+
+
 /**
- * main - insert code fragments into code frame (22.)
+ * main - insert code fragments into code frame (23.)
  * 
  * Return: always 0 (success)
 */
@@ -622,11 +652,15 @@
 int main()
 try
 {
-        // fragment22 - string<char> s = "Success!\n"; for (int i=0; i<=10; ++i) cout << s[i];
-        string s= "Success!\n";
+        // fragment23 - i=0; while (i<10) ++j; if (j<i) cout << "Success!\n";
+        int i = 0;
+        int j = 9;
 
-        for (int i=0; i<=10; ++i)
-                cout << s[i];
+        while (i < 10)
+        ++i;
+
+        if (j < i)
+                cout << "Success!\n";
         keep_window_open();
         return 0;
 }
