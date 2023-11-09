@@ -1,0 +1,51 @@
+// chapter 5 - errors
+// date: 9.11.2023
+
+1.      Name four major types of errors and briefly define each one.
+Ans:    * Runtime-error: This is an error that throws an exception while the system is running.
+        * Compiletime_error: This is an error that is found by the compiler.
+        * linker error: This is an error that occures when the object file can not link to the executable file.
+        * Logic error: This is a programmer error, it is made by the programmer when you give the computer wrong logic
+
+2.      What kinds of errors can we ignore in student programs?
+        * Errors that can not be fixed
+
+3.      What guarantees should every completed project offer?
+        * Every completed project should be free of errors
+        * Every completed should always check for errors catch if necessary
+
+4.      List three approaches we can take to eliminate errors in programs and
+        produce acceptable software
+        * Check for error from callee function
+        * check for error in function calling
+        * catch exceptions
+
+5.      Why do we hate debugging?
+        * we hate debugging because its tedious
+
+6.      What is a syntax error? Give five examples.
+        * syntax error is an error that is found when you write the wrong pattern of a statement or code
+        *       1. for (initialized var; conditional statement; increment { //... body ...// }
+        *       2. return type identifier(parameter list)
+        *       3. return type identifier(parameter list');
+        *       4. int val = area('0);
+        *       5. int val = area("f");
+
+7.      What is a type error? Give five examples.
+        * Type errors throw an error when you store the wrong value in the wrong data type
+        *       1. int i = "4";
+        *       2. char c = 2;
+        *       3. int a = arena(4); // mispelled function name (arena not declared)
+        *       4. int b = area("two", 2) // expected two int arguments (wrong input in first argument)
+        *       5. int c = area(4)      // wrong number of arguments
+
+8.      What is a linker error? Give three examples.
+        * It throws an error message when object file can not be combined with executable file
+          or a function can not be linked to its libraries
+        *       1. #include <iostraem> // library not found
+        *       2. int a = area(9, 9)  // area not declared in this scope
+        *       3.  #include "main.hhh" // main.hhh does not exist
+
+9.      What is a logic error? Give three examples
+        * This is when your code does not output your expectations (its likely you wrote the wrong code)
+        *       1. double val = 9 / 2 * 2; cout << double << endl; // prints 8 instead of 9
