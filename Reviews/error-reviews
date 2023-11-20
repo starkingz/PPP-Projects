@@ -25,7 +25,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 6.      What is a syntax error? Give five examples.
         * syntax error is an error that is found when you write the wrong pattern of a statement or code
-        *       1. for (initialized var; conditional statement; increment { //... body ...// }
+        *       1. for (initialized var; conditional statement; increment) { //... body ...// }
         *       2. return type identifier(parameter list)
         *       3. return type identifier(parameter list');
         *       4. int val = area('0);
@@ -47,5 +47,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         *       3.  #include "main.hhh" // main.hhh does not exist
 
 9.      What is a logic error? Give three examples
-        * This is when your code does not output your expectations (its likely you wrote the wrong code)
-        *       1. double val = 9 / 2 * 2; cout << double << endl; // prints 8 instead of 9
+        * This is when your code does not output your expectations or desired result(its likely you wrote the wrong code)
+        *       1. double val = 9 / 2 * 2; cout << val << endl; // Expectations: 9, prints 8 instead of 9
+        *       2. int i = 0; while (i <= 10) cout << i; // Expectations: Range of 0 through 10. Result: prints Overflow (infinite loop)
+        *       3. short int shnum = 2000000000000000000 * 2000000000000000; cout << shnum;
