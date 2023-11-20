@@ -51,3 +51,11 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         *       1. double val = 9 / 2 * 2; cout << val << endl; // Expectations: 9, prints 8 instead of 9
         *       2. int i = 0; while (i <= 10) cout << i; // Expectations: Range of 0 through 10. Result: prints Overflow (infinite loop)
         *       3. short int shnum = 2000000000000000000 * 2000000000000000; cout << shnum;
+
+10.     List four potential sources of program errors discussed in the text.
+        * Incomplete program
+        * Logic errors
+        * Poor specifications
+        * Unexpected argument or input
+
+11.     
