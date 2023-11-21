@@ -58,4 +58,9 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         * Poor specifications
         * Unexpected argument or input
 
-11.     
+11.     How do you know if a result is plausible? What techniques do you have
+        to answer such questions?
+        * When the result looks fair enough for example an area does not have a negative value
+        * Firstly you need to know what a right answer looks like, then you can use online sources to get at least a plausible result
+
+12.
