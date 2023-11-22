@@ -81,3 +81,9 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
           while trying to catch an exception you use a try keyword.
           The exception checks for any thrown error and catches it then write the error to 
           the screen/console and returns failure then terminates the program
+
+16.     Why, with a vector called v, is v[v.size()] a range error? What would be
+        the result of calling this?
+        * These is because the member function v.size() accesses a non valid index in the vector element,
+         the vector starts its index from 0 so v.size() accesses an element out side the vector range
+        * Its likely to print 0 or any random value.
