@@ -72,3 +72,6 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 13.     Why is using exceptions a better idea than returning an “error value”?
         * Using exceptions is better because you can catch errors from functions that throws error
         * Exception can be used to catch any type of error thrown by the function
+
+14.     How do you test if an input operation succeeded?
+        * By testing cin
