@@ -75,3 +75,9 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 14.     How do you test if an input operation succeeded?
         * By testing cin
+
+15.     Describe the process of how exceptions are thrown and caught.
+        * Exceptions are been caught by the main function and thrown by the called function, 
+          while trying to catch an exception you use a try keyword.
+          The exception checks for any thrown error and catches it then write the error to 
+          the screen/console and returns failure then terminates the program
