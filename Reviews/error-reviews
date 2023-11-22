@@ -63,4 +63,12 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         * When the result looks fair enough for example an area does not have a negative value
         * Firstly you need to know what a right answer looks like, then you can use online sources to get at least a plausible result
 
-12.
+12.     Compare and contrast having the caller of a function handle a run-time error
+        vs. the called function’s handling the run-time error.
+        * Well i think the good thing about allowing the callee handle the error is because the handling is done in one place and you don't have to handle the error separetely every time you call a function
+        * Good thing about the caller handling the function is that you get to have different error messages with different meaning for every called function 
+        * Letting the caller handle the error can be messy sometimes and making debugging harder
+
+13.     Why is using exceptions a better idea than returning an “error value”?
+        * Using exceptions is better because you can catch errors from functions that throws error
+        * Exception can be used to catch any type of error thrown by the function
