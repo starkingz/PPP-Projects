@@ -40,7 +40,8 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "ctime": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "functional": "cpp"
     },
     "terminal.explorerKind": "integrated",
     "C_Cpp.errorSquiggles": "disabled"

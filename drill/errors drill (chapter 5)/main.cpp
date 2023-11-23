@@ -709,7 +709,7 @@
 
 
 /**
- * main - insert code fragments into code frame (24.)
+ * main - insert code fragments into code frame (25.)
  * 
  * Return: always 0 (success)
 */
@@ -717,7 +717,7 @@
 int main()
 try
 {
-        // fragment24 - cin << "Success!\n";
+        // fragment25 - cin << "Success!\n";
         cout << "Success!\n";
         keep_window_open();
         return 0;

@@ -1,5 +1,6 @@
 // chapter 5 - errors
 // date: 9.11.2023
+// Answered by Ohia Goodstar(me)
 
 1.      Name four major types of errors and briefly define each one.
 Ans:    * Runtime-error: This is an error that throws an exception while the system is running.
@@ -85,5 +86,35 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 16.     Why, with a vector called v, is v[v.size()] a range error? What would be
         the result of calling this?
         * These is because the member function v.size() accesses a non valid index in the vector element,
-         the vector starts its index from 0 so v.size() accesses an element out side the vector range
+          the vector starts its index from 0 so v.size() accesses an element out side the vector range
         * Its likely to print 0 or any random value.
+
+17.     Define pre-condition and post-condition; give an example (that is not the area()
+        function from this chapter), preferably a computation that requires a loop.
+        * pre-condition is a condition that checks the individual arguments for error before it sends its result
+        * post-condition is a condition that checks if the requirments of the arguments result are met
+        * // A program that takes an argument, add them in a loop and prints only the absolute value
+        * // pre-condition: number is positive
+        * // post-condition: print out the positive result
+        *       void print_out()
+                {
+                        cout << "Enter a condition to loop (int value): ";
+                        int number {0};
+                        cin >> number;
+
+                        if (i < 0)
+                                        error("Error: Negative value\n");
+                        for (int i = 0; i <= number; i++) {
+                                
+                                int result = i + i;
+                                if (result < 0)
+                                        error("Error: Negative value not allowed\n");
+                                cout << "Result: " << number << endl;
+                        }
+
+                }
+
+                int main()
+                {
+                        print_out();
+                }

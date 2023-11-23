@@ -588,7 +588,7 @@ using namespace std;
 // {
 //         vector <double> temps;
 
-//         for (double temp; cin >> temp;) {
+//         for (double temp; cin >> temp;)
 //                 temps.push_back(temp);
 
 //                 // Calculate the mean of the temperature
@@ -600,8 +600,7 @@ using namespace std;
 //                 //Calculate the median of the temperature
 //                 sort(temps.begin(), temps.end());
 //                 cout << "Median temperature: " << temps[temps.size()/2] << endl;
-//         }
-
+ 
 //         return 0;
 // }
 
@@ -723,21 +722,33 @@ using namespace std;
 // #include <algorithm>
 // using namespace std;
 
+// int main()
+// {
+//         vector <string> words;
+//         string temp {""};
+//         int i;
+
+//         while (cin >> temp)
+//                 words.push_back(temp);
+//         cout << "Number of words: " << words.size() << endl;
+
+//         sort(words.begin(), words.end());
+//         for (i = 0; i < words.size(); ++i) {
+//                 if (i == 0 || words[i - 1] != words[i]) 
+//                 cout << words[i] << endl;
+//         }
+
+//         return 0;
+// }
+
 int main()
 {
-        vector <string> words;
-        string temp {""};
-        int i;
+        int a = 10000;
+        char b = a;
+        int c = b;
 
-        while (cin >> temp)
-                words.push_back(temp);
-        cout << "Number of words: " << words.size() << endl;
-
-        sort(words.begin(), words.end());
-        for (i = 0; i < words.size(); ++i) {
-                if (i == 0 || words[i - 1] != words[i]) 
-                cout << words[i] << endl;
-        }
-
-        return 0;
+        if (a != b)
+                cout << a << " != " << c << endl;
+        else
+                cout << a << " == " << c << endl;
 }

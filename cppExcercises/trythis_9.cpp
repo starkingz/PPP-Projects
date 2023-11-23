@@ -28,7 +28,7 @@ int main()
         string word;
 
         while (cout << "Enter a word: " && cin >> word) {
-                len = disliked.size();
+                len = disliked.size(); // store lenght of disliked words
 
                 for (i = 0; i < len; ++i) {
                         liked.push_back(word);
