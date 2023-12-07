@@ -4,6 +4,7 @@
 // Fix the median problem, original souce code doesn't
 // output correct median if the the element size
 // is even
+// Reference to a median solution
 #include <iostream>
 #include <vector>
 #include <string>
