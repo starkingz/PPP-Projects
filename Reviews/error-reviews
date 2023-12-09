@@ -118,3 +118,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
                 {
                         print_out();
                 }
+
+
+18.     When would you not test a pre-condition?
+        When you have a reason not to
