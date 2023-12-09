@@ -131,4 +131,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         1.      Get the program to compile. (pass the compile time error)
         2.      get it to run.  (pass the link time error and run time error)
         3.      get it to do what its supposed to do. (pass the logic errors)
-        
+
+21.     Why does commenting help when debugging?
+        Commenting helps you know the requirement of the function (i.e specific argument(s) needed by the function)
+        and what a function does.
