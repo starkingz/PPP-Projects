@@ -94,26 +94,26 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         * pre-condition is a condition that checks the individual arguments for error before it sends its result
         * post-condition is a condition that checks if the requirments of the arguments result are met
         * // A program that takes an argument, add them in a loop and prints only the absolute value
-        * // pre-condition: number is positive
+        * // pre-condition: n is positive
         * // post-condition: print out the positive result
         *       void print_out()
                 {
                         cout << "Enter a condition to loop (int value): ";
-                        int number {0};
-                        cin >> number;
+                        int n {0};
+                        cin >> n;
 
                         if (i < 0)
                                         error("Error: Negative value\n");
-                        for (int i = 0; i <= number; i++) {
+                        for (int i = 0; i <= n; i++) {
                                 
                                 int result = i + i;
                                 if (result < 0)
                                         error("Error: Negative value not allowed\n");
-                                cout << "Result: " << number << endl;
+                                cout << "Result: " << n << endl;
                         }
 
                 }
-
+                // main function
                 int main()
                 {
                         print_out();
