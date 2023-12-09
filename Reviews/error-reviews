@@ -126,3 +126,9 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 19.     When would you not test a post-condition?
         When there's no return value
+
+20.     What are the steps in debugging a program?
+        1.      Get the program to compile. (pass the compile time error)
+        2.      get it to run.  (pass the link time error and run time error)
+        3.      get it to do what its supposed to do. (pass the logic errors)
+        
