@@ -121,4 +121,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 
 18.     When would you not test a pre-condition?
-        When you have a reason not to
+        When you have a good reason not to
+
+19.     When would you not test a post-condition?
+        When there's no return value
