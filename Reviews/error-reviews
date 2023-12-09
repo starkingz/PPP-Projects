@@ -92,6 +92,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 17.     Define pre-condition and post-condition; give an example (that is not the area()
         function from this chapter), preferably a computation that requires a loop.
         * pre-condition is a condition that checks the individual arguments for error before it sends its result
+                EDiT -> pre-condition is checking for bad arguments based on the function requirements
         * post-condition is a condition that checks if the requirments of the arguments result are met
         * // A program that takes an argument, add them in a loop and prints only the absolute value
         * // pre-condition: n is positive
