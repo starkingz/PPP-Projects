@@ -135,3 +135,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 21.     Why does commenting help when debugging?
         Commenting helps you know the requirement of the function (i.e specific argument(s) needed by the function)
         and what a function does.
+
+22.     How does testing differ from debugging?
+        Debugging is a process of finding system bugs(errors) while testing is a process of using test cases to find system bugs(errors) or
+        testing can be said to be a way of using every possible input to check for vulnerebility in a system
