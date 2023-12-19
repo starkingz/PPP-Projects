@@ -266,16 +266,18 @@
 //        cout << v[v.size()] << endl;
 // }
 
-
+// Testing pre-condition and post-condition
 void print_out()
                 {
                         cout << "Enter a condition to loop (int value): ";
                         int number {0};
                         cin >> number;
+                        // throw err message if negative
                              if (number < 0)
                                         error("Negative value inputted\n");
                         for (int i = 0; i <= number; i++) {
                                 int result = i * i;
+                                //throw err message if the res is negative
                                 if (result < 0)
                                         error("Negative value caught\n");
                                 cout << "Result: " << result << endl;
@@ -289,6 +291,7 @@ try
 
        return 0;
 }
+// catch all errors
 catch(runtime_error& e) {
        cerr << "Error: " << e.what() << endl;
        return 1;
