@@ -266,37 +266,72 @@
 //        cout << v[v.size()] << endl;
 // }
 
-// Testing pre-condition and post-condition
-void print_out()
-                {
-                        cout << "Enter a condition to loop (int value): ";
-                        int number {0};
-                        cin >> number;
-                        // throw err message if negative
-                             if (number < 0)
-                                        error("Negative value inputted\n");
-                        for (int i = 0; i <= number; i++) {
-                                int result = i * i;
-                                //throw err message if the res is negative
-                                if (result < 0)
-                                        error("Negative value caught\n");
-                                cout << "Result: " << result << endl;
-                        }
+// // Testing pre-condition and post-condition
+// void print_out()
+//                 {
+//                         cout << "Enter a condition to loop (int value): ";
+//                         int number {0};
+//                         cin >> number;
+//                         // throw err message if negative
+//                              if (number < 0)
+//                                         error("Negative value inputted\n");
+//                         for (int i = 0; i <= number; i++) {
+//                                 int result = i * i;
+//                                 //throw err message if the res is negative
+//                                 if (result < 0)
+//                                         error("Negative value caught\n");
+//                                 cout << "Result: " << result << endl;
+//                         }
 
-                }
+//                 }
+// int main()
+// try
+// {
+//        print_out();
+
+//        return 0;
+// }
+// // catch all errors
+// catch(runtime_error& e) {
+//        cerr << "Error: " << e.what() << endl;
+//        return 1;
+// }
+// catch(...) {
+//        cerr << "Something went wrong" << endl;
+//        return 2;
+// }
+
+// // Testing for range errors or off-by=one errors
+// int main()
+// try {
+//         vector <int> v;
+
+//         cout << "Enter sequence of digits:\n";
+//         for (int x; cin >> x;)
+//                 v.push_back(x);
+
+//         int len = v.size();
+//         for (int i = 0; i <= len; ++i) {
+//                 cout << "v[" << i << "] == " << v[i] << endl; 
+//         }
+//         return 0;
+// }
+// catch(exception& e) {
+//         cerr<< e.what() << endl;
+//         return 1;
+// }
+// catch(...) {
+//         cerr << "Something went wrong\n";
+//         return 2;
+// }
+
+//Testing Bad inputs
 int main()
-try
 {
-       print_out();
+        double d {0.0};
 
-       return 0;
-}
-// catch all errors
-catch(runtime_error& e) {
-       cerr << "Error: " << e.what() << endl;
-       return 1;
-}
-catch(...) {
-       cerr << "Something went wrong" << endl;
-       return 2;
+        cout << "Enter a double value: ";
+        cin >> d;
+        if (!cin)
+                error("Wrong input! try again!!\n");
 }
