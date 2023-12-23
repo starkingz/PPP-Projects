@@ -7,12 +7,9 @@ int main()
 try {
         vector <double> temps;
 
-        
         for (double temp; cin >> temp;) {
                 temps.push_back(temp);
         }
-        if(!cin)
-                error("Could'nt read a double from 'main()'");
 
         double sum {0};
         double high_temp {0};
