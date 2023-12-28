@@ -28,7 +28,7 @@ try {
         cin >> kel;
 
         double cel = ktoc(kel);
-        cout << cel << " degree Celsius.\n";
+        cout << cel << " degrees Celsius.\n";
 
         return 0;
 }
