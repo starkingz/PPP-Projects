@@ -67,6 +67,7 @@ double ftoc(double c)
         return form;
 }
 
+
 double ctof(double f)
 {
         if (f < -1000)
