@@ -63,8 +63,8 @@ int main()
         double discriminant {(square(b) - (4 * a * c))};
 
         // Quadratic formula - x = [ -b (+-) sqrt(b^2 - 4ac) ] / 2a
-        x1 = -b + sqroot(discriminant) / (2 * a);
-        x2 = -b - sqroot(discriminant) / (2 * a);
+        x1 = (-b + sqroot(discriminant)) / (2 * a);
+        x2 = (-b - sqroot(discriminant)) / (2 * a);
 
         // if imaginery number
         if (discriminant < 0) {
