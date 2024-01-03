@@ -22,13 +22,11 @@ using namespace std;
 
 int main()
 {
-        int a = 0;
-        char i = 'a';
+        int a;
+        cin >> a;
 
-        while (i <= 'z') {
-            cout << i << '\t' << 'a' + a++ << endl;
-            i++;
-        }
-
-        return 0;
+        if (!cin)
+            cout << "bad argument\n";
+        else
+            cout << "Passed\n";
 }
