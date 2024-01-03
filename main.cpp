@@ -1,4 +1,4 @@
-#include <iostream>
+// #include <iostream>
 // int main() {
 
 //     int age;
@@ -18,15 +18,13 @@
 //     std::cout << "\nYour age is : " << age << std::endl;
 //     return 0;
 // }
-using namespace std;
+// using namespace std;
+
+#include "std_lib_facilities.h" // external library
 
 int main()
 {
-        int a;
-        cin >> a;
+        int a = narrow_cast<int> (2.5);
 
-        if (!cin)
-            cout << "bad argument\n";
-        else
-            cout << "Passed\n";
+        
 }
