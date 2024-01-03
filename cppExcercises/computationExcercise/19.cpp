@@ -2,11 +2,12 @@
 // Excercise 20
 // Date: 10/10/2023
 // Modification of excercise of 19
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+#include "../../std_lib_facilities.h" // external library
 
 /**
  * main - read set of names and scores, output all found names with same score
@@ -21,7 +22,7 @@ int main()
         bool exit {false};
         int len {0};
 
-        cout << "Enter set of names and scores: (Terminate with NoName 0) \n";
+        cout << "Enter set of names and scores (Terminate with NoName 0): \n";
         string name {" "};
         int score {0};
 
@@ -34,7 +35,7 @@ int main()
                 len = names.size();
                 for (int i = 0; i < len - 1; i++) {                        
                         if (name == names[i]) { // check for repeated name
-                                cout << "Error! Name already exists\n"; // Error mess
+                                error ("Error! Name already exists"); // Error mess
                                 exit = true;
                                 break;
                         }                      
@@ -48,6 +49,8 @@ int main()
                 }
                 exit = false;
         }
+        if (!cin)
+                error("Could'nt read the score");
 
         // Find names with same scores
         cout << "\n\n ---------- Search integers to find names ----------\n";
@@ -69,7 +72,7 @@ int main()
         if (found == false)
         cout << "Score Not found.\n";
         if (count > 0)
-        cout << count << " Name(s) found:  \n";
+        cout << count << " Name(s) found  \n";
 
         return 0;
 }
