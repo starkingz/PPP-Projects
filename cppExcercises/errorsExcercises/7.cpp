@@ -25,18 +25,27 @@ int main()
         cout << "Please enter some integers (press '|' to stop):\n";
         for(int n; cin >> n;)
                 ns.push_back(n);
-
+        
         int sum = ns[0];
         int len = ns.size();
         int i;
 
-        if (len - 1 < valno)
-                error("Values you want to sum is more than the stored number of values\n");
+        if (len < valno)
+                error("Values you want to sum is more than the stored number of values");
 
-        for(i = 1; i < valno; ++i)
-                sum += ns[i];
-        
-        cout << "The sum of the first " << valno << " numbers is " << sum << endl;
+        for(i = 1; i <= valno; ++i)
+        {
+                // print only once
+                if (i == 1)
+                        cout << "The sum of the first " << valno << " numbers ( " << ns[0];
+                if (i < valno)
+                {
+                        sum += ns[i];
+                        cout << " " << ns[i];
+                }
+                if (i == valno)
+                        cout << " ) is " << sum << ".\n";
+        }
 
         return 0;
 }
