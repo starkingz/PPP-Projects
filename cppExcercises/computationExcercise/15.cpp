@@ -59,7 +59,7 @@ int main()
         }
 
         cout << "Sequence minimum (alphabetically): " << str_min << endl;
-        cout << "Sequence minimum (alphabetically): " << str_max << endl;
+        cout << "Sequence maximum (alphabetically): " << str_max << endl;
         if (highest_count <= 1)
         cout << "Mode not found\n";
         else
