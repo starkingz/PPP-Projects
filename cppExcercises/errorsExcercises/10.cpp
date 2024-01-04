@@ -9,6 +9,14 @@
 using namespace std;
 
 /**
+ * error - print runtime error message to stdout
+*/
+void error(string s)
+{
+        throw runtime_error(s);
+}
+
+/**
  * get_fib - find the largest fibonnaci number that can fits in an int
  * @number: argument to know the size of the loop
  * 
@@ -21,6 +29,9 @@ void get_fib(int number)
         int curr = 1;
         int i;
 
+        if (number <= 0)
+                error("get_fib() - Number can't be less or equals 0");
+        
         cout << prev << endl << prevcurr << endl;
 
         for (i = 1; i <= number; ++i)
