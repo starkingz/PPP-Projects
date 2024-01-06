@@ -9,7 +9,7 @@
 int main()
 {
         vector <int> comg;
-        vector <int> userg;
+        vector <int> userg(4);
         int count = 0;
         int bullz = 0;
         int cowz = 0;
@@ -23,15 +23,21 @@ int main()
         comg.push_back(4);
 
         cout << "=========== Cows and Bulls guessing game ==========\n";
-        
+        len = userg.size();
         while (restart == true)
         {
                 cout <<  "Guess only four integers (from 0 to 9): ";
                 for (int val; cin >> val;)
                 {
                         if (val > 9 || val < 0)
+                        {
                                 error("Input range is greater than 9 or lesser than 0");
-                        userg.push_back(val); // put val into vector
+                        }
+                                for (int i = count; i < len; ++i)
+                                {
+                                       userg[i] = val;
+                                       break;
+                                }
                         if (count == 3)
                                 break;
                         ++count;
@@ -56,10 +62,10 @@ int main()
                         }
                 }
                 cout << bullz << " bulls and " << cowz << " cows\n";
-                if (bullz == 4)
-                        restart = false;
+                if (bullz != 4)
+                        cout << "Play again!\n";
                 else
-                        cout << "Play again!!!\n";
+                        restart = false;
                 bullz = 0;
                 cowz = 0;
         }
