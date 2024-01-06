@@ -63,10 +63,11 @@ int main()
                 }
                 cout << bullz << " bulls and " << cowz << " cows\n";
                 if (bullz != 4)
-                        cout << "Play again!\n";
+                        cout << "==========Play again!==========\n";
                 else
                         restart = false;
                 bullz = 0;
                 cowz = 0;
+                count = 0;
         }
 }
