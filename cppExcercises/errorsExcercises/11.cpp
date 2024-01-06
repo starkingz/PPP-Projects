@@ -22,9 +22,12 @@ int main()
         comg.push_back(3);
         comg.push_back(4);
 
-        cout << "=========== Cows and Bulls guessing game ==========\n";
-        len = userg.size();
-        while (restart == true)
+        cout << "=========== Bulls and Cows guessing game ==========\n";
+        cout << "============= Discover the hidden code ============\n";
+        cout << "       Bulls == right guess, right position.\n";
+        cout << "       Cows == right guess, wrong position.\n\n";
+        len = userg.size();     // size of userg vector   
+        while (restart == true)         //repeat game everytime user doesn't get the game
         {
                 cout <<  "Guess only four integers (from 0 to 9): ";
                 for (int val; cin >> val;)
@@ -45,8 +48,7 @@ int main()
                 if (!cin)
                         error("Could'nt read an int");
 
-                len = comg.size();
-                // int len2 = userg.size();
+                len = comg.size();      // size of comg vector
                 for (i = 0; i < len; ++i)
                 {
                         for (j = 0; j < len; ++j)
@@ -63,9 +65,14 @@ int main()
                 }
                 cout << bullz << " bulls and " << cowz << " cows\n";
                 if (bullz != 4)
-                        cout << "==========Play again!==========\n";
+                {
+                        cout << "========== Continue playing! ==========\n";
+                }
                 else
+                {
+                        cout << "========== WELL DONE ==========\n";
                         restart = false;
+                }
                 bullz = 0;
                 cowz = 0;
                 count = 0;
