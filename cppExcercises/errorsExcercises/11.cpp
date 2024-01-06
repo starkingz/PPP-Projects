@@ -14,6 +14,7 @@ int main()
         int bullz = 0;
         int cowz = 0;
         int knownval = 0;
+        bool restart = true;
         int i, j, len;
 
         comg.push_back(1);
@@ -22,34 +23,44 @@ int main()
         comg.push_back(4);
 
         cout << "=========== Cows and Bulls guessing game ==========\n";
-        cout <<  "Guess only four integers (from 0 to 9): ";
-        for (int val; cin >> val;)
+        
+        while (restart == true)
         {
-                if (val > 9 || val < 0)
-                        error("Input range is greater than 9 or lesser than 0");
-                userg.push_back(val); // put val into vector
-                if (count == 3)
-                        break;
-                ++count;
-        }
-        if (!cin)
-                error("Could'nt read an int");
-
-        len = comg.size();
-        // int len2 = userg.size();
-        for (i = 0; i < len; ++i)
-        {
-                for (j = 0; j < len; ++j)
+                cout <<  "Guess only four integers (from 0 to 9): ";
+                for (int val; cin >> val;)
                 {
-                        if (userg[i] == comg[j])
+                        if (val > 9 || val < 0)
+                                error("Input range is greater than 9 or lesser than 0");
+                        userg.push_back(val); // put val into vector
+                        if (count == 3)
+                                break;
+                        ++count;
+                }
+                if (!cin)
+                        error("Could'nt read an int");
+
+                len = comg.size();
+                // int len2 = userg.size();
+                for (i = 0; i < len; ++i)
+                {
+                        for (j = 0; j < len; ++j)
                         {
-                                ++knownval;
-                                if (userg[i] == comg[i])
-                                        ++bullz;
-                                else
-                                        ++cowz;
+                                if (userg[i] == comg[j])
+                                {
+                                        ++knownval;
+                                        if (userg[i] == comg[i])
+                                                ++bullz;
+                                        else
+                                                ++cowz;
+                                }
                         }
                 }
+                cout << bullz << " bulls and " << cowz << " cows\n";
+                if (bullz == 4)
+                        restart = false;
+                else
+                        cout << "Play again!!!\n";
+                bullz = 0;
+                cowz = 0;
         }
-        cout << bullz << " bulls and " << cowz << " cows\n";
 }
