@@ -14,29 +14,28 @@ int main()
         int bullz = 0;
         int cowz = 0;
         int knownval = 0;
-        int i, j;
+        int i, j, len;
 
         comg.push_back(1);
         comg.push_back(2);
         comg.push_back(3);
         comg.push_back(4);
 
-        cout << "Cows and BUlls guessing game: guess four integers: ";
+        cout << "=========== Cows and Bulls guessing game ==========\n";
+        cout <<  "Guess only four integers (from 0 to 9): ";
         for (int val; cin >> val;)
         {
-                if (count == 4)
+                if (val > 9 || val < 0)
+                        error("Input range is greater than 9 or lesser than 0");
+                userg.push_back(val); // put val into vector
+                if (count == 3)
                         break;
-                
-                for (int x : comg)
-                {
-                        if (val == x)
-                                error("Digits can't be the same");
-                }
-                userg.push_back(val);
                 ++count;
         }
+        if (!cin)
+                error("Could'nt read an int");
 
-        int len = comg.size();
+        len = comg.size();
         // int len2 = userg.size();
         for (i = 0; i < len; ++i)
         {
