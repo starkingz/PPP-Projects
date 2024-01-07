@@ -36,7 +36,7 @@ int main()
                         {
                                 error("Input range is greater than 9 or lesser than 0");
                         }
-                                for (int i = count; i < len; ++i)
+                                for (i = count; i < len; ++i) // initialize by every iteration of count
                                 {
                                        userg[i] = val;
                                        break;
