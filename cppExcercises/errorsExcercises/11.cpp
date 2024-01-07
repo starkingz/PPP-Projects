@@ -1,5 +1,5 @@
 // Chapter 5 - Errors
-// Excercise 11
+// Excercise 12
 // Date: 4/1/2023
 #include "../../std_lib_facilities.h" // external library
 
@@ -13,7 +13,7 @@ int main()
         int count = 0;
         int bullz = 0;
         int cowz = 0;
-        int knownval = 0;
+        // int knownval = 0;
         bool restart = true;
         int i, j, len;
 
@@ -55,7 +55,7 @@ int main()
                         {
                                 if (userg[i] == comg[j])
                                 {
-                                        ++knownval;
+                                        // ++knownval;
                                         if (userg[i] == comg[i])
                                                 ++bullz;
                                         else
