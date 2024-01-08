@@ -14,6 +14,7 @@ int main()
         int count = 0;
         int bullz = 0;
         int cowz = 0;
+        int comcount = 0;
         string startagain {"yes"};
         // int knownval = 0;
         bool restart = true;
@@ -26,11 +27,25 @@ int main()
                 int n;
                 cin >> n;
                 seed_randint(n);
-                for (int i = 0; i < 4; ++i)
+                while (true)
                 {
                         int comval = randint(9);
-                        cout << comval << " ";
-                        comg[i] = comval;
+                        for (int i = 0; i < 4; i++)
+                        {
+                                if (comcount == 0 || comval != comg[])
+                                {
+                                        for (int j = comcount; j < 4; j++)
+                                        {
+                                                cout << comval << " ";
+                                                comg[j] = comval;
+                                                ++comcount;
+                                                break;
+                                        }
+                                }
+                        }
+                        if (comcount == 3)
+                                break;
+                        
                 }
                 cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
