@@ -38,15 +38,14 @@ void get_fib(int number)
         {
                 curr = prevcurr + prev;
 
-                cout << curr << "\n";
-                prev = prevcurr;
-                prevcurr = curr;
-
                 if (curr < 0)
                 {
-                        cout << "Found largest fibonnaci number that fits in an int: " << prev << endl;
+                        cout << "Found largest fibonnaci number that fits in an int: " << prevcurr << endl;
                         break;
                 }
+                cout << curr << "\n";
+                prev = prevcurr;
+                prevcurr = curr;  
         }
 }
 
