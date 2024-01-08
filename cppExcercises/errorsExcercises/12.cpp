@@ -21,16 +21,18 @@ int main()
 
         
         while (startagain == "yes")
-        {       cout << "Enter any number: ";
+        {       
+                cout << "Enter any number: ";
                 int n;
                 cin >> n;
-                // seed_randint(n);
+                seed_randint(n);
                 for (int i = 0; i < 4; ++i)
                 {
-                        int comval = randint(10);
+                        int comval = randint(9);
+                        cout << comval << " ";
                         comg[i] = comval;
                 }
-                cout << "=========== Bulls and Cows guessing game ==========\n";
+                cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
                 cout << "       Bulls == right guess, right position.\n";
                 cout << "       Cows == right guess, wrong position.\n\n";
@@ -74,7 +76,19 @@ int main()
                                 }
                         }
                         cout << bullz << " bulls and " << cowz << " cows\n";
-
+                        if (bullz > 4)
+                        {
+                                cout << "========== WELL DONE ==========\n";
+                                cout << "Start a new game again? (yes/no): ";
+                                cin >> startagain;
+                                if (startagain == "yes")
+                                        startagain = "yes";
+                                else if (startagain == "no")
+                                        startagain = "no";
+                                else
+                                        error("Wrong response\n");
+                                restart = false;  
+                        }
                         if (bullz != 4)
                         {
                                 cout << "========== Continue playing! ==========\n";
