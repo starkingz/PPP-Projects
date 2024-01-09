@@ -29,6 +29,7 @@ int main()
                 for (int i = 0; i < 4; ++i)
                 {
                         int comval = randint(9);
+                        if (i == 0 || comval != comg[i - 1])
                         cout << comval << " ";
                         comg[i] = comval;
                 }
