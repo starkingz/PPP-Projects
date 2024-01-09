@@ -14,7 +14,6 @@ int main()
         int count = 0;
         int bullz = 0;
         int cowz = 0;
-        int comcount = 0;
         string startagain {"yes"};
         // int knownval = 0;
         bool restart = true;
@@ -23,29 +22,15 @@ int main()
         
         while (startagain == "yes")
         {       
-                cout << "Enter any number: ";
-                int n;
-                cin >> n;
-                seed_randint(n);
-                while (true)
+                // cout << "Enter any number: ";
+                // int n;
+                // cin >> n;
+                // seed_randint(n);
+                for (int i = 0; i < 4; ++i)
                 {
                         int comval = randint(9);
-                        for (int i = 0; i < 4; i++)
-                        {
-                                if (comcount == 0 || comval != comg[])
-                                {
-                                        for (int j = comcount; j < 4; j++)
-                                        {
-                                                cout << comval << " ";
-                                                comg[j] = comval;
-                                                ++comcount;
-                                                break;
-                                        }
-                                }
-                        }
-                        if (comcount == 3)
-                                break;
-                        
+                        cout << comval << " ";
+                        comg[i] = comval;
                 }
                 cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
@@ -58,10 +43,10 @@ int main()
                         cout <<  "Guess only four integers (from 0 to 9): ";
                         for (int val; cin >> val;)
                         {
-                                // if (val > 9 || val < 0)
-                                // {
-                                //         error("Input range is greater than 9 or lesser than 0");
-                                // }
+                                if (val > 9 || val < 0)
+                                {
+                                        error("Input range is greater than 9 or lesser than 0");
+                                }
                                 // int comval = randint(10);
                                 for (i = count; i < len; ++i) // initialize by every iteration of count
                                 {
