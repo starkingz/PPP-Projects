@@ -14,6 +14,7 @@ int main()
         int count = 0;
         int bullz = 0;
         int cowz = 0;
+        int comcount = 0;
         string startagain {"yes"};
         // int knownval = 0;
         bool restart = true;
@@ -26,12 +27,18 @@ int main()
                 // int n;
                 // cin >> n;
                 // seed_randint(n);
-                for (int i = 0; i < 4; ++i)
+                while(comcount < 4)
                 {
                         int comval = randint(9);
-                        if (i == 0 || comval != comg[i - 1])
-                        cout << comval << " ";
-                        comg[i] = comval;
+                        for (int x = 0; x <= 4; x++)
+                        {
+                                if (comcount == 0 || comval != comg[x - 1])
+                                { 
+                                        cout << comval << " "; // for testing purposes only
+                                        comg[comcount] = comval;
+                                        ++comcount;
+                                }
+                        }
                 }
                 cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
@@ -79,6 +86,7 @@ int main()
                         cout << bullz << " bulls and " << cowz << " cows\n";
                         if (bullz > 4)
                         {
+                                                // for testing purposes only
                                 cout << "========== WELL DONE ==========\n";
                                 cout << "Start a new game again? (yes/no): ";
                                 cin >> startagain;
@@ -110,6 +118,7 @@ int main()
                         bullz = 0;
                         cowz = 0;
                         count = 0;
+                        comcount = 0;
                 }
         }
 }
