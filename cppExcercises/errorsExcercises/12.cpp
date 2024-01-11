@@ -9,7 +9,7 @@
 */
 int main()
 {
-        vector <int> comg(4);
+        vector <int> comg;
         vector <int> userg(4);
         int count = 0;
         int bullz = 0;
@@ -23,23 +23,6 @@ int main()
         
         while (startagain == "yes")
         {       
-                // cout << "Enter any number: ";
-                // int n;
-                // cin >> n;
-                // seed_randint(n);
-                while(comcount < 4)
-                {
-                        int comval = randint(9);
-                        for (int x = 0; x <= 4; x++)
-                        {
-                                if (comcount == 0 || comval != comg[x - 1])
-                                { 
-                                        cout << comval << " "; // for testing purposes only
-                                        comg[comcount] = comval;
-                                        ++comcount;
-                                }
-                        }
-                }
                 cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
                 cout << "       Bulls == right guess, right position.\n";
