@@ -9,7 +9,7 @@
 */
 int main()
 {
-        vector <int> comg;
+        vector <int> comg(4);
         vector <int> userg(4);
         int count = 0;
         int bullz = 0;
@@ -19,10 +19,43 @@ int main()
         // int knownval = 0;
         bool restart = true;
         int i, j, len;
-
+        int comval = 0;
         
         while (startagain == "yes")
-        {       
+        {
+                cout << "Enter a number: ";
+                int n;
+                cin >> n;
+                seed_randint(n);
+                for (int i = 0; i < 4; ++i)
+                {
+                        comval = randint(9);
+                        if (i == 0)
+                        {
+                                cout << comval;
+                                comg[i] = comval;
+                        }
+                        if (i > 1)
+                        {
+                                if (comval == comg[i - 1] || comval == comg[0])
+                                {
+                                        cout << comval;
+                                        comg[i] = comval;
+                                }
+                                else
+                                {
+                                        cout << comval;
+                                        comg[i] = comval;
+                                }
+                        }
+                }
+                // cout << endl;
+
+                // for (int x = 1; x < 4; x++)
+                // {
+                       
+                // }
+                
                 cout << "\n=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
                 cout << "       Bulls == right guess, right position.\n";
