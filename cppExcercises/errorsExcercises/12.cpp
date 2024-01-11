@@ -32,19 +32,19 @@ int main()
                         comval = randint(9);
                         if (i == 0)
                         {
-                                cout << comval;
+                                cout << comval; //for testing purpose
                                 comg[i] = comval;
                         }
                         if (i > 1)
                         {
                                 if (comval == comg[i - 1] || comval == comg[0])
                                 {
-                                        cout << comval;
+                                        cout << comval; // for testing purpose
                                         comg[i] = comval;
                                 }
                                 else
                                 {
-                                        cout << comval;
+                                        cout << comval; // for testing purpose
                                         comg[i] = comval;
                                 }
                         }
