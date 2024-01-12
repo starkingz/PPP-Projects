@@ -14,55 +14,47 @@ int main()
         int count = 0;
         int bullz = 0;
         int cowz = 0;
-        int comcount = 0;
         string startagain {"yes"};
-        // int knownval = 0;
         bool restart = true;
         int i, j, len;
         int comval = 0;
         
         while (startagain == "yes")
         {
-                cout << "Enter a number: ";
+                cout << "Enter a number to randomized: ";
                 int n;
                 cin >> n;
+
                 seed_randint(n);
                 for (int i = 0; i < 4; ++i)
                 {
                         comval = randint(9);
-                        if (i == 0)
+                        // cout << comval;      // for testing purposes only
+                        comg[i] = comval;
+                }
+
+                for (int x = 1; x < 4; x++)
+                {
+                        if (comg[x] == comg[x - 1] || comg[x] == comg[0])
                         {
-                                cout << comval; //for testing purpose
-                                comg[i] = comval;
-                        }
-                        if (i > 1)
-                        {
-                                if (comval == comg[i - 1] || comval == comg[0])
-                                {
-                                        cout << comval; // for testing purpose
-                                        comg[i] = comval;
-                                }
-                                else
-                                {
-                                        cout << comval; // for testing purpose
-                                        comg[i] = comval;
-                                }
+                                comval = randint(9);
+                                // cout << comval << endl;      // for testing purposes only
+                                comg[x] = comval;
                         }
                 }
-                // cout << endl;
-
-                // for (int x = 1; x < 4; x++)
-                // {
-                       
-                // }
                 
-                cout << "\n=========== Bulls and Cows guessing game ==========\n";
+                // for testing purposes
+                // for (int k = 0; k < 4; k++)
+                // {
+                //         cout << comg[k] << endl;
+                // }
+                cout << "=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
                 cout << "       Bulls == right guess, right position.\n";
                 cout << "       Cows == right guess, wrong position.\n\n";
                 len = userg.size();     // size of userg vector
                 restart = true;
-                while (restart == true)         //repeat game everytime user doesn't get the game
+                while (restart == true)         //repeat game everytime user doesn't get the four int right
                 {
                         cout <<  "Guess only four integers (from 0 to 9): ";
                         for (int val; cin >> val;)
@@ -111,7 +103,7 @@ int main()
                                 else if (startagain == "no")
                                         startagain = "no";
                                 else
-                                        error("Wrong response\n");
+                                        error("Wrong response");
                                 restart = false;  
                         }
                         if (bullz != 4)
@@ -134,7 +126,6 @@ int main()
                         bullz = 0;
                         cowz = 0;
                         count = 0;
-                        comcount = 0;
                 }
         }
 }
