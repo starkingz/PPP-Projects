@@ -44,28 +44,28 @@ int main()
     if (response == 'y')
     {
         cout << "Enter a sign followed by the third number: ";
-    int third_num;
-    char sign2;
-    cin >> sign2 >> third_num;
+        int third_num;
+        char sign2;
+        cin >> sign2 >> third_num;
 
-    switch (sign2)
-    {
-        case '+':
-        cout << "Result == " << result + third_num << endl;
-        break;
-        case '-':
-        cout << "Result == " << result - third_num << endl;
-        break;
-        case '*':
-        cout << "Result == " << result * third_num << endl;
-        break;
-        case '/':
-        cout << "Result == " << result / third_num << endl;
-        break;
-        default:
-        cout << "Invalid input, try again!\n";
-        break;
-    }
+        switch (sign2)
+        {
+            case '+':
+            cout << "Result == " << result + third_num << endl;
+            break;
+            case '-':
+            cout << "Result == " << result - third_num << endl;
+            break;
+            case '*':
+            cout << "Result == " << result * third_num << endl;
+            break;
+            case '/':
+            cout << "Result == " << result / third_num << endl;
+            break;
+            default:
+            cout << "Invalid input, try again!\n";
+            break;
+        }
     }
     else if (response == 'n')
     {
