@@ -33,7 +33,7 @@ int main()
 	cout << "Do you want to continue calculating with " << result << "? (y / n / e [end])?\n";
 	cin >> response;
 
-    for (int i = 0; i < 100; i++) {
+    while (response != 'e') {
 	if (response == 'y') {
 		cout << "choose a sign (+, -, *, /): ";
 	        cin >> sign;
