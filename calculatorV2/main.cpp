@@ -1,4 +1,8 @@
 // Simple calculator
+/** 
+ * Program still in program - Will add more features and fix more bugs in the future
+ * Not so good at commenting - Hope to improve my commenting skills and be back here commenting this program
+ */
 #include <iostream>
 #include "main.h"
 #include <iomanip>
@@ -33,7 +37,7 @@ int main()
 	cout << "Do you want to continue calculating with " << result << "? (y / n / e [end])?\n";
 	cin >> response;
 
-    while (response != 'e') {
+    while (response != 'e') {	// loop until user ends it
 	if (response == 'y') {
 		cout << "choose a sign (+, -, *, /): ";
 	        cin >> sign;
