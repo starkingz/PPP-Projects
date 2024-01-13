@@ -8,6 +8,7 @@
  * main - play bulls and cows guessing game
 */
 int main()
+try
 {
         vector <int> comg(4);
         vector <int> userg(4);
@@ -21,11 +22,11 @@ int main()
         
         while (startagain == "yes")
         {
-                cout << "Enter a number to randomized: ";
-                int n;
-                cin >> n;
+                // cout << "Enter a number to randomized: ";
+                // int n;
+                // cin >> n;
 
-                seed_randint(n);
+                // seed_randint(n);
                 for (int i = 0; i < 4; ++i)
                 {
                         comval = randint(9);
@@ -43,11 +44,6 @@ int main()
                         }
                 }
                 
-                // for testing purposes
-                // for (int k = 0; k < 4; k++)
-                // {
-                //         cout << comg[k] << endl;
-                // }
                 cout << "=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden code ============\n";
                 cout << "       Bulls == right guess, right position.\n";
@@ -92,20 +88,6 @@ int main()
                                 }
                         }
                         cout << bullz << " bulls and " << cowz << " cows\n";
-                        if (bullz > 4)
-                        {
-                                                // for testing purposes only
-                                cout << "========== WELL DONE ==========\n";
-                                cout << "Start a new game again? (yes/no): ";
-                                cin >> startagain;
-                                if (startagain == "yes")
-                                        startagain = "yes";
-                                else if (startagain == "no")
-                                        startagain = "no";
-                                else
-                                        error("Wrong response");
-                                restart = false;  
-                        }
                         if (bullz != 4)
                         {
                                 cout << "========== Continue playing! ==========\n";
@@ -118,7 +100,10 @@ int main()
                                 if (startagain == "yes")
                                         startagain = "yes";
                                 else if (startagain == "no")
+                                {
                                         startagain = "no";
+                                        keep_window_open("~");
+                                }
                                 else
                                         error("Wrong response\n");
                                 restart = false;
@@ -128,4 +113,17 @@ int main()
                         count = 0;
                 }
         }
+        return 0;
+}
+catch (runtime_error& e) {
+        cerr << e.what() << endl;
+        keep_window_open("~");
+}
+catch (exception& e) {
+        cerr << e.what() << endl;
+        keep_window_open("~");
+}
+catch (...) {
+        cerr << "Something went wrong\n";
+        keep_window_open("~");
 }
