@@ -211,7 +211,7 @@ inline default_random_engine& get_rand()
 {
 	static default_random_engine ran;	// note: not thread_local
 	return ran;
-};
+}
 
 inline void seed_randint(int s) { get_rand().seed(s); }
 
