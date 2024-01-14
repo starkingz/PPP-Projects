@@ -334,4 +334,6 @@ int main()
         cin >> d;
         if (!cin)
                 error("Wrong input! try again!!\n");
+        
+        keep_window_open("~");  // for some window (TM)
 }
