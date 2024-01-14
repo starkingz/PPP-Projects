@@ -37,6 +37,7 @@ string dconverter(string d);
 void error(string s);
 
 int main()
+try
 {
         double temp {0.0};
         string td {"c or f"};
@@ -58,6 +59,15 @@ int main()
         td = dconverter(td);
         cout << res << " " << td << endl;
 }
+catch (runtime_error& e) {
+        cerr << e.what() << endl;
+        return 1;
+}
+catch (...) {
+        cerr << "Something went wrong\n";
+        return 2;
+}
+
 
 double ftoc(double c)
 {
