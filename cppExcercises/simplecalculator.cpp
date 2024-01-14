@@ -10,9 +10,6 @@ int main()
     int fir_num, sec_num;
     char sign = 0;
     cin >> fir_num >> sign >> sec_num;
-    // cout << "Enter second number: ";
-    // int sec_num = 0;
-    // cin >> sec_num;
 
     switch (sign)
     {
