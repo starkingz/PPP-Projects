@@ -33,7 +33,7 @@ try
                 // cin >> n;
 
                 // seed_randint(n);
-                for (int i = 0; i < 4; ++i)
+                for (i = 0; i < 4; ++i)
                 {
                         comval = randint(9);
                         // cout << comval;      // for testing purposes only
