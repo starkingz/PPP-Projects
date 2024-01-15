@@ -2,6 +2,8 @@
 // Excercise 13
 // Date: 6/1/2023
 // Modification of excercise 12
+// 15/01/2024 - Program works but has few glitches and bugs which needs to be fixed
+// Working on fixing it....
 #include "../../std_lib_facilities.h" // external library
 
 /**
