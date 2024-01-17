@@ -22,7 +22,7 @@ try
         int bullz = 0;
         int cowz = 0;
         string startagain {"yes"};
-        bool restart = true;
+        bool restart {true};
         int i, j, len;
         int comval = 0;
         
@@ -108,7 +108,7 @@ try
                                 else if (startagain == "no")
                                 {
                                         startagain = "no";
-                                        keep_window_open("~");
+                                        keep_window_open("~");  // for some windows(tm) setup
                                 }
                                 else
                                         error("Wrong response\n");
@@ -123,13 +123,13 @@ try
 }
 catch (runtime_error& e) {
         cerr << e.what() << endl;
-        keep_window_open("~");
+        keep_window_open("~");  // for some windows(tm) setup
 }
 catch (exception& e) {
         cerr << e.what() << endl;
-        keep_window_open("~");
+        keep_window_open("~");  // for some windows(tm) setups
 }
 catch (...) {
         cerr << "Something went wrong\n";
-        keep_window_open("~");
+        keep_window_open("~");  // for some windows(tm) setups
 }
