@@ -767,7 +767,7 @@ int main()
         else if (op == '-')
                 result = lval - rval;   // subtraction
         else
-                cout << "We can't handle that for now\n";
+                cout << "We can only handle + or -\n";
         
         cout << "Result: " << result << endl;
 
