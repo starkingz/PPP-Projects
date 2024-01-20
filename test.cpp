@@ -741,14 +741,35 @@ using namespace std;
 //         return 0;
 // }
 
+// int main()
+// {
+//         int a = 10000;
+//         char b = a;
+//         int c = b;
+
+//         if (a != b)
+//                 cout << a << " != " << c << endl;
+//         else
+//                 cout << a << " == " << c << endl;
+// }
+
 int main()
 {
-        int a = 10000;
-        char b = a;
-        int c = b;
+        int lval;
+        int rval;
+        char op;
+        int result {0};
+        cout << "Enter an expression (+ or -): ";
+        cin >> lval >> op >> rval;
 
-        if (a != b)
-                cout << a << " != " << c << endl;
+        if (op == '+')
+                result = lval + rval;   // addition
+        else if (op == '-')
+                result = lval - rval;   // subtraction
         else
-                cout << a << " == " << c << endl;
+                cout << "We can't handle that for now\n";
+        
+        cout << "Result: " << result << endl;
+
+        return 0;
 }
