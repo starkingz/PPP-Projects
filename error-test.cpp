@@ -326,14 +326,14 @@
 // }
 
 //Testing Bad inputs
-int main()
-{
-        double d {0.0};
+// int main()
+// {
+//         double d {0.0};
 
-        cout << "Enter a double value: ";
-        cin >> d;
-        if (!cin)
-                error("Wrong input! try again!!\n");    // print err mess
+//         cout << "Enter a double value: ";
+//         cin >> d;
+//         if (!cin)
+//                 error("Wrong input! try again!!\n");    // print err mess
         
-        keep_window_open("~");  // for some window (TM)
-}
+//         keep_window_open("~");  // for some window (TM)
+// }
