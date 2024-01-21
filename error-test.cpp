@@ -333,7 +333,7 @@ int main()
         cout << "Enter a double value: ";
         cin >> d;
         if (!cin)
-                error("Wrong input! try again!!\n");
+                error("Wrong input! try again!!\n");    // print err mess
         
         keep_window_open("~");  // for some window (TM)
 }
