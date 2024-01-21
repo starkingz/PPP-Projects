@@ -752,24 +752,3 @@ using namespace std;
 //         else
 //                 cout << a << " == " << c << endl;
 // }
-
-int main()
-{
-        int lval;
-        int rval;
-        char op;
-        int result {0};
-        cout << "Enter an expression (+ or -): ";
-        cin >> lval >> op >> rval;
-
-        if (op == '+')
-                result = lval + rval;   // addition
-        else if (op == '-')
-                result = lval - rval;   // subtraction
-        else
-                cout << "We can only handle + or -\n";
-        
-        cout << "Result: " << result << endl;
-
-        return 0;
-}
