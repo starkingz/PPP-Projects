@@ -1,5 +1,15 @@
+//PSEUDO CODE - process of writing code
+// read a line
+// calculate
+// result
+
 #include "std_lib_facilities.h"
 
+/**
+ * main - firt expression calculator attempt
+ * 
+ * Return: Always 0
+*/
 int main()
 {
         int lval;
