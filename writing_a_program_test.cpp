@@ -10,23 +10,73 @@
  * 
  * Return: Always 0
 */
-int main()
-{
-        int lval;
-        int rval;
-        char op;
-        int result {0};
-        cout << "Enter an expression (+ or -): ";
-        cin >> lval >> op >> rval;
+// int main()
+// {
+//         int lval;
+//         int rval;
+//         char op;
+//         int result {0};
+//         cout << "Enter an expression (+ or -): ";
+//         cin >> lval >> op >> rval;
 
-        if (op == '+')
-                result = lval + rval;   // addition
-        else if (op == '-')
-                result = lval - rval;   // subtraction
-        else
-                error("We can only handle + or -\n");   // from lib
+//         if (op == '+')
+//                 result = lval + rval;   // addition
+//         else if (op == '-')
+//                 result = lval - rval;   // subtraction
+//         else
+//                 error("We can only handle + or -\n");   // from lib
         
-        cout << "Result: " << result << endl;
+//         cout << "Result: " << result << endl;
 
-        return 0;
+//         return 0;
+// }
+
+/**
+ * main - clean up the previous code and let the program handle +, -, * and /
+ * 
+ * Return: Always 0
+*/
+int main()
+try
+{
+        cout << "Please enter expression (we can handle +, -, * and /)\n";
+        cout << "Add x to end expression: ";
+        int lval {0};
+        cin >> lval;
+        if (!cin)
+                error("No first operand");
+        int rval;
+
+        for (char op; cin >> op;)
+        {
+                if (op != 'x')
+                        cin >> rval;
+                if (!cin)
+                        error("No second operand");
+                
+                switch (op)
+                {
+                        case '+':
+                        lval += rval;
+                        break;
+                        case '-':
+                        lval -= rval;
+                        break;
+                        case '*':
+                        lval *= rval;
+                        break;
+                        case '/':
+                        lval /= rval;
+                        break;
+                        default:
+                        cout << "Result: " << lval << endl;
+                        cout << "===== END OF EXPRESSION =====\n";
+                        keep_window_open("~");
+                        return 0;
+                }
+        }
+}
+catch (runtime_error& e) {
+        cerr << e.what() << endl;
+        keep_window_open("~");
 }
