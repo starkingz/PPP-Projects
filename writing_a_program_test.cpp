@@ -79,4 +79,10 @@ try
 catch (runtime_error& e) {
         cerr << e.what() << endl;
         keep_window_open("~");
+        return 1;
+}
+catch (...) {
+        cerr << "Something went wrong\n";\
+        keep_window_open("~");
+        return 2;
 }
