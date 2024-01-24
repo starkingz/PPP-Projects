@@ -1,3 +1,6 @@
+// Uncomment code segment to use
+// 24/01/2024
+
 //PSEUDO CODE - process of writing code
 // read a line
 // calculate
