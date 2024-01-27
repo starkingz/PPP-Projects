@@ -85,7 +85,7 @@
 //         return 1;
 // }
 // catch (...) {
-//         cerr << "Something went wrong\n";\
+//         cerr << "Something went wrong\n";
 //         keep_window_open("~");
 //         return 2;
 // }
@@ -95,26 +95,50 @@
  * 
  * Return: Always 0
 */
-int main()
-{
-        class Token {
+// int main()
+// {
+//         class Token {
+//                 public:
+//                         char kind;
+//                         double value;
+//         };
+
+//         Token t;
+//         t.kind = '+';
+
+//         Token t2;
+//         t2.kind = '8';
+//         t2.value = 3.14;
+
+//         Token tt = t;
+
+//         if (tt.kind != t.kind)
+//                 error("impossible");
+//         t = t2;
+
+//         cout << t.value << endl;
+// }
+
+/**
+ * main - still testing Token class
+ * 
+ * Return: Always 0
+*/
+class Token {
                 public:
                         char kind;
                         double value;
         };
-
-        Token t;
-        t.kind = '+';
-
-        Token t2;
-        t2.kind = '8';
-        t2.value = 3.14;
-
-        Token tt = t;
-
-        if (tt.kind != t.kind)
-                error("impossible");
-        t = t2;
-
-        cout << t.value << endl;
+        Token get_token(); // function to read cin
+int main()
+{
+        vector <Token> tok;
+        cout << "Enter values to tokenize: ";
+        char ch; 
+        cin >> ch;
+                while (cin)
+                {
+                        Token t = get_token();
+                        tok.push_back(t);
+                }
 }
