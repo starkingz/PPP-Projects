@@ -129,16 +129,24 @@ class Token {
                         char kind;
                         double value;
         };
-        Token get_token(); // function to read cin
-int main()
+Token get_token(); // function to read cin
+
+void f()
 {
         vector <Token> tok;
-        cout << "Enter values to tokenize: ";
-        char ch; 
-        cin >> ch;
+
                 while (cin)
-                {
+                {        
                         Token t = get_token();
                         tok.push_back(t);
                 }
+}
+int main()
+{
+        cout << "Enter values to tokenize: ";
+        char ch; 
+        cin >> ch;
+        f();
+
+        return 0;
 }
