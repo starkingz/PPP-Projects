@@ -76,7 +76,10 @@ double primary()     // read and evaluate a Primary
 int main()
 try {
     while (cin)
-        cout << expression() << "=" << '\n';
+    {
+        double res = expression();
+        cout << "=" << res << '\n';
+    }
     keep_window_open("~0");
 }
 catch (exception& e) {
