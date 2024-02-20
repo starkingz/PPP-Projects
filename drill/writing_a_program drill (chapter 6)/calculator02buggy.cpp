@@ -185,7 +185,7 @@ try
 {
         cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
-             << "Available operator signs: '*', '/', '+', '-'\n"
+             << "Available operators: '*', '/', '+', '-'\n"
              << "Enter '=' to print now or 'x' to quite program\n";
         double val {0};
         while (cin) {
