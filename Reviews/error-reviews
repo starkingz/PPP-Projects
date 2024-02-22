@@ -13,7 +13,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 3.      What guarantees should every completed project offer?
         * Every completed project should be free of errors
-        * Every completed should always check for errors catch if necessary
+        * Every completed projects should always check for errors catch if necessary
 
 4.      List three approaches we can take to eliminate errors in programs and
         produce acceptable software
@@ -68,18 +68,19 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
         vs. the called function’s handling the run-time error.
         * Well i think the good thing about allowing the callee handle the error is because the handling is done in one place and you don't have to handle the error separetely every time you call a function
         * Good thing about the caller handling the function is that you get to have different error messages with different meaning for every called function 
-        * Letting the caller handle the error can be messy sometimes and making debugging harder
+        * Letting the caller handle the error can be messy sometimes and making debugging harder and more tedious
 
 13.     Why is using exceptions a better idea than returning an “error value”?
         * Using exceptions is better because you can catch errors from functions that throws error
         * Exception can be used to catch any type of error thrown by the function
+        * With exception you don't need to know the return value to handle error
 
 14.     How do you test if an input operation succeeded?
         * By testing cin
 
 15.     Describe the process of how exceptions are thrown and caught.
         * Exceptions are been caught by the main function and thrown by the called function, 
-          while trying to catch an exception you use a try keyword.
+          while trying to catch an exception you use a try keyword before the curly bracket block in main function.
           The exception checks for any thrown error and catches it then write the error to 
           the screen/console and returns failure then terminates the program
 
@@ -134,7 +135,7 @@ Ans:    * Runtime-error: This is an error that throws an exception while the sys
 
 21.     Why does commenting help when debugging?
         Commenting helps you know the requirement of the function (i.e specific argument(s) needed by the function)
-        and what a function does.
+        and what a function does and also helps documenting the decisions made in a program.
 
 22.     How does testing differ from debugging?
         Debugging is a process of finding system bugs(errors) while testing is a process of using test cases to find system bugs(errors) or
