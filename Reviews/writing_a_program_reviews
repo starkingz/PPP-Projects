@@ -11,3 +11,6 @@ Ans.    The calculator would handle only + - * / and would be read as an express
 
 3.      How do you break a problem up into smaller manageable parts?
 Ans.    Using pseudo code
+
+4.      Why is creating a small, limited version of a program a good idea?
+Ans.    To avoid feature creep and it would help making buiding less tedious
