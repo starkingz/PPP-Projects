@@ -8,3 +8,6 @@ Ans.    Programming is understanding becuase you need to basically understand th
 2.      The chapter details the creation of a calculator program. Write a short
         analysis of what the calculator should be able to do.
 Ans.    The calculator would handle only + - * / and would be read as an expression
+
+3.      How do you break a problem up into smaller manageable parts?
+Ans.    Using pseudo code
