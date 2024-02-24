@@ -26,3 +26,10 @@ Ans.    This is a way a system can be used to anchieve a task
 
 8.      What is the purpose of testing?
 Ans.    Testing is used to check if the requirements/specifications of a program are all met
+
+9.      According to the outline in the chapter, describe the difference between a
+        Term, an Expression, a Number, and a Primary.
+Ans.    a. Terms handles only multiplication, division and modulo operators and it is first calculated before an expression
+        b. An expression calcualates only addition and subtraction Numbers, and it binds less tighter than terms
+        c. Number reads a floating point value
+        d. Primary handles an expression in a bracket before it handles any other operations
