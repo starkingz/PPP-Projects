@@ -37,3 +37,6 @@ Ans.    a. Terms handles only multiplication, division and modulo operators and 
 10.     In the chapter, an input was broken down into its component Terms, Expressions,
         Primarys, and Numbers. Do this for (17+4)/(5–1).
 Ans.    (21)/(4) = 21 / 4 = 5.25
+
+11.     Why does the program not have a function called number()?
+Ans.    Thats because we already have floating point types as an external function
