@@ -33,3 +33,7 @@ Ans.    a. Terms handles only multiplication, division and modulo operators and 
         b. An expression calcualates only addition and subtraction Numbers, and it binds less tighter than terms
         c. Number reads a floating point value
         d. Primary handles an expression in a bracket before it handles any other operations
+
+10.     In the chapter, an input was broken down into its component Terms, Expressions,
+        Primarys, and Numbers. Do this for (17+4)/(5–1).
+Ans.    (21)/(4) = 21 / 4 = 5.25
