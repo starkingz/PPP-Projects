@@ -43,3 +43,7 @@ Ans.    Thats because we already have floating point types as an external functi
 
 12.     What is a token?
 Ans.    Token is a sequence of characters that reads characters and a number
+
+13.     What is a grammar? A grammar rule?
+Ans.    A grammar lets us transform a program into a syntax tree
+        Grammar rule is a rule that reads a stream of tokens and search through the tokens to find a match
