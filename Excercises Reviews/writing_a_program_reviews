@@ -51,3 +51,6 @@ Ans.    A grammar lets us transform a program into a syntax tree
 14.     What is a class? What do we use classes for?
 Ans.    A class is a user defined data type that groups data and functionalities
         ........ A class is used to group data and functions and it is also used to create an object
+
+15.     How can we provide a default value for a member of a class?
+Ans.    using initializer list
