@@ -64,3 +64,6 @@ Ans.    To foresee into the expression
 18.     What does putback() do and why is it useful?
 Ans.    Putback() puts a value that has already been read by cin back into istream... So it can be read by another variable using cin
         putback() is useful when trying to determine if a value is a number or word then it brings back the value that has already been read by char so it can be read again by a double or a string if necessary.
+
+19.     Why is the remainder (modulus) operation, %, difficult to implement in the term()?
+Ans.    modulus operator is difficult to implement because we need to determine the input given is an integer and not a floating point number.
