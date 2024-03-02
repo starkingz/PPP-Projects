@@ -69,4 +69,4 @@ Ans.    Putback() puts a value that has already been read by cin back into istre
 Ans.    modulus operator is difficult to implement because we need to determine the input given is an integer and not a floating point number.
 
 20.     What do we use the two data members of the Token class for
-Ans.    The two data members which are kind and value. Kind is used to store charaters like operators while value is used to store floating point literals
+Ans.    The two data members which are kind and value. Kind is used to store characters like operators while value is used to store floating point literals
