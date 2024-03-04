@@ -752,3 +752,59 @@ using namespace std;
 //         else
 //                 cout << a << " == " << c << endl;
 // }
+
+// class Players
+// {
+//         public:
+//                 int speed;
+//                 int agility;
+//                 int strength;
+// };
+
+// int main()
+// {
+//         Players mbappe;
+
+//         mbappe.speed = 98;
+//         mbappe.agility = 79;
+//         mbappe.strength = 90;
+
+//         cout << "Mbappe's Football Rating:\n";
+//         cout << "Speed::" << mbappe.speed << endl << "Agility::" << mbappe.agility << endl << "Strength::" << mbappe.strength << endl;
+
+//         Players messi;
+
+//         messi.speed = 91;
+//         messi.agility = 89;
+//         messi.strength = 95;
+
+//         cout << "\nMessi's Football Rating:\n";
+//         cout << "Spead::" << messi.speed << endl << "Agility::" << messi.agility << endl << "Strength::" << messi.strength << endl;
+
+//         return 0;
+// }
+
+class Usegeek
+{
+        public:
+        string fname;        // Data member
+        string lname;
+
+        void print_name();  // Member function
+};
+
+void Usegeek::print_name()
+{
+        cout << "My name is " << fname << " " << lname;
+}
+
+int main()
+{
+        // ClassName objName
+        Usegeek name;
+
+        name.fname = "Goodstar";
+        name.lname = "Ohia";
+
+        name.print_name();
+}
