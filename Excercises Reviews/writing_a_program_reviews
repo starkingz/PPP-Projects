@@ -70,3 +70,6 @@ Ans.    modulus operator is difficult to implement because we need to determine 
 
 20.     What do we use the two data members of the Token class for
 Ans.    The two data members which are kind and value. Kind is used to store characters like operators while value is used to store floating point literals
+
+21.     Why do we (sometimes) split a class’s members into private and public members?
+Ans.    Makes interface simpler and more secured
