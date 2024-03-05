@@ -77,3 +77,7 @@ Ans.    Makes interface simpler and more secured
 22.     What happens in the Token_stream class when there is a token in the
 buffer and the get() function is called?
 Ans.    it removes the token from buffer by assigning false to buffer (i.e full = false) and returns buffer
+
+23.     Why were the ';' and 'q' characters added to the switch-statement in the
+get() function of the Token_stream class?
+Ans.    ';' was added so if get() returns ';' then the program prints the answer, while 'q' was to quit / end / kill the program processes
