@@ -73,3 +73,7 @@ Ans.    The two data members which are kind and value. Kind is used to store cha
 
 21.     Why do we (sometimes) split a class’s members into private and public members?
 Ans.    Makes interface simpler and more secured
+
+22.     What happens in the Token_stream class when there is a token in the
+buffer and the get() function is called?
+Ans.    it removes the token from buffer by assigning false to buffer (i.e full = false) and returns buffer
