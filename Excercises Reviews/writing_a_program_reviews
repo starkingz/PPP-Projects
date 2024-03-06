@@ -90,3 +90,6 @@ Ans.    A user defined type is a type created by the user using a class, for cla
 
 26.     What is the interface to a C++ “user-defined type”?
 Ans.    Public
+
+27.     Why do we want to rely on libraries of code?
+Ans.    To make writing code less tedious and making our code efficient
