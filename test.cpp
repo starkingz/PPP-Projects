@@ -784,16 +784,16 @@ using namespace std;
 //         return 0;
 // }
 
-class Usegeek
+class Fullname
 {
         public:
         string fname;        // Data member
         string lname;
 
-        void print_name();  // Member function
+        void printname();  // Member function
 };
 
-void Usegeek::print_name()
+void Fullname::printname()
 {
         cout << "My name is " << fname << " " << lname;
 }
@@ -801,10 +801,11 @@ void Usegeek::print_name()
 int main()
 {
         // ClassName objName
-        Usegeek name;
+        Fullname name;
 
         name.fname = "Goodstar";
         name.lname = "Ohia";
 
-        name.print_name();
+        name.printname();
+        return 0;
 }
