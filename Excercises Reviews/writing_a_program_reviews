@@ -1,4 +1,4 @@
-// chapter 5 - errors
+// chapter 6 - Writing a program
 // date: 22.02.2024
 // Answered by Ohia Goodstar(me)
 
@@ -93,3 +93,40 @@ Ans.    Public:
 
 27.     Why do we want to rely on libraries of code?
 Ans.    To make writing code less tedious and making our code more efficient
+
+// chapter 6 - Writing a program
+// date: 09.03.2024
+// Answered by Ohia Goodstar
+// CHAPTER TERMS
+
+*Analysis:       This is a process of setting requirements / specification for a new or ongoing program. Its a way of looking-ahead to know the necessary requirements that is needed for the program..
+
+*Class:         Class is a user defined type that groups data members and member functions.
+
+Class member:   This consists of varibles and functions that been declared in a class.
+
+Data member:    This is an initialization of variable in a class.
+
+Design:         Is the structuring of a system.
+
+Divide by zero: This simply means a number can not be divided by a 0, so there should always be check while dividing
+
+Grammar:        Is a way of structuring a language to follow a certain rules.
+
+Implementation: Write the code, debug and test it to know if you doing what its supposed to do.
+
+Interface:      Interface is defined to describe the behaviour of a class without taking action of that class
+
+Private:        This is the implementation part of a class.
+
+Prototype:      Is a limited initial version of a program aimed at experimentation
+
+Pseudo code:    Pseudo code is a way of writing algorithm in a plain language that can be understood by a programmer.
+
+Public:         Is an interface that is shown or can by accessed by other functions outside the class.
+
+Syntax analyser:Is a process of confirming the rules and structure of a formal grammar.
+
+Token:          Is a sequence of character that represents a unit.
+
+use case:       This is a way a system can be used to achieve a task
