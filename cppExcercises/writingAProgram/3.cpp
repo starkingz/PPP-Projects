@@ -30,7 +30,7 @@ Name_value get()
                 case '2': 
                 case '3': 
                 case '4': case '5': case '6': case '7': case '8': case '9':
-                error("Name can't start with a value");
+                        error("Name can't start with a digit");
                 break;
 
                 default:
@@ -57,12 +57,15 @@ int main()
 try {
         int len;
 
+        cout << "Please enter names and scores. \n"
+             << "Enter 'NoName 0' to print Names & scores.\n"
+             << "Enter 'quit 0' to kill/end processes.\n";
         while (cin)
         {
                 Name_value v = get();
                 len = ns.size();
 
-                if (v.name == "quit" || v.name == "q")
+                if (v.name == "quit" && v.value == 0)
                         break;
                 if (v.name == "NoName" && v.value == 0)
                 {
