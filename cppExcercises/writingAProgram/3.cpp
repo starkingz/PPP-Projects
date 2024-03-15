@@ -13,7 +13,7 @@ class Name_value {
                 : name(n), value(v) {}
 };
 
-vector <Name_value> ns;
+vector <Name_value> ns; // stores sequence of names and values
 
 Name_value get()
 {
@@ -24,7 +24,8 @@ Name_value get()
         
         switch (n)
         {
-                case '.': 
+                case '.':
+                case '0': 
                 case '1': 
                 case '2': 
                 case '3': 
@@ -34,7 +35,7 @@ Name_value get()
 
                 default:
                 {
-                        cin.putback(n);
+                        cin.putback(n); // put name char back into istream
                         cin >> name;
                 }
         }
@@ -60,6 +61,7 @@ try {
         {
                 Name_value v = get();
                 len = ns.size();
+
                 if (v.name == "quit" || v.name == "q")
                         break;
                 if (v.name == "NoName" && v.value == 0)
