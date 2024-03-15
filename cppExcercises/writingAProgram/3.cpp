@@ -18,20 +18,38 @@ vector <Name_value> ns;
 Name_value get()
 {
         int len;
-        string n;
+        char n;
         cin >> n;
-        int v;
-        cin >> v;
+        string name;
+        
+        switch (n)
+        {
+                case '.': 
+                case '1': 
+                case '2': 
+                case '3': 
+                case '4': case '5': case '6': case '7': case '8': case '9':
+                error("Name can't start with a value");
+                break;
+
+                default:
+                {
+                        cin.putback(n);
+                        cin >> name;
+                }
+        }
+        int val;
+        cin >> val;
         if (!cin)
-                error("Couldn't read the input");
+                error("couldn't read the input");
 
         len = ns.size();
         for (int i = 0; i < len; i++)
         {
-                if (n == ns[i].name)
+                if (name == ns[i].name)
                         error("Name already exists");
         }
-        return Name_value(n, v);
+        return Name_value(name, val);
 }
 
 int main()
