@@ -27,6 +27,36 @@ void init()
 
 }
 
+bool is_noun()
+{
+        string s;
+        cin >> s;
+        int len = 0;
+
+        len = noun.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (s == noun[i])
+                        return true;
+        }
+        // return false;
+}
+
+bool is_verb()
+{
+        string s;
+        cin >> s;
+        int len = 0;
+
+        len = verb.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (s == verb[i])
+                        return true;
+        }
+        // return false;
+}
+
 bool is_sentence()
 {
         if (!is_noun())
