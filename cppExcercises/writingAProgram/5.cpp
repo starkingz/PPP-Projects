@@ -6,7 +6,7 @@
 
 vector <string> noun;
 vector <string> verb;
-vector <string> conj;
+vector <string> conju;
 
 void init()
 {
@@ -21,9 +21,9 @@ void init()
         verb.push_back("swim");
 
         // put words into conj
-        conj.push_back("and");
-        conj.push_back("or");
-        conj.push_back("but");
+        conju.push_back("and");
+        conju.push_back("or");
+        conju.push_back("but");
 
 }
 
@@ -39,7 +39,7 @@ bool is_noun()
                 if (s == noun[i])
                         return true;
         }
-        // return false;
+        return false;
 }
 
 bool is_verb()
@@ -54,23 +54,44 @@ bool is_verb()
                 if (s == verb[i])
                         return true;
         }
-        // return false;
+        return false;
+}
+bool is_sentence();
+
+bool is_conju()
+{
+        char dot;
+        cin >> dot;
+        if (dot == '.')
+                return true;
+
+        string s;
+        cin.putback(dot);
+        cin >> s;
+        int len = 0;
+
+        len = conju.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (s == conju[i])
+                {
+                        if (is_sentence())
+                                return true;
+                }
+        }
+        return false;
+
 }
 
 bool is_sentence()
 {
-        if (!is_noun())
-                return false;
-        if (!is_verb())
-                return false;
-
-        string dot;
-        cin >> dot;
-        if (dot == ".")
-                return true;
-        if (!is_conj())
-                return false;
-        // return true;
+                if (!is_noun())
+                        return false;
+                if (!is_verb())
+                        return false;
+                if (is_conju())
+                        return true;
+        return false;
 }
 
 int main()
@@ -80,15 +101,15 @@ int main()
         bool ok {false};
 
         while (cin) {
-                if (sen == ".")
-                        ok = true;
-                if (sen == "|")
+                ok = is_sentence();
+                if (ok == true)
+                        cout << "OK\n";
+                else
                 {
-                        if (ok == true)
-                                cout << "OK\n";
-                        else
-                                cout << "not OK\n";
+                        cout << "not OK\n";
+                        break;
                 }
+                continue;
         }
         return 0;
 }
