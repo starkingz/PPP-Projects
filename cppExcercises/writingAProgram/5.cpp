@@ -27,6 +27,7 @@ void init()
 
 }
 
+// deal with noun
 bool is_noun()
 {
         string s;
@@ -42,6 +43,7 @@ bool is_noun()
         return false;
 }
 
+// deal with verb
 bool is_verb()
 {
         string s;
@@ -58,26 +60,20 @@ bool is_verb()
 }
 bool is_sentence();
 
+// deal with conjunction
 bool is_conju()
 {
-        char dot;
-        cin >> dot;
-        if (dot == '.')
-                return true;
-
         string s;
-        cin.putback(dot);
         cin >> s;
         int len = 0;
 
+        if (s == ".")
+                return true;
         len = conju.size();
         for (int i = 0; i < len; i++)
         {
                 if (s == conju[i])
-                {
-                        if (is_sentence())
-                                return true;
-                }
+                        return is_sentence();
         }
         return false;
 
@@ -97,19 +93,15 @@ bool is_sentence()
 int main()
 {
         init();
-        string sen;
-        bool ok {false};
 
+        cout << "Enter a sentence of the simplified grammar (terminated by a dot): \n";
         while (cin) {
-                ok = is_sentence();
-                if (ok == true)
+                bool ok = is_sentence();
+                if (ok)
                         cout << "OK\n";
                 else
-                {
                         cout << "not OK\n";
-                        break;
-                }
-                continue;
+                cout << "Try again: \n";
         }
         return 0;
 }
