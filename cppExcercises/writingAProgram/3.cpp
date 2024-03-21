@@ -47,8 +47,8 @@ Name_value get()
         len = ns.size();
         for (int i = 0; i < len; i++)
         {
-                if (name == ns[i].name)
-                        error("Name already exists");
+                if (name == ns[i].name) // check for duplicates
+                        error("Name already exists, ", name);
         }
         return Name_value(name, val);
 }
@@ -71,8 +71,8 @@ try {
                 {
                         for (int i = 0; i < len; i++)
                         {
-                                cout << ns[i].name << endl
-                                     << ns[i].value << endl;
+                                cout << "(" << ns[i].name << ', '
+                                     << ns[i].value << ")" << endl;
                         }
                 }
                 else
