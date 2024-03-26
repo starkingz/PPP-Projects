@@ -1,5 +1,5 @@
 // Chapter 6 - Writing a program
-// Exercise 5
+// Exercise 6
 // Date: 15.03.2024
 
 #include "../../std_lib_facilities.h"
