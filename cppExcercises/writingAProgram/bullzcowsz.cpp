@@ -132,3 +132,21 @@ Game_counts fourth()
         }
         return Game_counts(count.bullz, count.cowz);
 }
+
+/**
+ * main - read sequence of char from input and send for parsing
+ * 
+ * Return: Always 0 (success)
+*/
+int main()
+{
+        init();
+
+        while (cin)
+        {
+                Game_counts count = fth();
+                cout << count.bullz << " bulls and " << count.cowz << " cows\n";
+        }
+        
+        return 0;
+}
