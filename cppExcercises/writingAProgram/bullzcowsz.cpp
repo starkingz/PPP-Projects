@@ -48,7 +48,8 @@ Game_counts first()
 {
         char usg;
         cin >> usg;
-        Game_counts count;
+        int bc = 0;
+        int cc = 0;
 
         int len = comg.size();
         for (int i = 0; i < len; i++)
@@ -56,12 +57,12 @@ Game_counts first()
                 if (usg == comg[i])
                 {
                         if (i == 0)
-                                ++count.bullz;
+                                ++bc;
                         else
-                                ++count.cowz;
+                                ++cc;
                 }
         }
-        return Game_counts(count.bullz, count.cowz);
+        return Game_counts(bc, cc);
 }
 
 /**
