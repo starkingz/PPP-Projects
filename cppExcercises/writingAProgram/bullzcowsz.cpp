@@ -104,7 +104,7 @@ Game_counts third()
         int len = comg.size();
         for (int i = 0; i < len; i++)
         {
-                if (usg == comg[i]);
+                if (usg == comg[i])
                 {
                         if (i == 3)
                                 ++count.bullz;
