@@ -2,6 +2,12 @@
 // Exercise 8
 // Date: 26.03.2024
 
+/**
+ * From the book "principles and practices using c++ by Bjarne Stroustrup"     
+ * Redo the “Bulls and Cows” game from exercise 12 in Chapter 5 to usen
+ * four letters rather than four digits.
+*/
+
 //Making a prototype of the program
 #include "../../std_lib_facilities.h" //external header file
 
@@ -144,7 +150,7 @@ int main()
 
         while (cin)
         {
-                Game_counts count = fth();
+                Game_counts count = fourth();
                 cout << count.bullz << " bulls and " << count.cowz << " cows\n";
         }
         
