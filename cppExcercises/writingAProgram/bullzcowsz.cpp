@@ -106,7 +106,7 @@ Game_counts third()
         {
                 if (usg == comg[i])
                 {
-                        if (i == 3)
+                        if (i == 2)
                                 ++count.bullz;
                         else
                                 ++count.cowz;
