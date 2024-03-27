@@ -82,3 +82,28 @@ Game_counts second()
         }
         return Game_counts(count.bullz, count.cowz);
 }
+
+/**
+ * third - read third char input from the user/console
+ * 
+ * Return: void
+*/
+Game_counts third()
+{
+        Game_counts count = second();
+        char usg;
+        cin >> usg;
+
+        int len = comg.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (usg == comg[i]);
+                {
+                        if (i == 3)
+                                ++count.bullz;
+                        else
+                                ++count.cowz;
+                }
+        }
+        return Game_counts(count.bullz, count.cowz)
+}
