@@ -32,3 +32,28 @@ void init()
         comg.push_back('c');
         comg.push_back('d');
 }
+
+/**
+ * first - read first char input by user
+ * 
+ * Return: void
+*/
+Game_counts first()
+{
+        char usg;
+        cin >> usg;
+        Game_counts count;
+
+        int len = comg.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (usg == comg[i])
+                {
+                        if (i == 0)
+                                ++count.bullz;
+                        else
+                                ++count.cowz;
+                }
+        }
+        return Game_counts(count.bullz, count.cowz);
+}
