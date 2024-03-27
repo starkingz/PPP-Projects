@@ -111,7 +111,7 @@ Game_counts third()
                                 ++count.cowz;
                 }
         }
-        return Game_counts(count.bullz, count.cowz)
+        return Game_counts(count.bullz, count.cowz);
 }
 
 /**
