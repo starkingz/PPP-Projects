@@ -92,7 +92,7 @@ Game_counts third()
 {
         Game_counts count = second();
         char usg;
-        cin >> usg;
+        cin >> usg;     // get the next char from istream
 
         int len = comg.size();
         for (int i = 0; i < len; i++)
@@ -106,4 +106,29 @@ Game_counts third()
                 }
         }
         return Game_counts(count.bullz, count.cowz)
+}
+
+/**
+ * fourth - read fourth char input from user / console
+ * 
+ * Return: void
+*/
+Game_counts fourth()
+{
+        Game_counts count = third();
+        char usg;
+        cin >> usg;
+
+        int len = comg.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (usg == comg[i])
+                {
+                        if (i == 3)
+                                ++count.bullz;
+                        else
+                                ++count.cowz;
+                }
+        }
+        return Game_counts(count.bullz, count.cowz);
 }
