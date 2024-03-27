@@ -57,3 +57,28 @@ Game_counts first()
         }
         return Game_counts(count.bullz, count.cowz);
 }
+
+/**
+ * second - read second char input from the user/console
+ * 
+ * Return: void
+*/
+Game_counts second()
+{
+        Game_counts count = first();
+        char usg;
+        cin >> usg;     // get the next input from istream
+
+        int len = comg.size();
+        for (int i = 0; i < len; i++)
+        {
+                if (usg == comg[i])
+                {
+                        if (i == 1)
+                                ++count.bullz;
+                        else
+                                ++count.cowz;
+                }
+        }
+        return Game_counts(count.bullz, count.cowz);
+}
