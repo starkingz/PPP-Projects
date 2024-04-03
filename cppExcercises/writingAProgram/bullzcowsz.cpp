@@ -4,7 +4,7 @@
 
 /**
  * From the book "principles and practices using c++ by Bjarne Stroustrup"     
- * Redo the “Bulls and Cows” game from exercise 12 in Chapter 5 to usen
+ * Redo the “Bulls and Cows” game from exercise 12 in Chapter 5 to use
  * four letters rather than four digits.
 */
 
@@ -26,6 +26,8 @@ class Game_counts
 
 vector <char> comg;     // store computer guesses
 
+void do_not_repeat();
+
 /**
  * init - put computer guesses into comg vector
  * 
@@ -33,10 +35,60 @@ vector <char> comg;     // store computer guesses
 */
 void init()
 {
-        comg.push_back('a');
-        comg.push_back('b');
-        comg.push_back('c');
-        comg.push_back('d');
+        // comg.push_back('a');
+        // comg.push_back('b');
+        // comg.push_back('c');
+        // comg.push_back('d');
+        int i = 0;
+        comg.clear();
+        srand(time(NULL));
+        for (i = 0; i < 4; i++)
+        {
+                int cr = rand();
+                char cc = 'a' + rand() % 25;
+                cout << "Rand(): " << cr << ", ";
+                cout << "\nRand()Alph: " << cc << endl;
+                comg.push_back(cc);
+        }
+
+        do_not_repeat();
+}
+
+void do_not_repeat()
+{
+        int j = 0;
+        int k = 0;
+        while (true)
+        {
+                if (j == k)
+                        j++;
+                if (comg[k] == comg[j])
+                {
+                        init();
+                }
+                        j++;
+                if (j == 4)
+                {
+                        j = 0;
+                        k++;
+                }
+                if (k == 3)
+                        break;
+        }
+}
+/**
+ * is_letter - check if input is a letter or not
+ * 
+ * Return: 1 or 0
+*/
+bool is_letter(char u)
+{
+        for (int i = 'A'; i <= 'z'; i++)
+        {
+                if (u == i && !(u > 'Z' && u < 'a'))    // check that input is between a-z & A-Z only
+                        return 1;
+        }
+        return 0;
 }
 
 /**
@@ -50,6 +102,9 @@ Game_counts first()
         cin >> usg;
         int bc = 0;
         int cc = 0;
+        
+        if (!is_letter(usg))
+                error("Input not a letter");
 
         int len = comg.size();
         for (int i = 0; i < len; i++)
@@ -76,6 +131,9 @@ Game_counts second()
         char usg;
         cin >> usg;     // get the next input from istream
 
+        if (!is_letter(usg))
+                error("Input not a letter");
+
         int len = comg.size();
         for (int i = 0; i < len; i++)
         {
@@ -101,6 +159,9 @@ Game_counts third()
         char usg;
         cin >> usg;     // get the next char from istream
 
+        if (!is_letter(usg))
+                error("Input not a letter");
+
         int len = comg.size();
         for (int i = 0; i < len; i++)
         {
@@ -114,7 +175,7 @@ Game_counts third()
         }
         return Game_counts(count.bullz, count.cowz);
 }
-
+bool is_letter(char u);
 /**
  * fourth - read fourth char input from user / console
  * 
@@ -126,6 +187,12 @@ Game_counts fourth()
         char usg;
         cin >> usg;
 
+        if (!is_letter(usg))
+                error("Input not a letter");
+                
+        char uu;
+        if (cin >> uu && uu != '|')     // check if length of input is greater than 4
+                error("Length of input is more than 4");
         int len = comg.size();
         for (int i = 0; i < len; i++)
         {
@@ -148,11 +215,12 @@ Game_counts fourth()
 int main()
 {
         init();
-
         while (cin)
         {
                 Game_counts count = fourth();
                 cout << count.bullz << " bulls and " << count.cowz << " cows\n";
+                if (count.bullz == 4)
+                        init();
         }
         
         return 0;
