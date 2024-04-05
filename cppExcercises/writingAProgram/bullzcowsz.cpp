@@ -58,22 +58,18 @@ void do_not_repeat()
 {
         int j = 0;
         int k = 0;
-        while (true)
+        while (k != 3)
         {
                 if (j == k)
                         j++;
                 if (comg[k] == comg[j])
-                {
                         init();
-                }
-                        j++;
+                j++;
                 if (j == 4)
                 {
                         j = 0;
                         k++;
                 }
-                if (k == 3)
-                        break;
         }
 }
 /**
