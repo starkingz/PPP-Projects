@@ -236,6 +236,7 @@ Game_counts fourth()
  * Return: Always 0 (success)
 */
 int main()
+try
 {
         init();
         cout << "=========== Bulls and Cows guessing game ==========\n";
@@ -250,6 +251,24 @@ int main()
                 if (count.bullz == 4)
                         init();
         }
-        
+        keep_window_open("~");
         return 0;
+}
+catch (runtime_error& e)
+{
+        cerr << e.what() << endl;
+        keep_window_open("~");
+        return 1;
+}
+catch (exception& e)
+{
+        cerr << e.what << endl;
+        keep_window("~");
+        return 2;
+}
+catch (...)
+{
+        cerr << "Oops! Something went wrong!\n";
+        keep_window("~");
+        return 3;
 }
