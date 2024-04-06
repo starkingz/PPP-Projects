@@ -25,9 +25,9 @@ class Game_counts
 };
 
 vector <char> comg;     // store computer guesses
-vector <char> usergs;   // store user guesses
+vector <char> userg;   // store user guesses
 
-void do_not_repeat();   // Make sure computer gueses do not repeat
+void not_repeat();   // Make sure computer gueses do not repeat
 
 /**
  * init - put computer guesses into comg vector
@@ -41,7 +41,9 @@ void init()
         // comg.push_back('c');
         // comg.push_back('d');
         int i = 0;
+        // clear values in vectors when init() is called
         comg.clear();
+        userg.clear();
         srand(time(NULL));
         for (i = 0; i < 4; i++)
         {
@@ -52,14 +54,14 @@ void init()
                 comg.push_back(cc);
         }
 
-        do_not_repeat();
+        not_repeat();
 }
 
 /**
  * do_not_repeat - Do not repeat computer guesses
  * Return: void
 */
-void do_not_repeat()
+void not_repeat()
 {
         int j = 0;
         int k = 0;
@@ -77,6 +79,22 @@ void do_not_repeat()
                 }
         }
 }
+
+/**
+ * is_duplicate - print error to the screen if user inputs same letter twice
+*/
+void is_duplicate(char c)
+{
+        int len = userg.size();
+
+        for (int i = 0; i < len; i++)
+        {
+                if (c == userg[i])
+                        error("Duplicate, ", c);
+        }
+        userg.push_back(c);
+}
+
 /**
  * is_letter - check if input is a letter or not
  * 
@@ -103,6 +121,7 @@ Game_counts first()
         cin >> usg;
         int bc = 0;
         int cc = 0;
+        userg.push_back(usg);
         
         if (!is_letter(usg))
                 error("Input not a letter");
@@ -132,6 +151,7 @@ Game_counts second()
         char usg;
         cin >> usg;     // get the next input from istream
 
+        is_duplicate(usg);  // check if usg is a duplicate
         if (!is_letter(usg))
                 error("Input not a letter");
 
@@ -160,6 +180,7 @@ Game_counts third()
         char usg;
         cin >> usg;     // get the next char from istream
 
+        is_duplicate(usg);  // check if usg is a duplicate
         if (!is_letter(usg))
                 error("Input not a letter");
 
@@ -188,6 +209,7 @@ Game_counts fourth()
         char usg;
         cin >> usg;
 
+        is_duplicate(usg);  // check if usg is a duplicate
         if (!is_letter(usg))
                 error("Input not a letter");
                 
