@@ -43,7 +43,7 @@ void init()
         int i = 0;
         // clear values in vectors when init() is called
         comg.clear();
-        userg.clear();
+
         srand(time(NULL));
         for (i = 0; i < 4; i++)
         {
@@ -113,7 +113,7 @@ bool is_letter(char u)
 /**
  * first - read first char input by user
  * 
- * Return: void
+ * Return: counts of bullz and cowz
 */
 Game_counts first()
 {
@@ -121,6 +121,8 @@ Game_counts first()
         cin >> usg;
         int bc = 0;
         int cc = 0;
+
+        userg.clear();  // clear all values stored in value
         userg.push_back(usg);
         
         if (!is_letter(usg))
@@ -143,7 +145,7 @@ Game_counts first()
 /**
  * second - read second char input from the user/console
  * 
- * Return: void
+ * Return: counts of bullz and cowz
 */
 Game_counts second()
 {
@@ -172,7 +174,7 @@ Game_counts second()
 /**
  * third - read third char input from the user/console
  * 
- * Return: void
+ * Return: counts of bullz and cowz
 */
 Game_counts third()
 {
@@ -201,7 +203,7 @@ bool is_letter(char u);
 /**
  * fourth - read fourth char input from user / console
  * 
- * Return: void
+ * Return: counts of bullz and cowz
 */
 Game_counts fourth()
 {
@@ -249,7 +251,11 @@ try
                 Game_counts count = fourth();
                 cout << count.bullz << " bulls and " << count.cowz << " cows\n";
                 if (count.bullz == 4)
+                {
+                        cout << "*************** WELL DONE ***************\n";
+                        cout << "NEW GAME ->\n";
                         init();
+                }
         }
         keep_window_open("~");
         return 0;
@@ -262,13 +268,13 @@ catch (runtime_error& e)
 }
 catch (exception& e)
 {
-        cerr << e.what << endl;
-        keep_window("~");
+        cerr << e.what() << endl;
+        keep_window_open("~");
         return 2;
 }
 catch (...)
 {
         cerr << "Oops! Something went wrong!\n";
-        keep_window("~");
+        keep_window_open("~");
         return 3;
 }
