@@ -25,8 +25,9 @@ class Game_counts
 };
 
 vector <char> comg;     // store computer guesses
+vector <char> usergs;   // store user guesses
 
-void do_not_repeat();
+void do_not_repeat();   // Make sure computer gueses do not repeat
 
 /**
  * init - put computer guesses into comg vector
@@ -44,16 +45,20 @@ void init()
         srand(time(NULL));
         for (i = 0; i < 4; i++)
         {
-                int cr = rand();
+                // int cr = rand();
                 char cc = 'a' + rand() % 25;
-                cout << "Rand(): " << cr << ", ";
-                cout << "\nRand()Alph: " << cc << endl;
+                // cout << "Rand(): " << cr << ", ";
+                // cout << "\nRand()Alph: " << cc << endl;
                 comg.push_back(cc);
         }
 
         do_not_repeat();
 }
 
+/**
+ * do_not_repeat - Do not repeat computer guesses
+ * Return: void
+*/
 void do_not_repeat()
 {
         int j = 0;
@@ -211,8 +216,13 @@ Game_counts fourth()
 int main()
 {
         init();
+        cout << "=========== Bulls and Cows guessing game ==========\n";
+                cout << "============= Discover the hidden letters ============\n";
+                cout << "       Bulls == right guess, right position.\n";
+                cout << "       Cows == right guess, wrong position.\n\n";
         while (cin)
         {
+                cout <<  "Guess only four lowercase letters (from a-z): ";
                 Game_counts count = fourth();
                 cout << count.bullz << " bulls and " << count.cowz << " cows\n";
                 if (count.bullz == 4)
