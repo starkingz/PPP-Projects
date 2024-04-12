@@ -17,14 +17,20 @@
 class Place_value
 {
         public:
-                string word;
+                string unit;
                 int digit;
 
-                Place_value(string w, int d)
-                        :word(w), digit(d) {}
+                Place_value(string u, int d)
+                        :unit(u), digit(d) {}
 };
 
 vector <Place_value> pval;
+
+void get_digit(char c)
+{
+        if ((c < '0' || c > '9'))
+                error("Bad digit", c);
+}
 
 int ones(int val)
 {
@@ -41,21 +47,23 @@ int tens(int d, int n)
 
 int place()
 {
+        int count = 0;
         char c1;
         cin >> c1;
 
         int n = c1 - '0';
         int val = ones(n);
 
+        pval.clear();
         pval.push_back(Place_value("ones", val));
-        int count = 0;
+        get_digit(c1);  // check if digit is 0:9
 
         char c2;
-        while (cin >> c2)
+        while (cin >> c2 && c2 != '|')
         {
+                get_digit(c2);  // check if digit is 0:9
                 count++;
-                if (c2 == '|')
-                        break;
+
                 n = c2 - '0';
                 val = tens(val, n);
                 switch(count)
@@ -70,7 +78,7 @@ int place()
                         pval.push_back(Place_value("thousand", n));
                         break;
                         default:
-                        error("Can't provide more than a thousand place value");
+                        error("Sorry, cannot handle that many digits");
                 }
         }
 
@@ -78,23 +86,31 @@ int place()
 }
 
 int main()
+try
 {
         int d = 0;
-        cout << "Enter digits to get the place values: (end with '|')\n";
+        int len = 0;
+        cout << "Please enter an integer not more than 9: (end with '|')\n";
         while (cin)
         {
                 d = place();
                 cout << d << " is ";
-                int len = pval.size();
-                int count = len - 1;
-                for (int i = 0; i < len; i++)
+
+                len = pval.size() - 1;
+                for (int i = 0; i <= len; i++)
                 {
-                        cout << pval[i].digit << " " << pval[count--].word;
-                        if (i != len - 1)
+                        cout << pval[i].digit << " " << pval[len - i].unit;
+                        if (i != len)
                                 cout << " and ";
                         else
                                 cout << endl;
                 }
         }
-        
+        keep_window_open("~");
+}
+catch (runtime_error& e)
+{
+        cerr << e.what() << endl;
+        keep_window_open("~"); // to read error mess
+        return 1;
 }
