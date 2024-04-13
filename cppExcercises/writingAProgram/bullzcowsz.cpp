@@ -36,10 +36,6 @@ void not_repeat();   // Make sure computer gueses do not repeat
 */
 void init()
 {
-        // comg.push_back('a');
-        // comg.push_back('b');
-        // comg.push_back('c');
-        // comg.push_back('d');
         int i = 0;
         // clear values in vectors when init() is called
         comg.clear();
@@ -47,10 +43,7 @@ void init()
         srand(time(NULL));
         for (i = 0; i < 4; i++)
         {
-                // int cr = rand();
                 char cc = 'a' + rand() % 25;
-                // cout << "Rand(): " << cr << ", ";
-                // cout << "\nRand()Alph: " << cc << endl;
                 comg.push_back(cc);
         }
 
@@ -105,9 +98,9 @@ bool is_letter(char u)
         for (int i = 'A'; i <= 'z'; i++)
         {
                 if (u == i && !(u > 'Z' && u < 'a'))    // check that input is between a-z & A-Z only
-                        return 1;
+                        return true;
         }
-        return 0;
+        return false;
 }
 
 /**
