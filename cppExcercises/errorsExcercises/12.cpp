@@ -86,7 +86,7 @@ try
                                         if (userg[i] == comg[j])
                                         {
                                                 // ++knownval;
-                                                if (userg[i] == comg[i])
+                                                if (userg[i] == comg[i]) // if in same position
                                                         ++bullz;
                                                 else
                                                         ++cowz;
