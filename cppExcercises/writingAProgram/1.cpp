@@ -8,7 +8,7 @@
 class Token{
 public:
     char kind;        // what kind of token
-    double value;     // for numbers: a value 
+    double value;     // for numbers: a value
     Token(char ch)    // make a Token from a char
         :kind(ch), value(0) { }
     Token(char ch, double val)     // make a Token from a char and a double
@@ -84,7 +84,7 @@ Token Token_stream::get()
 
 //------------------------------------------------------------------------------
 
-Token_stream ts;        // provides get() and putback() 
+Token_stream ts;        // provides get() and putback()
 
 //------------------------------------------------------------------------------
 
@@ -101,11 +101,11 @@ double primary()
     switch (t.kind) {
     case '{':     // handle '{' expression '}'
     {
-        d = expression();  
+        d = expression();
         t = ts.get();
         if (t.kind != '}')
                 error("'}' expected");
-        return d;  
+        return d;
     }
     case '(':    // handle '(' expression ')'
     {
