@@ -21,13 +21,13 @@ double fact(int n)
 }
 
 /**
- * perm - return result of an ordered subset of set
+ * permutation - return result of an ordered subset of set
  * @a: number of objects
  * @b: object to be selected
  *
  * Return: result
  */
-double perm(int a, int b)
+double permutaion(int a, int b)
 {
 	int i;
 	int n = a - b;
@@ -37,17 +37,17 @@ double perm(int a, int b)
 }
 
 /**
- * comb - return result of un-ordered subset of set
+ * combination - return result of un-ordered subset of set
  * @a: number of objects
  * @b: object to be selected
  *
  * Return: result
  */
-double comb(int a, int b)
+double combination(int a, int b)
 {
 	double res = 1;
 
-	res = perm(a, b) / fact(b);
+	res = permutation(a, b) / fact(b);
 
 	return (res);
 }
@@ -72,9 +72,9 @@ int main()
 		cin >> res;
 
 		if (res == 'c')
-			result = comb(a, b);
+			result = combination(a, b);
 		else if (res == 'p')
-			result = perm(a, b);
+			result = permutation(a, b);
 		else
 			error("wrong response");
 	}
