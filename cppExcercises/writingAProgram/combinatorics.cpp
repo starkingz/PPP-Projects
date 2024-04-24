@@ -15,7 +15,7 @@ double fact(int n)
 	int i;
 	double res = 1;
 
-	if (n > 0)
+	if (n < 0)
 		error("overflow of number");
 	for (i = 1; i <= n; i++)
 		res *= i;
@@ -31,7 +31,6 @@ double fact(int n)
  */
 double permutation(int a, int b)
 {
-	int i;
 	int n = a - b;
 
 	double res = fact(a) / fact(n);
