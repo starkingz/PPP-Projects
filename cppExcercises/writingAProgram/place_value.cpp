@@ -90,7 +90,7 @@ try
 {
         int d = 0;
         int len = 0;
-        cout << "Please enter an integer not more than 9: (end with '|')\n";
+        cout << "Please enter an integer not more than 4 digits: (followed by '|')\n";
         while (cin)
         {
                 d = place();
