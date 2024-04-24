@@ -60,7 +60,7 @@ double combination(int a, int b)
  */
 int main()
 {
-	int a, b;
+	double a, b;
         double result = 0;
 
 	cout << "Please enter two numbers to calculate \n"
