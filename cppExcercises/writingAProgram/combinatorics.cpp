@@ -10,15 +10,16 @@
  *
  * Return: res
  */
-double fact(int n)
+double fact(double n)
 {
 	int i;
 	double res = 1;
-
-	if (n < 0)
-		error("overflow of number");
 	for (i = 1; i <= n; i++)
+	{
 		res *= i;
+		if (res <= 0)
+			error("Overflow");
+	}
 	return (res);
 }
 
@@ -29,11 +30,13 @@ double fact(int n)
  *
  * Return: result
  */
-double permutation(int a, int b)
+double permutation(double a, double b)
 {
 	int n = a - b;
 
 	double res = fact(a) / fact(n);
+	if (res < 0)
+		error("Overflow");
 	return (res);
 }
 
@@ -44,11 +47,13 @@ double permutation(int a, int b)
  *
  * Return: result
  */
-double combination(int a, int b)
+double combination(double a, double b)
 {
 	double res = 1;
 
 	res = permutation(a, b) / fact(b);
+	if (res < 0)
+		error("Overflow");
 
 	return (res);
 }
@@ -59,6 +64,7 @@ double combination(int a, int b)
  * Return: void
  */
 int main()
+try
 {
 	double a, b;
         double result = 0;
@@ -82,4 +88,16 @@ int main()
 			error("wrong response");
 	}
 	cout << result << endl;
+}
+catch (exception& e)
+{
+	cerr << e.what() << endl;
+	keep_window_open("~");
+	return 1;
+}
+catch (...)
+{
+	cerr << "Something went wrong\n";
+	keep_window_open("~");
+	return 2;
 }
