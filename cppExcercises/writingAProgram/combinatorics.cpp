@@ -17,7 +17,7 @@ double fact(double n)
 	for (i = 1; i <= n; i++)
 	{
 		res *= i;
-		if (res <= 0)
+		if (i == 171)
 			error("Overflow");
 	}
 	return (res);
@@ -32,11 +32,11 @@ double fact(double n)
  */
 double permutation(double a, double b)
 {
+	if (1 > b || 1 > a || b > a)
+		error("Wrong permutation sizes");
 	int n = a - b;
 
 	double res = fact(a) / fact(n);
-	if (res < 0)
-		error("Overflow");
 	return (res);
 }
 
@@ -52,8 +52,6 @@ double combination(double a, double b)
 	double res = 1;
 
 	res = permutation(a, b) / fact(b);
-	if (res < 0)
-		error("Overflow");
 
 	return (res);
 }
@@ -69,25 +67,38 @@ try
 	double a, b;
         double result = 0;
 
-	cout << "Please enter two numbers to calculate \n"
-	     << "Permutation or Combination: \n";
-	while (cin >> a >> b)
+	cout << "========== Calculate Permutation and Combination ==========\n"
+	     << "Please enter two positive numbers to calculate: ";
+	while(cin >> a >> b)
 	{
-		if (0 > b || b > a)
-			error("Invalid number");
-		cout << "Please specify your choice - Permutation(p) or Combination(c)"
-		     << "\nEnter (p or c) followed by any value: \n";
+		if (1 > a || 1 > b || b > a)
+			error ("Wrong sizes");
+
+		cout << "Please specify your choice, \n"
+		     << "'p' for Permutation while 'c' for Combination\n";
 		char resp;
 		cin >> resp;
 
 		if (resp == 'c' || resp == 'C')
+		{
 			result = combination(a, b);
+			cout << "C("<< a << "," << b << ") = " << result << endl;
+		}
 		else if (resp == 'p' || resp == 'P')
+		{
 			result = permutation(a, b);
+			cout << "P("<< a << "," << b << ") = " << result << endl;
+		}
 		else
 			error("wrong response");
+		cout << "Please enter two positive numbers to calculate: ";
 	}
-	cout << result << endl;
+       	if (!cin)
+	       	error("could'nt read two numbers");
+
+	keep_window_open("~");
+
+	return 0;
 }
 catch (exception& e)
 {
