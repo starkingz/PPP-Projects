@@ -125,17 +125,19 @@ double primary()
 //------------------------------------------------------------------------------
 
 // deal with !
-int factorial()
+double factorial()
 {
-        int left = primary();
+        double left = primary();
         Token t = ts.get();     // get the next token from token stream
 
+	int n = left;
         while (true)
         {
                 switch (t.kind) {
                         case '!':
                         {
-                                for (int i = left - 1; i >= 1; i--)
+				left = n;
+                                for (int i = n - 1; i >= 1; i--)
                                 {
                                         left *= i;
                                 }
