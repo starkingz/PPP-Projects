@@ -224,7 +224,7 @@ try
                 // '=' for "print now"
 		while (t.kind == '=')
 			t = ts.get(); // eat '='
-                if (t.kind == 'x')        // '=' for "print now"
+                if (t.kind == 'x')        // 'x' to "exit"
 		{
 			keep_window_open();
 			return 0;
