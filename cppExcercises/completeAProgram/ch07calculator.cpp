@@ -116,6 +116,10 @@ double primary()
     }
     case '8':            // we use '8' to represent a number
         return t.value;  // return the number's value
+    case '-':
+	    return -primary();	// handle negative number elegantly
+    case '+':
+	    return +primary();	// hangle positive number elegantly
     default:
         error("primary expected");
     }
