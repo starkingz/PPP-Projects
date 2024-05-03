@@ -5,7 +5,7 @@
 #include "../../std_lib_facilities.h" // external library
 
 /**
- * fact - multiplies a number by its sequence below it till 1
+ * fact - multiplies a number by its sequence below till 1 n(n-1)...
  * @n: positive number to factorise
  *
  * Return: res
