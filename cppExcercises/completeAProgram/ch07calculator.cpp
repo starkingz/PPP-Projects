@@ -228,7 +228,7 @@ try
 			t = ts.get(); // eat '='
                 if (t.kind == 'x')        // 'x' to "exit"
 		{
-			keep_window_open();
+			keep_window_open("~");
 			return 0;
 		}
                 ts.putback(t);
@@ -243,7 +243,7 @@ catch (exception& e) {
 }
 catch (...) {
     cerr << "Oops: unknown exception!\n";
-    keep_window_open();
+    keep_window_open("~~");
     return 2;
 }
 
