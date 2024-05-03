@@ -69,10 +69,10 @@ try
         double result = 0;
 
 	cout << "========== Calculate Permutation and Combination ==========\n"
-	     << "Please enter two positive numbers to calculate: ";
+	     << "Please enter two positive numbers to calculate\n";
 	while(cin)
 	{
-		cout << "Please enter two positive numbers to calculate: ";
+		cout << "> ";
 		cin >> a >> b;	// read two integers
 		if (1 > a || 1 > b || b > a)
 			error ("Wrong sizes");
