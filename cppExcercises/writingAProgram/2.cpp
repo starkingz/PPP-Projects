@@ -211,33 +211,28 @@ double expression()
 //------------------------------------------------------------------------------
 
 int main()
-try
-{
-        cout << "Welcome to our simple calculator.\n"
-             << "Please enter expressions using floating-point numbers.\n"
-             << "Available operators: '*', '/', '+', '-', '!'\n"
-             << "Enter '=' to print now or 'x' to quite program\n";
-        double val {0};
-        while (cin) {
-		cout << "> ";
-                Token t = ts.get();
+	try
+	{
+		cout << "Welcome to our simple calculator.\n"
+		     << "Please enter expressions using floating-point numbers.\n"
+		     << "Available operators: '*', '/', '+', '-', '!'\n"
+		     << "Enter '=' to print now or 'x' to quite program\n";
+		double val {0};
+		while (cin) {
+			Token t = ts.get();
 
-                // '=' for "print now"
-		while (t.kind == '=')
-			t = ts.get(); // eat '='
-                if (t.kind == 'x')        // 'x' to "exit"
-		{
-			keep_window_open();
-			return 0;
+			if (t.kind == 'x') break; // 'x' for quit
+			if (t.kind == '=')        // '=' for "print now"
+				cout << "=" << val << '\n';
+			else
+				ts.putback(t);
+			val = expression();
 		}
-                ts.putback(t);
-                cout << "= " << expression() << endl;
-        }
-        keep_window_open();
-}
+		keep_window_open();
+	}
 catch (exception& e) {
-    cerr << "error: " << e.what() << '\n';
-    keep_window_open("~~");
+    cerr << e.what() << '\n';
+    keep_window_open();
     return 1;
 }
 catch (...) {
