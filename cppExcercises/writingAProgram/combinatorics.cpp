@@ -12,13 +12,13 @@
  */
 double fact(double n)
 {
-	const int inf_num {171}	// factorial(171 and above) prints 'inf'
+	const int n_inf {171}	// factorial(171 and above) prints 'inf'
 	int i;
 	double res = 1;
 	for (i = 1; i <= n; i++)
 	{
 		res *= i;
-		if (i == inf_num)
+		if (i == n_inf)
 			error("Overflow");
 	}
 	return (res);
