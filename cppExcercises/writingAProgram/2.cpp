@@ -127,19 +127,20 @@ double primary()
 // deal with !
 double factorial()
 {
+	const int  inf_num {171}; // factorial(171) and above prints 'inf'
         double left = primary();
         Token t = ts.get();     // get the next token from token stream
 
-	int n = left;
         while (true)
         {
                 switch (t.kind) {
                         case '!':
                         {
-				left = n;
-                                for (int i = n - 1; i >= 1; i--)
+                                for (int i = left - 1; i >= 1; i--)
                                 {
-                                        left *= i;
+                                        left = int(left) * i; // truncate floating point values
+					if (i == inf_num)
+						error("factorial overflow");
                                 }
                                 if (left == 0)
                                         left = 1;
