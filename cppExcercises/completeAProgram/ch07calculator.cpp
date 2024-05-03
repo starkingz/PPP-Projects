@@ -217,7 +217,7 @@ try
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
              << "Enter '=' to print now or 'x' to quite program\n";
-        double val {0};
+
         while (cin) {
 		cout << "> ";
                 Token t = ts.get();
