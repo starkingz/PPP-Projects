@@ -102,7 +102,7 @@ try
 }
 catch (exception& e)
 {
-	cerr << e.what() << endl;
+	cerr << "error: " << e.what() << endl;
 	keep_window_open("~");
 	return 1;
 }
