@@ -12,7 +12,7 @@
  */
 double fact(double n)
 {
-	const int n_inf {171}	// factorial(171 and above) prints 'inf'
+	const int n_inf {171};	// factorial(171 and above) prints 'inf'
 	int i;
 	double res = 1;
 	for (i = 1; i <= n; i++)
@@ -70,8 +70,10 @@ try
 
 	cout << "========== Calculate Permutation and Combination ==========\n"
 	     << "Please enter two positive numbers to calculate: ";
-	while(cin >> a >> b)
+	while(cin)
 	{
+		cout << "Please enter two positive numbers to calculate: ";
+		cin >> a >> b;	// read two integers
 		if (1 > a || 1 > b || b > a)
 			error ("Wrong sizes");
 
@@ -92,7 +94,6 @@ try
 		}
 		else
 			error("wrong response");
-		cout << "Please enter two positive numbers to calculate: ";
 	}
        	if (!cin)
 	       	error("could'nt read two numbers");
