@@ -136,11 +136,12 @@ double factorial()
                 switch (t.kind) {
                         case '!':
                         {
+				left = int(left); // truncate floating point number to int
                                 for (int i = left - 1; i >= 1; i--)
                                 {
-                                        left = int(left) * i; // truncate floating point values
 					if (i == inf_num)
 						error("factorial overflow");
+                                        left = left * i;
                                 }
                                 if (left == 0)
                                         left = 1;
