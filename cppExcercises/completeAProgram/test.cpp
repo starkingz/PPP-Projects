@@ -5,16 +5,19 @@
 
 int main()
 {
-	double left = 0;
-	cout << "Enter two integers to calculate modulo: ";
-	double d = 0;
-	cin >> left >> d;
+	// double left = 0;
+	// cout << "Enter two integers to calculate modulo: ";
+	// double d = 0;
+	// cin >> left >> d;
 
-	int a1 = narrow_cast <int> (left);
-	int a2 = narrow_cast <int> (d);
+	// int a1 = narrow_cast <int> (left);
+	// int a2 = narrow_cast <int> (d);
 
-	left = a1 % a2;
+	// left = a1 % a2;
 
-	cout << "Result: " << left << endl;
-	return 0;
+	// cout << "Result: " << left << endl;
+	// return 0;
+
+	int a{2.9};
+	cout << a << endl;
 }
