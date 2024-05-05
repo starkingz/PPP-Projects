@@ -18,6 +18,6 @@ int main()
 	// cout << "Result: " << left << endl;
 	// return 0;
 
-	int a{2.9};
+	int a = narrow_cast <int> (2.9);
 	cout << a << endl;
 }
