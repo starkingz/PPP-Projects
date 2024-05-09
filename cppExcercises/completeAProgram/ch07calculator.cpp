@@ -229,6 +229,8 @@ double expression()
 int main()
 try
 {
+	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
+	const char print = '='; // t.kind==print means that t is a print Token
         cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
@@ -239,9 +241,9 @@ try
                 Token t = ts.get();
 
                 // '=' for "print now"
-		while (t.kind == '=')
+		while (t.kind == print)
 			t = ts.get(); // eat '='
-                if (t.kind == 'x')        // 'x' to "exit"
+                if (t.kind == quit)        // 'x' to "exit"
 		{
 			keep_window_open("~");
 			return 0;
