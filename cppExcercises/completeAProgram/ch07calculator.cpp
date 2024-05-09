@@ -59,6 +59,7 @@ Token Token_stream::get()
         return buffer;
     }
 
+    const char number = '8';
     char ch;
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
@@ -74,7 +75,7 @@ Token Token_stream::get()
         cin.putback(ch);         // put digit back into the input stream
         double val;
         cin >> val;              // read a floating-point number
-        return Token('8', val);   // let '8' represent "a number"
+        return Token(number, val);
     }
     default:
         error("Bad token");
@@ -95,6 +96,7 @@ double expression();    // declaration so that primary() can call expression()
 // deal with numbers and parentheses
 double primary()
 {
+	const char number = '8'; // t.kind means it a number Token
     double d = 0;
 
     Token t = ts.get();
@@ -114,7 +116,7 @@ double primary()
         if (t.kind != ')') error("')' expected");
             return d;
     }
-    case '8':            // we use '8' to represent a number
+    case number:
         return t.value;  // return the number's value
     case '-':
 	    return -primary();	// handle negative number elegantly
