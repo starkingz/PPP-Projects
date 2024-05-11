@@ -3,6 +3,11 @@
 
 #include "../../std_lib_facilities.h"
 
+/**
+ * main - test code
+ *
+ * Return: 0
+ */
 int main()
 {
 	// double left = 0;
