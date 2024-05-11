@@ -231,6 +231,7 @@ try
 {
 	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
 	const char print = '='; // t.kind==print means that t is a print Token
+
         cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
