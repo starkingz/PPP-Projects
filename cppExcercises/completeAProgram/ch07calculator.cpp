@@ -224,35 +224,39 @@ double expression()
     }
 }
 
+// -----------------------------------------------------------------------------
+void calculate()		// expression evaluation loop
+{
+	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
+	const char print = '='; // t.kind==print means that t is a print Token
+	const string prompt = "> ";
+	const string result = "= "; // used to indicate that what follows is result
+
+        while (cin) {
+		cout << prompt;
+                Token t = ts.get();
+
+		while (t.kind == print)
+			t = ts.get(); // first discard all "prints"
+                if (t.kind == quit)        // 'x' to "exit"
+			return;
+                ts.putback(t);
+                cout << result << expression() << endl;
+        }
+}
+
 //------------------------------------------------------------------------------
 
 int main()
 try
 {
-	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
-	const char print = '='; // t.kind==print means that t is a print Token
-
-        cout << "Welcome to our simple calculator.\n"
+	cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
              << "Enter '=' to print now or 'x' to quite program\n";
 
-        while (cin) {
-		cout << "> ";
-                Token t = ts.get();
-
-                // '=' for "print now"
-		while (t.kind == print)
-			t = ts.get(); // eat '='
-                if (t.kind == quit)        // 'x' to "exit"
-		{
-			keep_window_open("~");
-			return 0;
-		}
-                ts.putback(t);
-                cout << "= " << expression() << endl;
-        }
-        keep_window_open();
+	calculate();		// cope with windows console mode
+        keep_window_open("~");
 }
 catch (exception& e) {
     cerr << "error: " << e.what() << '\n';
