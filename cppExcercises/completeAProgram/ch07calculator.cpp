@@ -60,13 +60,24 @@ Token Token_stream::get()
     }
 
     const char number = '8';
+    const char print = '=';
+    const char quit = 'x';
     char ch;
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
     switch (ch) {
-    case '=':    // for "print"
-    case 'x':    // for "quit"
-    case '(': case ')': case '+': case '-': case '*': case '/': case '{': case '}': case '!': case '%':
+    case print:
+    case quit:
+    case '(':
+    case ')':
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+    case '{':
+    case '}':
+    case '!':
+    case '%':
         return Token(ch);        // let each character represent itself
     case '.':
     case '0': case '1': case '2': case '3': case '4':
@@ -92,6 +103,10 @@ Token_stream ts;        // provides get() and putback()
 double expression();    // declaration so that primary() can call expression()
 
 //------------------------------------------------------------------------------
+
+double factorial();		// declaration so that primary() can call factorial()
+
+// -----------------------------------------------------------------------------
 
 // deal with numbers and parentheses
 double primary()
@@ -119,7 +134,7 @@ double primary()
     case number:
         return t.value;  // return the number's value
     case '-':
-	    return -primary();	// handle negative number elegantly
+	    return -factorial();	// handle negative number elegantly
     case '+':
 	    return +primary();	// hangle positive number elegantly
     default:
@@ -130,10 +145,10 @@ double primary()
 
 //------------------------------------------------------------------------------
 
-// deal with !
+// deal with '!'
 double factorial()
 {
-	const int  print_inf {171}; // factorial(171) and above prints 'inf'
+	const int print_inf {171}; // factorial(171) and above prints 'inf'
         double left = primary();
         Token t = ts.get();     // get the next token from token stream
 
@@ -143,6 +158,8 @@ double factorial()
                         case '!':
                         {
 				left = int(left); // truncate floating point number to int
+				if (left < 0)
+					error("Undefined factorial");
                                 for (int i = left - 1; i >= 1; i--)
                                 {
 					if (i == print_inf)
@@ -257,6 +274,7 @@ try
 
 	calculate();		// cope with windows console mode
         keep_window_open("~");
+	return 0;
 }
 catch (exception& e) {
     cerr << "error: " << e.what() << '\n';
