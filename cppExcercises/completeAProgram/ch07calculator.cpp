@@ -134,9 +134,9 @@ double primary()
     case number:
         return t.value;  // return the number's value
     case '-':
-	    return -factorial();	// handle negative number elegantly
+	    return -factorial();	// handle negative number/factorial elegantly
     case '+':
-	    return +primary();	// hangle positive number elegantly
+	    return +primary();	// handle positive number elegantly
     default:
         error("primary expected");
     }
