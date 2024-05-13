@@ -1,6 +1,58 @@
 // Chapter 6 - Writing a program
 // Exercise 3
 // Date: 12.03.2024
+
+/*
+ * Simple calculator
+ *
+ * Revision history:
+ *********** Revised by Ohia Goodstar May 2024
+ *********** Revised by Bjarne Stroustrup November 2013
+ *********** Revised by Bjarne Stroustrup May 2007
+ *********** Revised by Bjarne Stroustrup August 2006
+ *********** Revised by Bjarne Stroustrup August 2004
+ *********** Originally writtten by Bjarned Stroustrup
+ ******************* (bs@cs.tamu.edu) spring 2004)
+ *
+ * This program implements a basic expression calculator.
+ * Input from cin; output to cout.
+ * The grammar for input is:
+ *
+ * Statement:
+ ** Expression
+ ** Print
+ ** Quit
+ *
+ * Print: =
+ * Quit: x
+ *
+ * Expression:
+ *** Term
+ *** Expression + Term
+ *** Expression - Term
+ *
+ * Term:
+ *** Factorial
+ *** Term * Factorial
+ *** Term / Factorial
+ *** Term % Factorial
+ *
+ * Factorial:
+ *** Primary
+ *** Factorial !
+ *
+ * Primary:
+ *** Number
+ *** '(' Expression ')'
+ *** - Factorial
+ *** + Primary
+ *
+ * Number:
+ *** floating-point-literal
+ *
+ * Input comes from cin through the Token_stream called ts.
+ */
+
 #include "../../std_lib_facilities.h"
 
 //------------------------------------------------------------------------------
