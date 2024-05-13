@@ -148,7 +148,7 @@ double primary()
 // deal with '!'
 double factorial()
 {
-	const int print_inf {171}; // factorial(171) and above prints 'inf'
+	const int print_inf {170}; // factorial(171) and above prints 'inf'
         double left = primary();
         Token t = ts.get();     // get the next token from token stream
 
@@ -158,8 +158,6 @@ double factorial()
                         case '!':
                         {
 				left = int(left); // truncate floating point number to int
-				if (left < 0)
-					error("Undefined factorial");
                                 for (int i = left - 1; i >= 1; i--)
                                 {
 					if (i == print_inf)
