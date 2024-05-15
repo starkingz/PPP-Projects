@@ -292,6 +292,17 @@ double expression()
 }
 
 // -----------------------------------------------------------------------------
+void clean_up_mess()
+{
+	const char print = '=';
+
+	while (true) {
+		Token t = ts.get();
+		if (t.kind == print)
+			return;
+	}
+}
+// -----------------------------------------------------------------------------
 void calculate()		// expression evaluation loop
 {
 	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
@@ -299,7 +310,8 @@ void calculate()		// expression evaluation loop
 	const string prompt = "> ";
 	const string result = "= "; // used to indicate that what follows is result
 
-        while (cin) {
+        while (cin)
+	try {
 		cout << prompt;
                 Token t = ts.get();
 
@@ -310,6 +322,10 @@ void calculate()		// expression evaluation loop
                 ts.putback(t);
                 cout << result << expression() << endl;
         }
+	catch(exception& e) {
+		cerr << e.what() << '\n';
+		clean_up_mess();
+	}
 }
 
 //------------------------------------------------------------------------------
