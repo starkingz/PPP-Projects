@@ -16,6 +16,8 @@ struct Token {
 		:kind(ch), value(0) { }
 	Token(char ch, double val)
 		:kind(ch), value(val) { }
+	Token(char ch, string n)
+		:kind(ch), name(n) { }
 };
 
 class Token_stream {
@@ -121,7 +123,8 @@ vector<Variable> names;
 
 double get_value(string s)
 {
-	for (int i = 0; i < names.size(); ++i) {
+	int len = names.size();
+	for (int i = 0; i < len; ++i) {
 		if (names[i].name == s)
 			return names[i].value;
 	}
@@ -130,7 +133,8 @@ double get_value(string s)
 
 void set_value(string s, double d)
 {
-	for (int i = 0; i <= names.size(); ++i)
+	int len = names.size();
+	for (int i = 0; i <= len; ++i)
 		if (names[i].name == s) {
 			names[i].value = d;
 			return;
@@ -140,7 +144,8 @@ void set_value(string s, double d)
 
 bool is_declared(string s)
 {
-	for (int i = 0; i < names.size(); ++i)
+	int len = names.size();
+	for (int i = 0; i < len; ++i)
 	{
 		if (names[i].name == s)
 			return true;
@@ -162,6 +167,7 @@ double primary()
 	       	t = ts.get();
        		if (t.kind != ')')
 			error("'(' expected");
+		return d;
 	}
 	case '-':
 		return -primary();
