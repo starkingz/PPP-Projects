@@ -93,6 +93,7 @@ Token Token_stream::get()
 			return Token(name, s);
 		}
 		error("Bad token");
+		return 0;
 	}
 }
 
@@ -129,6 +130,7 @@ double get_value(string s)
 			return names[i].value;
 	}
 	error("get: undefined name ", s);
+	return 0;
 }
 
 void set_value(string s, double d)
@@ -171,12 +173,15 @@ double primary()
 	}
 	case '-':
 		return -primary();
+	case '+':
+		return +primary();
 	case number:
 		return t.value;
 	case name:
 		return get_value(t.name);
 	default:
 		error("primary expected");
+		return 0;
 	}
 }
 
