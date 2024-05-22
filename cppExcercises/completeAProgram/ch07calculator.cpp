@@ -74,6 +74,7 @@ public:
     // Token_stream();   // make a Token_stream that reads from cin
     Token get();      // get a Token (get() is defined elsewhere)
     void putback(Token t);    // put a Token back
+	void ignore(char c);  // discard character up to and including a c
 
     Token_stream()
         :full(false), buffer(0) {}
@@ -103,6 +104,11 @@ void Token_stream::putback(Token t)
 
 //------------------------------------------------------------------------------
 
+// keywords
+const char number = '8'; // t.kind means it a number Token
+const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
+const char print = '='; // t.kind==print means that t is a print Token
+
 Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
@@ -111,9 +117,6 @@ Token Token_stream::get()
         return buffer;
     }
 
-    const char number = '8';
-    const char print = '=';
-    const char quit = 'x';
     char ch;
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
@@ -145,6 +148,26 @@ Token Token_stream::get()
         return 0;
     }
 }
+// -----------------------------------------------------------------------------
+
+void Token_stream::ignore(char c) // c represents the kind of Token
+{
+	// first look in the buffer
+	if (full && c == buffer.kind) {
+		full = false;
+		return;
+	}
+
+	full = false;
+
+	// now search input:
+	char ch = 0;
+
+	while (cin >> ch) {
+		if (ch == c)
+			return;
+	}
+}
 
 //------------------------------------------------------------------------------
 
@@ -163,7 +186,6 @@ double factorial();		// declaration so that primary() can call factorial()
 // deal with numbers and parentheses
 double primary()
 {
-	const char number = '8'; // t.kind means it a number Token
     double d = 0;
 
     Token t = ts.get();
@@ -294,22 +316,15 @@ double expression()
 // -----------------------------------------------------------------------------
 void clean_up_mess()
 {
-	const char print = '=';
-
-	while (true) {
-		Token t = ts.get();
-		if (t.kind == print)
-			return;
-	}
+	ts.ignore(print);
 }
+// -----------------------------------------------------------------------------
+
+const string prompt = "> "; // indicate the program is asking for an input
+const string result = "= "; // used to indicate that what follows is result
 // -----------------------------------------------------------------------------
 void calculate()		// expression evaluation loop
 {
-	const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
-	const char print = '='; // t.kind==print means that t is a print Token
-	const string prompt = "> ";
-	const string result = "= "; // used to indicate that what follows is result
-
         while (cin)
 	try {
 		cout << prompt;
