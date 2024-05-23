@@ -6,8 +6,11 @@
   We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
 
-#include "../../std_lib_facilities.h"
+#include "../../std_lib_facilities.h" // external library
 
+/**
+ * Token: Read sequence of character and number
+ */
 struct Token {
 	char kind;
 	double value;
@@ -36,12 +39,18 @@ public:
 	void ignore(char);
 };
 
+// keywords
 const char let = 'L';
 const char quit = 'Q';
 const char print = ';';
 const char number = '8';
 const char name = 'a';
 
+/**
+ * get: Read input and store its corresponding value in Token
+ *
+ * Return: Token(ch) or Token(number, val)
+ */
 Token Token_stream::get()
 {
 	if (full) {
@@ -52,6 +61,8 @@ Token Token_stream::get()
 	char ch;
 	cin >> ch;
 	switch (ch) {
+	case print:
+	case quit:
 	case '(':
 	case ')':
 	case '+':
@@ -59,8 +70,6 @@ Token Token_stream::get()
 	case '*':
 	case '/':
 	case '%':
-	case print:
-	case quit:
 	case '=':
 		return Token(ch);
 	case '.':
@@ -75,17 +84,17 @@ Token Token_stream::get()
 	case '8':
 	case '9':
 	{
-		cin.unget();
+		cin.unget();	// put input back to input stream
 		double val;
 	       	cin >> val;
-       		return Token(number, val);
+       		return Token(number, val + 0);
 	}
 	default:
 		if (isalpha(ch)) {
 			string s;
 			s += ch;
 			while (cin.get(ch) && (isalpha(ch) || isdigit(ch)))
-				s = ch;
+				s += ch;
 			cin.unget();
 			if (s == "let")
 				return Token(let);
@@ -131,7 +140,7 @@ double get_value(string s)
 			return names[i].value;
 	}
 	error("get: undefined name ", s);
-	return 0;
+	// return 0;
 }
 
 void set_value(string s, double d)
@@ -160,9 +169,14 @@ Token_stream ts;
 
 double expression();
 
+/**
+ * primary - deal with '(' Expression ')'
+ *
+ * Return: Token(val) or d
+ */
 double primary()
 {
-	Token t = ts.get();
+	Token t = ts.get();	// read Token from stdin stream
 	switch (t.kind) {
 	case '(':
 	{
@@ -186,11 +200,16 @@ double primary()
 	}
 }
 
+/**
+ * term - deal with '*', '/' and '%'
+ *
+ * Return result
+ */
 double term()
 {
 	double left = primary();
 	while (true) {
-		Token t = ts.get();
+		Token t = ts.get(); // read next Token from input stream
 		switch (t.kind) {
 		case '*':
 			left *= primary();
@@ -204,17 +223,22 @@ double term()
        			break;
 		}
 		default:
-			ts.unget(t);
+			ts.unget(t); // put back t into Token
 			return left;
 		}
 	}
 }
 
+/**
+ * expression - handle '+' and '-' expressions
+ *
+ * Return: result
+ */
 double expression()
 {
 	double left = term();
 	while (true) {
-		Token t = ts.get();
+		Token t = ts.get(); // read next Token from input stream
 		switch (t.kind) {
 		case '+':
 			left += term();
@@ -223,7 +247,7 @@ double expression()
 			left -= term();
 			break;
 		default:
-			ts.unget(t);
+			ts.unget(t); // put back t into Token
 			return left;
 		}
 	}
@@ -256,7 +280,7 @@ double statement()
 	case let:
 		return declaration();
 	default:
-		ts.unget(t);
+		ts.unget(t);	// put back t into Token stream
 		return expression();
 	}
 }
@@ -269,9 +293,14 @@ void clean_up_mess()
 const string prompt = "> ";
 const string result = "= ";
 
+/**
+ *  calculate - handle expression evaluation loop
+ *
+ * Return: void
+ */
 void calculate()
 {
-	while (true)
+	while (cin)
 	try {
        		cout << prompt;
 
@@ -280,7 +309,7 @@ void calculate()
 			t = ts.get();
        		if (t.kind == quit)
 			return;
-       		ts.unget(t);
+       		ts.unget(t);	// put back t into Token stream
 		cout << result << statement() << endl;
 	}
 	catch (runtime_error& e) {
@@ -289,9 +318,15 @@ void calculate()
        	}
 }
 
+/**
+ * main - handle fatal errors
+ *
+ * Return: 0
+ */
 int main()
 try {
 	calculate();
+	keep_window_open("~");	// cope with window console mode
        	return 0;
 }
 catch (exception& e) {
