@@ -140,7 +140,7 @@ double get_value(string s)
 			return names[i].value;
 	}
 	error("get: undefined name ", s);
-	// return 0;
+	return 0;
 }
 
 void set_value(string s, double d)
