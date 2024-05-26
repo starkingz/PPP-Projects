@@ -103,5 +103,6 @@ int main()
                         cout << "not OK\n";
                 cout << "Try again: \n";
         }
+        keep_window_open("~");
         return 0;
 }
