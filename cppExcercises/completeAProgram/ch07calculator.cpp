@@ -1,6 +1,58 @@
 // Chapter 6 - Writing a program
 // Exercise 3
 // Date: 12.03.2024
+
+/*
+ * Simple calculator
+ *
+ * Revision history:
+ *********** Revised by Ohia Goodstar May 2024
+ *********** Revised by Bjarne Stroustrup November 2013
+ *********** Revised by Bjarne Stroustrup May 2007
+ *********** Revised by Bjarne Stroustrup August 2006
+ *********** Revised by Bjarne Stroustrup August 2004
+ *********** Originally writtten by Bjarned Stroustrup
+ ******************* (bs@cs.tamu.edu) spring 2004)
+ *
+ * This program implements a basic expression calculator.
+ * Input from cin; output to cout.
+ * The grammar for input is:
+ *
+ * Statement:
+ ** Expression
+ ** Print
+ ** Quit
+ *
+ * Print: =
+ * Quit: x
+ *
+ * Expression:
+ *** Term
+ *** Expression + Term
+ *** Expression - Term
+ *
+ * Term:
+ *** Factorial
+ *** Term * Factorial
+ *** Term / Factorial
+ *** Term % Factorial
+ *
+ * Factorial:
+ *** Primary
+ *** Factorial !
+ *
+ * Primary:
+ *** Number
+ *** '(' Expression ')'
+ *** - Factorial
+ *** + Primary
+ *
+ * Number:
+ *** floating-point-literal
+ *
+ * Input comes from cin through the Token_stream called ts.
+ */
+
 #include "../../std_lib_facilities.h"
 
 //------------------------------------------------------------------------------
@@ -22,6 +74,7 @@ public:
     // Token_stream();   // make a Token_stream that reads from cin
     Token get();      // get a Token (get() is defined elsewhere)
     void putback(Token t);    // put a Token back
+	void ignore(char c);  // discard character up to and including a c
 
     Token_stream()
         :full(false), buffer(0) {}
@@ -51,6 +104,11 @@ void Token_stream::putback(Token t)
 
 //------------------------------------------------------------------------------
 
+// keywords
+const char number = '8'; // t.kind means it a number Token
+const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
+const char print = '='; // t.kind==print means that t is a print Token
+
 Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
@@ -63,9 +121,18 @@ Token Token_stream::get()
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
     switch (ch) {
-    case '=':    // for "print"
-    case 'x':    // for "quit"
-    case '(': case ')': case '+': case '-': case '*': case '/': case '{': case '}': case '!':
+    case print:
+    case quit:
+    case '(':
+    case ')':
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+    case '{':
+    case '}':
+    case '!':
+    case '%':
         return Token(ch);        // let each character represent itself
     case '.':
     case '0': case '1': case '2': case '3': case '4':
@@ -74,12 +141,32 @@ Token Token_stream::get()
         cin.putback(ch);         // put digit back into the input stream
         double val;
         cin >> val;              // read a floating-point number
-        return Token('8', val);   // let '8' represent "a number"
+        return Token(number, val);
     }
     default:
         error("Bad token");
         return 0;
     }
+}
+// -----------------------------------------------------------------------------
+
+void Token_stream::ignore(char c) // c represents the kind of Token
+{
+	// first look in the buffer
+	if (full && c == buffer.kind) {
+		full = false;
+		return;
+	}
+
+	full = false;
+
+	// now search input:
+	char ch = 0;
+
+	while (cin >> ch) {
+		if (ch == c)
+			return;
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -91,6 +178,10 @@ Token_stream ts;        // provides get() and putback()
 double expression();    // declaration so that primary() can call expression()
 
 //------------------------------------------------------------------------------
+
+double factorial();		// declaration so that primary() can call factorial()
+
+// -----------------------------------------------------------------------------
 
 // deal with numbers and parentheses
 double primary()
@@ -114,8 +205,12 @@ double primary()
         if (t.kind != ')') error("')' expected");
             return d;
     }
-    case '8':            // we use '8' to represent a number
+    case number:
         return t.value;  // return the number's value
+    case '-':
+	    return -factorial();	// handle negative number/factorial elegantly
+    case '+':
+	    return +primary();	// handle positive number elegantly
     default:
         error("primary expected");
     }
@@ -124,14 +219,14 @@ double primary()
 
 //------------------------------------------------------------------------------
 
-// deal with !
+// deal with '!'
 double factorial()
 {
-	const int  inf_num {171}; // factorial(171) and above prints 'inf'
+	const int print_inf {170}; // factorial(171) and above prints 'inf'
         double left = primary();
         Token t = ts.get();     // get the next token from token stream
 
-        while (true)
+	while (true)
         {
                 switch (t.kind) {
                         case '!':
@@ -139,7 +234,7 @@ double factorial()
 				left = int(left); // truncate floating point number to int
                                 for (int i = left - 1; i >= 1; i--)
                                 {
-					if (i == inf_num)
+					if (i == print_inf)
 						error("factorial overflow");
                                         left = left * i;
                                 }
@@ -177,6 +272,15 @@ double term()
             t = ts.get();
             break;
         }
+	case '%':
+	{
+		double d = factorial();
+		if (d == 0)
+			error("%: divide by zero");
+		left = fmod(left, d);
+		t = ts.get();
+		break;
+	}
         default:
             ts.putback(t);     // put t back into the token stream
             return left;
@@ -209,36 +313,58 @@ double expression()
     }
 }
 
+// -----------------------------------------------------------------------------
+void clean_up_mess()
+{
+	ts.ignore(print);
+}
+// -----------------------------------------------------------------------------
+
+const string prompt = "> "; // indicate the program is asking for an input
+const string result = "= "; // used to indicate that what follows is result
+// -----------------------------------------------------------------------------
+void calculate()		// expression evaluation loop
+{
+        while (cin)
+	try {
+		cout << prompt;
+                Token t = ts.get();
+
+		while (t.kind == print)
+			t = ts.get(); // first discard all "prints"
+                if (t.kind == quit)        // 'x' to "exit"
+			return;
+                ts.putback(t);
+                cout << result << expression() << endl;
+        }
+	catch(exception& e) {
+		cerr << e.what() << '\n';
+		clean_up_mess();
+	}
+}
+
 //------------------------------------------------------------------------------
 
 int main()
-	try
-	{
-		cout << "Welcome to our simple calculator.\n"
-		     << "Please enter expressions using floating-point numbers.\n"
-		     << "Available operators: '*', '/', '+', '-', '!'\n"
-		     << "Enter '=' to print now or 'x' to quite program\n";
-		double val {0};
-		while (cin) {
-			Token t = ts.get();
+try
+{
+	cout << "Welcome to our simple calculator.\n"
+             << "Please enter expressions using floating-point numbers.\n"
+             << "Available operators: '*', '/', '+', '-', '!'\n"
+             << "Enter '=' to print now or 'x' to quite program\n";
 
-			if (t.kind == 'x') break; // 'x' for quit
-			if (t.kind == '=')        // '=' for "print now"
-				cout << "=" << val << '\n';
-			else
-				ts.putback(t);
-			val = expression();
-		}
-		keep_window_open();
-	}
+	calculate();		// cope with windows console mode
+        keep_window_open("~");
+	return 0;
+}
 catch (exception& e) {
-    cerr << e.what() << '\n';
-    keep_window_open();
+    cerr << "error: " << e.what() << '\n';
+    keep_window_open("~~");
     return 1;
 }
 catch (...) {
     cerr << "Oops: unknown exception!\n";
-    keep_window_open();
+    keep_window_open("~~");
     return 2;
 }
 

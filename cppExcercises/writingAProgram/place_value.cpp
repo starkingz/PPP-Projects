@@ -3,7 +3,7 @@
 // Date: 06.04.2024
 
 /**
- * From the book "principles and practices using c++ by Bjarne Stroustrup"  
+ * From the book "principles and practices using c++ by Bjarne Stroustrup"
  * Write a program that reads digits and composes them into integers. For
  * example, 123 is read as the characters 1, 2, and 3. The program should
  * output 123 is 1 hundred and 2 tens and 3 ones. The number should be
@@ -90,7 +90,7 @@ try
 {
         int d = 0;
         int len = 0;
-        cout << "Please enter an integer not more than 9: (end with '|')\n";
+        cout << "Please enter an integer not more than 4 digits: (followed by '|')\n";
         while (cin)
         {
                 d = place();
