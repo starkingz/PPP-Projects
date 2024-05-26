@@ -10,19 +10,18 @@
  */
 int main()
 {
-	cout << "Enter a double value: ";
+	cout << "Enter a string ";
 	char ch;
 	cin >> ch;
 
-	double val;
-	if (ch == '2')
-	{
-		cin.unget();
-		cin >> val;
-		// cin.putback(ch);
-	}
-	if (!cin)
-		cout << "Not read" << endl;
-       	cout << "result: " << val << endl;
+	cin.unget();
+	string s;
+	while (cin.get(ch) && isalpha(ch)) // check if it reads whitespace
+		s += ch;
+	cin.unget();
+	ch = cin.get();
+	s = ch;
+	cout << "output: " << s << endl;
+       	// cout << "result: " << val << endl;
 
 }

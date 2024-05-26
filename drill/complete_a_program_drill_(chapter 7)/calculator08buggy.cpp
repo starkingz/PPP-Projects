@@ -59,7 +59,7 @@ Token Token_stream::get()
 	}
 
 	char ch;
-	cin >> ch;
+	cin >> ch;		// >> skips whitespace or newline
 	switch (ch) {
 	case print:
 	case quit:
