@@ -204,7 +204,7 @@ double primary()
 		double d = expression();
 	       	t = ts.get();
        		if (t.kind != ')')
-			error("'(' expected");
+			error("')' expected");
 		return d;
 	}
 	case '-':
