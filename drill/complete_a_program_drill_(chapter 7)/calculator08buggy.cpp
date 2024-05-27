@@ -1,11 +1,12 @@
 /*
+  Revised by Ohia Goodstar
+
   calculator08buggy.cpp
 
   Helpful comments removed.
 
   We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
-
 #include "../../std_lib_facilities.h" // external library
 
 /**
@@ -154,6 +155,12 @@ void set_value(string s, double d)
 	error("set: undefined name ", s);
 }
 
+/**
+ * is_declared - search vector<Variable>names if Variable has been declered
+ * @s: name to search
+ *
+ * Return: true if dclared already or false
+ */
 bool is_declared(string s)
 {
 	int len = names.size();
@@ -163,6 +170,20 @@ bool is_declared(string s)
 			return true;
 	}
 	return false;
+}
+
+/**
+ * define_name - add {var, val} to names
+ * @var: name to be added
+ * @val: value to be added
+ *
+ * Return: void
+ */
+void define_name(string var, double val)
+{
+	if (is_declared(var))
+		error("decleared twice, ", var);
+	names.push_back(Variable{var, val});
 }
 
 Token_stream ts;
@@ -325,6 +346,9 @@ void calculate()
  */
 int main()
 try {
+	// predefine name
+	define_name("k", 1000);
+
 	calculate();
 	keep_window_open("~");	// cope with window console mode
        	return 0;
