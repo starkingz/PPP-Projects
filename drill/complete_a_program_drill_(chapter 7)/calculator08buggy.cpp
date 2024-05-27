@@ -40,12 +40,13 @@ public:
 	void ignore(char);
 };
 
-// keywords
+// defined keywords
 const char let = 'L';
 const char quit = 'Q';
 const char print = ';';
 const char number = '8';
 const char name = 'a';
+const char sqr_t = 'S';
 
 /**
  * get: Read input and store its corresponding value in Token
@@ -88,7 +89,7 @@ Token Token_stream::get()
 		cin.unget();	// put input back to input stream
 		double val;
 	       	cin >> val;
-       		return Token(number, val + 0);
+       		return Token(number, val);
 	}
 	default:
 		if (isalpha(ch)) {
@@ -99,6 +100,8 @@ Token Token_stream::get()
 			cin.unget();
 			if (s == "let")
 				return Token(let);
+			if (s == "sqrt")
+				return Token(sqr_t);
 			if (s == "quit")
 				return Token(name);
 			return Token(name, s);
@@ -191,7 +194,7 @@ Token_stream ts;
 double expression();
 
 /**
- * primary - deal with '(' Expression ')'
+ * primary - deal with (), square root, negative and positive number and name
  *
  * Return: Token(val) or d
  */
@@ -206,6 +209,15 @@ double primary()
        		if (t.kind != ')')
 			error("')' expected");
 		return d;
+	}
+	case sqr_t:		// handle square root
+	{
+		t = ts.get();
+		if (t.kind != '(')
+			error("sqrt() '(' missing");
+      		ts.unget(t);
+		double d = primary();
+		return sqrt(d);	// call sqrt() from external library
 	}
 	case '-':
 		return -primary();
@@ -346,6 +358,8 @@ void calculate()
  */
 int main()
 try {
+	cout << "Available predefined variable names: k"
+	     << "\nAvailable functions: sqrt()" << endl;
 	// predefine name
 	define_name("k", 1000);
 
