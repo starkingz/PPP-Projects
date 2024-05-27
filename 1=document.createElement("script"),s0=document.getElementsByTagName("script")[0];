@@ -1,0 +1,2640 @@
+[33mcommit 7f4aa4159306a3f3206ba9ded398750991bb472b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 15 03:30:55 2024 +0000
+
+    add a way to recover from errors after the program catches an error
+
+[33mcommit bcbb98dac53d02b1af0faed15970c40ff260d2aa[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon May 13 20:19:55 2024 +0000
+
+    add complete block with useful informations about the program
+
+[33mcommit 6faf7005d566b2f0eb71b22decccb7c42034d394[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon May 13 00:22:39 2024 +0000
+
+    fix 171 factorial printing inf and not factorial overflow
+
+[33mcommit 5218318eb90ba1fbc99679e7bbb21d66ef3405f5[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun May 12 21:46:48 2024 +0000
+
+    modify comment
+
+[33mcommit 6461d02e858d9ec18cb05eaec802835cd910742d[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun May 12 21:27:29 2024 +0000
+
+    improve code layout of get() and make program to handle negative factorial
+
+[33mcommit 507035cc9eed1c109766c2a29981400ec56bd7b3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun May 12 20:19:14 2024 +0000
+
+    add exe file
+
+[33mcommit 88704ad3ee1ca540567e62c06d579ae0236b332f[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 11 16:55:19 2024 +0000
+
+    Put the calculation loop in main() into a seperate function calculate() to improve the structure of the program
+
+[33mcommit 037f0bc0fcde57c917f8c222605c7255c218852a[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 11 09:57:26 2024 +0000
+
+    break line after variable initialization
+
+[33mcommit 319d532cbcb2e2f76a4b026202f2f83f0d7150cf[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 11 09:51:48 2024 +0000
+
+    add description to main
+
+[33mcommit 9f1a0e9327aff12edc945cc3e2bb7ef9f7f51b17[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 10 20:36:01 2024 +0000
+
+    modify
+
+[33mcommit e82fc79896e34f768ece7e95089d74c6ad92821f[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu May 9 11:39:43 2024 +0000
+
+    add symbolic names for \=\ and \x\ respectively
+
+[33mcommit 5603eb63448c6ee9213dc5c92c89225aa62bfcee[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu May 9 11:15:47 2024 +0000
+
+    clean get() and primary() up by adding symbolic name for Token 8
+
+[33mcommit 40fee09d479c566433254c3a4c72c59b9651ff26[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu May 9 10:48:40 2024 +0000
+
+    add exe file for ch07calculator.cpp
+
+[33mcommit cdd14bc80916aefffd29ceebfdeb589d26a4281a[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu May 9 10:47:47 2024 +0000
+
+    add feature so program can handle % operator
+
+[33mcommit a57c709a06aac1a33562b4c19b53f6be39b15617[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 8 08:14:03 2024 +0000
+
+    add linux output for exe file
+
+[33mcommit 45937efbae20b8ec07c1a89096a112793678e5c6[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Tue May 7 10:13:24 2024 +0000
+
+    exe file
+
+[33mcommit c6cbd37cc40ade0dd792d78bb969d6487b299428[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon May 6 06:57:19 2024 +0000
+
+    add exe file for test.cpp
+
+[33mcommit 64cc9fee1093e7f23833db218f87ed0be69f3a8e[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun May 5 11:12:46 2024 +0000
+
+    new test alert
+
+[33mcommit d14f50c499ad0ba1b1618b67162b6b844b9b4d97[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 22:43:20 2024 +0000
+
+    for testing purpose only
+
+[33mcommit dbb22bbc873dee924047195e7b9e20b1ad9d4b6c[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 22:41:48 2024 +0000
+
+    add exe file for test.cpp
+
+[33mcommit 58341bf53d0d2d1ddc1a6afd6dd5e2485a4a96b9[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 22:28:47 2024 +0000
+
+    for testing purpose only
+
+[33mcommit 945371d842309d2a2c87b843c97d11b8cb680774[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 22:04:01 2024 +0000
+
+    break eof line
+
+[33mcommit 72e25cb9c459bdfc7c2657a2e57df1d059989691[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 21:58:30 2024 +0000
+
+    fix factorial() printing wrongresults
+
+[33mcommit b85094ad70c5b610b803fa81e454f0687a2eeb73[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat May 4 20:39:22 2024 +0000
+
+    add exe file for ch07calculator.cpp
+
+[33mcommit a16bb27b406eb5c215abd82a836f60b90050f7a8[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 23:29:25 2024 +0000
+
+    fix program way of handling negative and positive numbers
+
+[33mcommit 190a22084f93637cd9399c8cff70eae46c187478[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 22:51:25 2024 +0000
+
+    fix program sudden exit after it reads this input(1+2= xa)
+
+[33mcommit ebd8a111f5dbc878c4e13c3da887547873c93bad[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 22:31:31 2024 +0000
+
+    improve prompt message
+
+[33mcommit 42baa147280c184d33596e0b9b0d655add3431d7[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 22:20:42 2024 +0000
+
+    fix missing semi-colon
+
+[33mcommit 842bf6b0ffb53d3863c1c3ccc9f21963a901b197[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 22:13:20 2024 +0000
+
+    add detailed comment line
+
+[33mcommit 565a1d9feb57e65c42afceac87254c1e8d71f02f[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 22:09:13 2024 +0000
+
+    change const var name
+
+[33mcommit 3a079e061d19e89a9b564ba62ba66270afc0cb6d[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 12:15:06 2024 +0000
+
+    fix factorial() error of outputting wrong results and change var name of the --const int inf_num(former name)
+
+[33mcommit 88956e8517e8c947b399ba428459cb38106f8a95[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 11:44:37 2024 +0000
+
+    remove double val inits
+
+[33mcommit 554967d615cd5abe717cd007db94b1ef1df2cd59[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 11:27:19 2024 +0000
+
+    add improved version of 2.cpp file
+
+[33mcommit d7fa27cad09f9461b9f21ce867054f47161515e9[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 11:03:36 2024 +0000
+
+    reverse main() to original state before modification
+
+[33mcommit 9a10174085cb9f9c43c205a13617c6f70765cee9[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 01:28:39 2024 +0000
+
+    add more testing
+
+[33mcommit 045bdd4c4a2818089457eed5afe674b99c7a624a[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 01:19:26 2024 +0000
+
+    remove magic constant and do the better way
+
+[33mcommit 1adeb30dabee0f0aef2214462c05ca6222227cb2[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 00:50:01 2024 +0000
+
+    add word error: to exception catch output
+
+[33mcommit d83055cc07398c99bcf699003385da897bbfa0fe[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri May 3 00:44:12 2024 +0000
+
+    factorial() - check for overflow, remove the int declaration and truncate double to int instead
+
+[33mcommit b93aa2999fee2b1b79bfe140ca613332a13e85ea[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu May 2 08:49:07 2024 +0000
+
+    exe file for test.cpp
+
+[33mcommit 5814729060076e965793e6ba34d7247deee36689[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 1 20:13:26 2024 +0000
+
+    add README.md file
+
+[33mcommit 7688704f124ad3f33045ca57a5283cbdb0c20dfe[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 1 18:33:16 2024 +0000
+
+    correct comment
+
+[33mcommit 0c486608d03be2b775af4606297955f1fea95492[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 1 17:03:52 2024 +0000
+
+    fix factorial() to return double and not int so it returns the original value with out truncating it if \! is not been calculated
+
+[33mcommit 76136f49e017d1d16ac0c89df845c4251bfc0006[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed May 1 11:35:22 2024 +0000
+
+    fix errors and add new features
+
+[33mcommit ebe095e1561e1f29b3861245ee741ebdc2915a4a[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Tue Apr 30 03:28:22 2024 +0000
+
+    rm white trailing lines
+
+[33mcommit 43636371332455583e0af6b010406da10519b631[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Tue Apr 30 02:49:40 2024 +0000
+
+    add new line to the program end line
+
+[33mcommit 9b04c086e432ba6b40bdcb72cb5f2db64a069203[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon Apr 29 20:58:47 2024 +0000
+
+    add exe file for place_value.cpp
+
+[33mcommit 983c989fbaac6cf53aca4a82e14a560e02da96f5[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun Apr 28 19:53:01 2024 +0000
+
+    add new line to end of code
+
+[33mcommit 088cb4e95dcef37da51d627e442d2891fa81d9b2[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sat Apr 27 16:17:49 2024 +0000
+
+    fix erors and add new features to combination and permutation program
+
+[33mcommit 3e6b3255c832ddb31ca48fd6dba3bf0681ca6ba9[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu Apr 25 22:00:26 2024 +0000
+
+    add test.cpp for testing purposes only
+
+[33mcommit 4d778f3e0f89848149e35157b6db65101a63d712[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu Apr 25 07:02:45 2024 +0000
+
+    add moer error checkings
+
+[33mcommit c1c025e681e187774f2472d9c14086f9513c16a4[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed Apr 24 21:21:21 2024 +0000
+
+    fix so n is less than 0
+
+[33mcommit a307535026dd19771616bcab46fd77212ca1510f[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed Apr 24 21:18:38 2024 +0000
+
+    fix so n is less than 0
+
+[33mcommit f2059384a07622289e12c9ce340a49a4a118607c[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed Apr 24 07:42:15 2024 +0000
+
+    change prompt
+
+[33mcommit 6d7fd0729daa50de3d22b0a6184de3e0837d1473[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Tue Apr 23 07:46:18 2024 +0000
+
+    add error checkings
+
+[33mcommit 183de44b2b939fbf697f47b108e40569db5f7bf8[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon Apr 22 21:53:44 2024 +0000
+
+    change the function identifers name
+
+[33mcommit 063bbb1386ec07b37da658c536666290ea9ec08b[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon Apr 22 21:36:13 2024 +0000
+
+    change file name for p_and_c.cpp
+
+[33mcommit d8941df5328d032d01ec2609593e2b222067dbf6[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Mon Apr 22 07:19:50 2024 +0000
+
+    add file p_and_c.cpp
+
+[33mcommit ebad71bfb4c84a313add4b4cc545a832aef3a3ad[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Sun Apr 21 22:45:14 2024 +0000
+
+    add file
+
+[33mcommit 86fc9c4529aba0cab666502c3087057e79822450[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Fri Apr 19 05:53:30 2024 +0000
+
+    add output exe file for 1.cpp
+
+[33mcommit b3c13bebb33c830efd1253561f607a36db8428bb[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Thu Apr 18 20:15:17 2024 +0000
+
+    add output exe file for place value
+
+[33mcommit e6d15f5e03ab5ceb06f7922fbdca9c5128ef9f19[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed Apr 17 06:37:58 2024 +0000
+
+    remove white trailing line
+
+[33mcommit 1307662985509127e09a61c36349e38b4db58e7e[m
+Author: starkingz <goodstarohia@gmail.com>
+Date:   Wed Apr 17 05:46:19 2024 +0000
+
+    remove all whiteline
+
+[33mcommit c2bd2d3b670934fb29fe6b4d9d0127a2b909b4f5[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Apr 16 07:58:50 2024 +0100
+
+    add comments
+
+[33mcommit 1d6727ed62028e15c42978c6c4ecc358e0e66ca8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Apr 15 07:48:24 2024 +0100
+
+    exe file
+
+[33mcommit 44df9186cf411d5d63adb5d1c9e1bb4bb409cf40[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Apr 14 07:14:09 2024 +0100
+
+    exe file
+
+[33mcommit cb713a4a58d7ed42a56364acd647ec52c0e0df83[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Apr 13 09:22:04 2024 +0100
+
+    remove some code used for testing
+
+[33mcommit 1c6d6da45f80de3415cb410b4ab5e93c42dea51a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Apr 12 07:00:39 2024 +0100
+
+    catch run time error
+
+[33mcommit a3294b0e1d6851b32bb6c2f4192710bb33780018[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Apr 11 00:57:16 2024 +0100
+
+    exe file for place value
+
+[33mcommit 20b430dad18d51d3d3f51fabc01e7a384bb8376e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Apr 10 06:48:07 2024 +0100
+
+    add place_value.cpp
+
+[33mcommit c6b3ec236f9ee0a8ab87502f9a4d4280e6a01e8d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Apr 7 22:19:17 2024 +0100
+
+    exe file
+
+[33mcommit 7b816dcbbbbfcf7c86945557509b5128073a3356[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Apr 6 18:50:26 2024 +0100
+
+    fixing bugs and putting things in order
+
+[33mcommit 5349571a1de98dacf4421e9954fa6d1d9d886967[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Apr 6 17:22:36 2024 +0100
+
+    add catch throwed errors
+
+[33mcommit 4efe7787e263357ebc69ab6bb2be22ea72500773[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Apr 6 17:15:51 2024 +0100
+
+    add is_duplicate() so the program prints error when user inputs a duplicate letter
+
+[33mcommit 62651b54c84bfb45982cd6c9f26868a506f1d0a8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Apr 6 16:43:07 2024 +0100
+
+    add comments and create vector for user guesses
+
+[33mcommit 59cb2ff7c4fdd60b6bcb4271ebd589bce14fdaba[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Apr 5 07:57:40 2024 +0100
+
+    clean code
+
+[33mcommit a5733e3bb31cc88b98c584203cd1429ee4019212[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Apr 4 09:37:46 2024 +0100
+
+    exe file
+
+[33mcommit 756694ce9e0e742d1351d29590bf0efbd6b09012[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Apr 3 05:16:51 2024 +0100
+
+    improve code, fix repetition of letters in a sequence and add a function to check if input is between A-Za-z
+
+[33mcommit eab35f7489057317ace4b9e5deba0d86de245103[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Apr 3 00:00:07 2024 +0100
+
+    exe file
+
+[33mcommit 21745fe1b6bf05dea50798ab129833f4dabced68[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 29 18:30:35 2024 +0100
+
+    fix a redefnition bug
+
+[33mcommit 2acd7896d4ab19795ebe7b41b1535e7ddff31919[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 29 09:24:06 2024 +0100
+
+    exe file
+
+[33mcommit 98fd406947be76628a6de8aa8753cd1396001b1d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:57:05 2024 +0100
+
+    fix logical error()
+
+[33mcommit bcd2e6254ecfdc9408cf573912b924e97cf1c831[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:54:00 2024 +0100
+
+    remove the ; blocking the if statement
+
+[33mcommit 8551c31e4270cfb1452c6bbdd8d927598339ddb0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:52:11 2024 +0100
+
+    fix error
+
+[33mcommit 4541a0a043a4452d96b874dceab477180ec92bba[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:47:44 2024 +0100
+
+    fix missing ;
+
+[33mcommit 173cb6a7a30489ba62259fe559a683c8183544d8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:47:06 2024 +0100
+
+    add few comments
+
+[33mcommit 267fb59be1413f079ea2accccb0473a6aa8bbe0d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:41:35 2024 +0100
+
+    add main to control the parsers
+
+[33mcommit 694f492aa653a948a6d8164ed6a7defbb2448bac[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:33:19 2024 +0100
+
+    add fourth() to read the fourth char from istream
+
+[33mcommit b35e07d03cb9449175af2c43bee3ce0c4abf6f28[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:29:21 2024 +0100
+
+    add third() to read third char from istream
+
+[33mcommit 65dcf39590dddd30c56b9f301bb0e918037b19b3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:27:35 2024 +0100
+
+    add second() to read second input from istream
+
+[33mcommit e6c9fa3a149d55a4710272296548ed06f4aa933a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:21:18 2024 +0100
+
+    add second() to read second input from istream
+
+[33mcommit bba0de44f58853e3e1658f46f8f41504eb100e2c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 27 06:19:43 2024 +0100
+
+    add first() to read first input and count bullz or cowz
+
+[33mcommit 1db0a55f5678883e461ae8e498c6366ce28839f4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 26 19:11:58 2024 +0100
+
+    add init() to store computer data into vector
+
+[33mcommit 72c624ea84322bdb7390f41266ac85e17039cf28[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 26 18:58:48 2024 +0100
+
+    add class data members and constructor
+
+[33mcommit bada8937c702e66aac0725f0cd858bb4f8f426e4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 26 08:23:35 2024 +0100
+
+    correction
+
+[33mcommit ecbbc285fc18d6848025fdd2def487f177d601e2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Mar 23 12:49:52 2024 +0100
+
+    add grammar for bitwise expression for excercise 7
+
+[33mcommit 69ac52cb1300b00c29ab1d2340099a59ca359d26[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 22 21:12:54 2024 +0100
+
+    exe file
+
+[33mcommit 4b4100a25e4dab27e9e9ac4e1549e274dd8842e0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Mar 21 09:31:29 2024 +0100
+
+    add comment
+
+[33mcommit d125dad9ef5b66ebea7357cf57a9924dbd04c11d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 20 07:54:17 2024 +0100
+
+    exe file for 5.cpp
+
+[33mcommit 2119721d511763c48ee49a0b3d0c552b44402e64[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 18 20:19:02 2024 +0100
+
+    clean up code and made changes
+
+[33mcommit 064cc525be59f0601e2f3cdbf0943bd3863f19a9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 18 05:36:42 2024 +0100
+
+    prototype for excercise 6
+
+[33mcommit aa383bee0cd32548b20c7dd05fbda0f8061566f3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 18 04:17:07 2024 +0100
+
+    add is_verb() and is_noun()
+
+[33mcommit 9d14a8164f953d4c29d6ab01066abb148ceb3e14[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 18 04:07:48 2024 +0100
+
+    add init() and is_sentence()
+
+[33mcommit 718de5d55fc2797353b8b76ce65bd822f37cfab2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Mar 17 18:47:30 2024 +0100
+
+    main function checking for '.' of excercise 5
+
+[33mcommit ed679bd441c00b4cc0ef2cf7e9044367c39a04f3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Mar 16 18:52:50 2024 +0100
+
+    x file for 3.cpp
+
+[33mcommit 9b2465891f9cdec8378db613be17b00caad6b635[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 08:14:09 2024 +0100
+
+    x file for 3.cpp
+
+[33mcommit 9511afd6088868bc0ae79b31123624046da9ad9e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 08:13:54 2024 +0100
+
+    x file for 2.cpp
+
+[33mcommit 6eac7bacd655d5ae2bd9e88290b6d7a9e260a618[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 08:02:49 2024 +0100
+
+    added article to the grammar in 6.4.1
+
+[33mcommit 70209075b06e113ccb1b9d1a81daecbaded23c88[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 06:26:17 2024 +0100
+
+    add a greeting line in main()
+
+[33mcommit 1e9f9ef9e2e3c737f0e04c9c3a8016ce4181d0a9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 06:05:10 2024 +0100
+
+    add '0' as char to be checked
+
+[33mcommit 7af6bfdf6398cabee0dba089a368ee6792446748[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 15 05:56:05 2024 +0100
+
+    add a check so a value can't be inputted as a name
+
+[33mcommit a566fb581790df1e5113f01af78512db42f0b57e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Mar 14 03:19:59 2024 +0100
+
+    v1.1 - add new features and code fix
+
+[33mcommit 4462b2ed735fb6f6cceaf9bc31fb5ec6a9386298[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Mar 14 02:16:10 2024 +0100
+
+    prototype of excercise 4
+
+[33mcommit c732acfa0627697eecc936e763929d0056e5e281[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 13 07:06:45 2024 +0100
+
+    add availability of ! use
+
+[33mcommit b474509bfbedb7e9ee75bb87d25c703ad59f08a4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 12 04:41:06 2024 +0100
+
+    x file for 1.cpp
+
+[33mcommit f189bf6373e34fac893ca413dbd722b7d801b209[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 12 04:40:50 2024 +0100
+
+    add exercise 2 from chapter 6
+
+[33mcommit 11bb93103a803bc8a4e33bbc8d0c6d58fc1b7d66[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 11 07:54:19 2024 +0100
+
+    update
+
+[33mcommit 93e55a1bc8266353af0af017a4457236b040407f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Mar 9 20:12:56 2024 +0100
+
+    add chapter terms
+
+[33mcommit 0e33c9ae1a2da44f6d3866c6fa881ad1f10a73c4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 8 07:39:52 2024 +0100
+
+    exe file for test file
+
+[33mcommit e2dca6478e0e085c94f66146e6ba7c1fe378ee89[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 8 07:39:12 2024 +0100
+
+    testing a class
+
+[33mcommit 41e9b7197b0d5be79ae2e15952aad8737ebe8e6d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Mar 7 06:36:21 2024 +0100
+
+    correction
+
+[33mcommit 8b38a94708697113c94e73ef848de5565786ddc6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 6 07:25:20 2024 +0100
+
+    answer to question 27
+
+[33mcommit cdc469580de40e24566b087578d02fe962137e72[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 6 06:56:04 2024 +0100
+
+    answer to question 26
+
+[33mcommit 103eabe7f53f6d55ac93975af96e510f91cd3e06[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 6 06:54:58 2024 +0100
+
+    answer to question 25
+
+[33mcommit c1e6936129570c0226c6adda58cb07e3ef8cd401[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Mar 6 04:04:28 2024 +0100
+
+    answer to question 24
+
+[33mcommit ea28947b2fe7b3b38977cb5f2d546352d9526a08[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 5 07:54:59 2024 +0100
+
+    answer to question 23
+
+[33mcommit ce54f4f5829c63de51cb19db0edfc5f5dff55710[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 5 07:47:12 2024 +0100
+
+    answer to question 22
+
+[33mcommit 1ea5d6ce8f5e23ebd353981d43767138175039c6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Mar 5 07:42:50 2024 +0100
+
+    answer to question 21
+
+[33mcommit 9addcb37ffc2e77248c52dd987fe1697dff58d3a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Mar 4 08:51:34 2024 +0100
+
+    testing purposes
+
+[33mcommit 9ab0ac7446d25ff2020e1ea1e4e2209d91c8168f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Mar 3 06:52:37 2024 +0100
+
+    file exe
+
+[33mcommit 717f792c4b30b78c6feedd1c0255a7daf7992286[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Mar 2 13:34:41 2024 +0100
+
+    answer to question 20
+
+[33mcommit 92590e1f510b882de18d9075671427a4762161f2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 1 16:20:15 2024 +0100
+
+    answer to question 20
+
+[33mcommit 1b635bc77e9fc7d5af5fd5abc570ec6f7b54f3d0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 1 16:15:03 2024 +0100
+
+    answer to question 19
+
+[33mcommit b123adfea0b11e27a14d227cb6c478a7965d4472[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 1 16:06:56 2024 +0100
+
+    answer to question 18
+
+[33mcommit 4b91cef3d1c27b905e7ad5f1b1ede4fa70ef4193[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Mar 1 16:00:20 2024 +0100
+
+    answer to question 17
+
+[33mcommit 58e6ce53286a37cbd3a09eaebf14e2ebde43b936[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Feb 29 07:09:11 2024 +0100
+
+    add answer to question 16
+
+[33mcommit 1d74dc5b285908f04fcee2b8c46b0b70909b55ca[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Feb 29 07:08:39 2024 +0100
+
+    add answer to question 15
+
+[33mcommit 328f3375d175e9ac754d601fa99a6dceff916164[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 28 06:32:13 2024 +0100
+
+    answer to question 14
+
+[33mcommit f5f0c8bf83475d3fcdae4b058f9f9447db6c7675[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Feb 27 07:53:41 2024 +0100
+
+    corrections
+
+[33mcommit fdf6eee966fc877537f01a7ef1f2da64287441d8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Feb 27 07:27:43 2024 +0100
+
+    answer to question 13
+
+[33mcommit 5579d3b1c32ad693ca39b34a385626b591a93066[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Feb 26 07:29:18 2024 +0100
+
+    correction
+
+[33mcommit 531777d35c1d2ffd099b8b3b7aa95be0607de558[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Feb 25 06:47:59 2024 +0100
+
+    answer t question 12
+
+[33mcommit 3b10658003799fbc1f69fe32730571231caf845b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Feb 25 06:39:59 2024 +0100
+
+    answer to question 11
+
+[33mcommit e829c57584408d953f85c842c745454091cefd15[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Feb 25 06:37:21 2024 +0100
+
+    answer to question 10
+
+[33mcommit d2ebd673c2cea8b717d4bc323ca31321cf9abff0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Feb 24 19:21:34 2024 +0100
+
+    answer to question 9
+
+[33mcommit 7d58e2bd31a0df2c4ab50b0ec8a2b720cdf7c905[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 14:05:21 2024 +0100
+
+    answer to question 8
+
+[33mcommit de3c39a4f7093f6da95b6ee5a925124c86181a62[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 14:02:02 2024 +0100
+
+    answer to question 7
+
+[33mcommit 94679a0b592421010604479f7380cb427dd237de[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 13:11:30 2024 +0100
+
+    answer to question 6
+
+[33mcommit 5dd22f2085d36212057c0f06058004e7b29e9936[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 13:10:35 2024 +0100
+
+    answer to question 5
+
+[33mcommit a43daa818e162c3548a242906d145b1a3a56eea2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 13:07:04 2024 +0100
+
+    add answer to question 4
+
+[33mcommit 7ff347f0ad29296b53a9c6fecd01b007dcc4e1c9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 13:05:12 2024 +0100
+
+    answer to question 4
+
+[33mcommit 5eb35b58d624f8aee78fdd9659b80c385d3ee940[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 09:55:30 2024 +0100
+
+    answer to question 3
+
+[33mcommit 936dfdee245bbbd8b58116992807b8002ba7b1a6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 09:07:32 2024 +0100
+
+    answer to question 2
+
+[33mcommit a42acc9e2d4dbbf09858831d971261ce398d5546[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 23 09:01:09 2024 +0100
+
+    answer to question 1
+
+[33mcommit 83eb822ae4945364d1c21c8f6ab1292fa65a7cf2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Feb 22 06:25:22 2024 +0100
+
+    correct and throw light to answers in error-reviews
+
+[33mcommit 2281083271722b29b19ca5bffa31c4d337605f6b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 21 07:25:10 2024 +0100
+
+    exe file
+
+[33mcommit a4e277bf972dc982f0bba0edb8e61a25cd7e5103[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Feb 20 07:57:02 2024 +0100
+
+    change wording
+
+[33mcommit b59ad51e5f0ab77de9ea4f96d78d7f8a31a45c75[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Feb 19 06:43:26 2024 +0100
+
+    exe file
+
+[33mcommit 9d52a5fdc8423ec63eee80405e8df8edc88bfd08[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Feb 15 08:09:31 2024 +0100
+
+    update
+
+[33mcommit 11201b7b82114c0a0dd0629be565e1365a9ad581[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 14 04:09:22 2024 +0100
+
+    exe file for calculator02buggy.cpp
+
+[33mcommit 6159504f90b3fecdf371acab2ff0c439412fffa3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 14 04:09:12 2024 +0100
+
+    exe file for calculator02buggy.cpp
+
+[33mcommit 79ec69855e898072f22ae2da751281f517e978c9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 14 04:08:39 2024 +0100
+
+    solve drill for chapter 6
+
+[33mcommit b35ad78e3cfca7239bc750cf70be8114ab88a77e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 14 04:07:52 2024 +0100
+
+    exe file
+
+[33mcommit c59e5976dc0ad4d823378bd942501414a28e0fa8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 14 04:07:37 2024 +0100
+
+    update
+
+[33mcommit d218c011db23b17f563049ddac2ae1aef425daa8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 22:06:14 2024 +0100
+
+    exe file
+
+[33mcommit 0033fcdbf9ac4926f6daea538ac9fe2a90d38ef4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 22:06:00 2024 +0100
+
+    add calculator01.cpp
+
+[33mcommit 7426a6525496529bf4a6ff2316b26ad476d474aa[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 22:05:29 2024 +0100
+
+    exe file
+
+[33mcommit b6ebee8ac27d3e88d0d8caab466c83b6fb970212[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 22:05:19 2024 +0100
+
+    update
+
+[33mcommit 851443cf845d1e0829e27e5944faba4fbc35466e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 22:04:58 2024 +0100
+
+    exe file
+
+[33mcommit 7b47096060fbf70a9e6237356b3db8490672ffc9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 02:21:11 2024 +0100
+
+    add
+
+[33mcommit f6cfc9fab766dca285530db36ebdabb51db6fbe0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 02:20:54 2024 +0100
+
+    exe file
+
+[33mcommit f880764be947c84c3204b017640dc58cfa4d4e5e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 02:20:46 2024 +0100
+
+    exe file
+
+[33mcommit e29ae84e4da83ce3938fb8a4d1293fe25c0aa9ad[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 02:20:37 2024 +0100
+
+    exe file
+
+[33mcommit cdc07ca1f95e0be4933a323e6e63d985606f5d2f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 9 02:20:27 2024 +0100
+
+    exe file
+
+[33mcommit f5666b7f819ed7cadbc9cac8331828b64e3de8bc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Feb 7 08:48:32 2024 +0100
+
+    exe file
+
+[33mcommit 6e26544b827c7f0aa3a66a86caf0099f3c20eae2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Feb 6 05:51:24 2024 +0100
+
+    exe file for calculator00.cpp
+
+[33mcommit 619d331e40454902bc8e14f4b6c0d7f18c2ed071[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Feb 6 05:50:49 2024 +0100
+
+    add calculator00.cpp
+
+[33mcommit db2d363a8b0dab50eb2c2392e680f3ffe80ba5ca[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Feb 3 19:13:57 2024 +0100
+
+    exe file
+
+[33mcommit 33d3f95f59aa5bd21b7329db3126a76ab5514033[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Feb 3 19:13:31 2024 +0100
+
+    play around the code
+
+[33mcommit d8ba55bbbefd8d3d5075734fc804d143b1023e77[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Feb 2 23:13:35 2024 +0100
+
+    uncomment to test
+
+[33mcommit cec2cdeac06ebb0781845421dfb84b70a3085a9f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Feb 1 23:23:40 2024 +0100
+
+    exe file
+
+[33mcommit 14b100baf5505b1336b683f7b73f91731763b914[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 31 07:53:57 2024 +0100
+
+    exe file
+
+[33mcommit ec9515510679e45e46490a48c9ee7918c6ccf322[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 29 07:00:11 2024 +0100
+
+    exe file
+
+[33mcommit 0cfbb9e53b5087220a1f24c2ae1735f72862657f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 27 18:21:41 2024 +0100
+
+    exe file not working
+
+[33mcommit 179493f57088dc7053dbdb693dd0d54796b275db[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 27 18:21:12 2024 +0100
+
+    trying to add a Token function to read cin
+
+[33mcommit e9d778b6dae70ca254b95f4d2abc7438242ae046[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 26 02:58:45 2024 +0100
+
+    exe file
+
+[33mcommit aa89a53b391cf286b01f944d2722a0940619ac19[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 26 02:58:33 2024 +0100
+
+    testing token - a user defined type
+
+[33mcommit 45d86e89a6268e1abffea0ff604290cd6dfb354c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 24 22:46:24 2024 +0100
+
+    update
+
+[33mcommit d737886460600bb91e3886801cc13dc57858b77d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 24 22:43:14 2024 +0100
+
+    exe file
+
+[33mcommit 45a78dc60f1d7e80743e4b7b819ae57bd00e2ffc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 23 19:40:58 2024 +0100
+
+    exe file
+
+[33mcommit 92b754ddc80b4ffa4dc452f7b8bc9cdd136d028b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 23 19:40:50 2024 +0100
+
+    update
+
+[33mcommit 998d1e7cf7758e15e8bece84b82fa9364805fb10[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 23 06:51:45 2024 +0100
+
+    exe file
+
+[33mcommit 8202b412bb682121059e412b9d0a9e63a3916c89[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 23 06:51:34 2024 +0100
+
+    handle exceptions
+
+[33mcommit c4babe91fa9114f8153012e9ae2fdc6e5a853236[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 01:03:58 2024 +0100
+
+    add pseudo code line adn code block
+
+[33mcommit ce297c9ec5dce48ca92d12cd1f339aaaea08c590[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 01:01:11 2024 +0100
+
+    back to the calculator first atttempt
+
+[33mcommit 5741621ded47d65a8777ea49b24f7db186d51a15[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 00:59:15 2024 +0100
+
+    remove codes
+
+[33mcommit e65c008cfef8154bc1f52b963fb28bd6de42c055[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 00:58:07 2024 +0100
+
+    create a write_a_program_test.cpp
+
+[33mcommit a212c4c8a593c01b14222c4f0c734710f5d14674[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 00:57:38 2024 +0100
+
+    change name
+
+[33mcommit 85648a735b39b4752f3dcde22df6c5c9be081bdf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 22 00:57:24 2024 +0100
+
+    change name from error-test.cpp to error_test.cpp
+
+[33mcommit 0872645600a5ba0d9783cadfe60dd17747a581bd[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 21 23:38:18 2024 +0100
+
+    comment code
+
+[33mcommit b6e8ad8deb867ea57b6a532abdb26121e397f4bc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 21 23:37:33 2024 +0100
+
+    add comment
+
+[33mcommit 34243b9aabd6225ebaeb841eb11bfabf7d36649c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 21 21:48:56 2024 +0100
+
+    exe file
+
+[33mcommit cf9046d7bff88cad4d30fb2e65d95918154272c0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 20 06:28:41 2024 +0100
+
+    change the err mess
+
+[33mcommit f3b7fb71352564dcd556bc8ff4fd0ac7396d88f2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 20 06:27:15 2024 +0100
+
+    exe file
+
+[33mcommit f874c149930bbab6a4da06030a278f59e22e9579[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 20 06:27:06 2024 +0100
+
+    add a simple calculator prototype
+
+[33mcommit f60b7f8a59231585986b33457b24a07476ec28cb[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 19 09:46:27 2024 +0100
+
+    exe file
+
+[33mcommit ad2f85d06490a64404b222990dec802041fa5ea3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 18 06:54:36 2024 +0100
+
+    exe file
+
+[33mcommit 93204152a37aeebd1db0136febdcccc63e98664b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 17 05:46:05 2024 +0100
+
+    exe file
+
+[33mcommit 91f13bfbbe1bf47b7684515adcc2dcdba0a651a1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 17 05:45:49 2024 +0100
+
+    add comment for keep_window_open()
+
+[33mcommit e3489a2049b566e498f92e92b1be49f6382e1e82[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 16 07:48:09 2024 +0100
+
+    exe file
+
+[33mcommit e2ff554c9d39351a350df37fb2e22dcf0fd9e375[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 15 22:07:29 2024 +0100
+
+    rearrange code
+
+[33mcommit 1f08d41122568206a3943d96b70ca0a31b05a235[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 15 19:19:52 2024 +0100
+
+    exe file
+
+[33mcommit b621cbaad6ba2d4243cb6c9d1652dedc4e1a3eb6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 15 19:17:10 2024 +0100
+
+    add more comments
+
+[33mcommit 8e750ce00311b4e532e4aa33f530706379423fff[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 15 19:16:47 2024 +0100
+
+    add comment of future plan
+
+[33mcommit cfff60ea33a340ac44cc1efb420bf51e3ddcc8cc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 20:09:01 2024 +0100
+
+    exe file
+
+[33mcommit c710971aff6d4aeed283489c71e87293aa563880[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 20:08:16 2024 +0100
+
+    exe file
+
+[33mcommit 9410389c0b6eebc73d7bd7c59dc79c2f45746fbf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 16:36:06 2024 +0100
+
+    add keep_window_open()
+
+[33mcommit a0942902fb00af010fb72fa27ca19d4f49939425[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 16:33:10 2024 +0100
+
+    exe file
+
+[33mcommit 2f571a470467878d5f440b2b5d8ad7023f5c9c1f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 16:32:25 2024 +0100
+
+    handle error by catching exception
+
+[33mcommit 16fe11f103a9c5e637c7cf4ca600f9d2dce7d07f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 14 16:18:31 2024 +0100
+
+    remove commented code
+
+[33mcommit 59d761fac98f2ed5ecccadca37988951eee73126[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 18:17:11 2024 +0100
+
+    exe file
+
+[33mcommit 8e7ebdb286dbb0fdcb6e730fb38f5c06d9ae25c6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 18:17:00 2024 +0100
+
+    arrange code indentation properly
+
+[33mcommit 9ee871756c800732b5d00bea3c5efe7ce78c261a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 18:10:08 2024 +0100
+
+    add a block comment with program update
+
+[33mcommit 0cad9e00de44bf519328e433659f5f32835cba3b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 18:03:04 2024 +0100
+
+    calculator exe file
+
+[33mcommit 80aa2e91425d24a6826d7eb125e09f88fbe88bb3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 18:02:45 2024 +0100
+
+    fix the code so user decides when to end the loop
+
+[33mcommit b0d9130d03b39119687128ced6b86c025c6678ee[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 09:17:06 2024 +0100
+
+    bulls and cows game executable file
+
+[33mcommit 3ea044b29d4feed5a9ac246af5c7e3debf794243[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 09:16:47 2024 +0100
+
+    add catch exceptio and keep_window_open for some computer
+
+[33mcommit a8c6a3768d3c188356d908e9034f5aac6f2e10c4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 13 09:14:07 2024 +0100
+
+    remove ; causing errors
+
+[33mcommit 0173f66c02f414e9011c3d2d477e9c4c56802c4d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 12 21:09:09 2024 +0100
+
+    still testing
+
+[33mcommit ac9ef4f910ad157f06f517f55828b337d3e477f0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 12 21:08:51 2024 +0100
+
+    for testing
+
+[33mcommit 11973be80aa37383462418c1c9041dae99973770[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 11 23:34:08 2024 +0100
+
+    add for testing purpose comment
+
+[33mcommit 5a091af6fe0bd29ecfab09d9214847ff24a8e8c3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 11 23:30:30 2024 +0100
+
+    exe file
+
+[33mcommit 7f42a2be28897fb4739d12f6f68eded0f1aa608e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 11 23:30:20 2024 +0100
+
+    still testing
+
+[33mcommit b4d403489f042e2ea15df2e74b42efbcb34a06f9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 11 21:45:28 2024 +0100
+
+    exe file
+
+[33mcommit 7ff0336cbb0e076ab22380eed34f31bdc7198c00[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 11 21:45:15 2024 +0100
+
+    still testing
+
+[33mcommit 3a55fe4c4d221fd08c87e4f755f0f4a298b3d76d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 10 22:33:59 2024 +0100
+
+    exe file
+
+[33mcommit 80dac8715a85d0c0b343c02a6497f81fd7209285[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 20:15:47 2024 +0100
+
+    exe file
+
+[33mcommit 12ac25a459bb917cece3e486d1886192c362ec28[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 20:15:34 2024 +0100
+
+    still testing
+
+[33mcommit 479106cc500f4b1a01046656033943d52b866499[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 18:53:35 2024 +0100
+
+    exe file
+
+[33mcommit 3893699015d9180528cbaf1434cdf5a47d5043c4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 18:53:23 2024 +0100
+
+    final solution in progress
+
+[33mcommit ab79f67817233b686148b4099af5fb1fc872f359[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 18:39:49 2024 +0100
+
+    change bacck to former state
+
+[33mcommit 14c8903343d8e88635acae2a64173b1c0ca5271c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 9 18:39:15 2024 +0100
+
+    exe
+
+[33mcommit c340f5424e27833f81e2d5ca0b96de14067502ae[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 23:58:12 2024 +0100
+
+    still testing
+
+[33mcommit 49f68de19b98d01e1ecc17d8b6d0fc1fffc676c1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:58:09 2024 +0100
+
+    exe file
+
+[33mcommit 6c2a92316c9277d3f165f7cdfda83f92f49085e5[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:58:01 2024 +0100
+
+    exe file
+
+[33mcommit 19f9c9ea26c6a498b09a457fc3707e16428ff144[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:57:52 2024 +0100
+
+    exe file
+
+[33mcommit e4cca102918ae2ad9efcb291e03df90c42227430[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:57:43 2024 +0100
+
+    still fixing
+
+[33mcommit 75ccadf74d849c2f9cc7987eac86cfafb40038e9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:57:32 2024 +0100
+
+    fix the printing an int fib number that can't into an int
+
+[33mcommit 6841caea21c32e3ae38109696013f8c37f3b6ca3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Jan 8 22:50:50 2024 +0100
+
+    update the lib
+
+[33mcommit 6a83e21eb7af64122d1df75a8f42db578cb90d0e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 23:37:53 2024 +0100
+
+    exe file
+
+[33mcommit f6a09fb064ac2de73490049d9a5a0e56c78592de[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 23:37:42 2024 +0100
+
+    exe file
+
+[33mcommit 5fe9d5cd564bedb726c73c121e41a42c90066281[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 23:37:30 2024 +0100
+
+    update
+
+[33mcommit b28a7ba708a73edffaacb6064f931402bd2071b4[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 03:11:22 2024 +0100
+
+    exe file
+
+[33mcommit fa7e0818ae8c050bcdbc060a548f251524b61599[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 03:11:11 2024 +0100
+
+    update
+
+[33mcommit 9317839deb6d26440cc5f49f19b794c2dd158060[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 01:16:20 2024 +0100
+
+    exe file
+
+[33mcommit c1b5ae26c713fbaeb5cbcf76c5b44d542b5a7d96[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 01:16:09 2024 +0100
+
+    comment some codes and change the excercise number
+
+[33mcommit 3a7def517f7a49f6fc24ab8f42afcfd2ea54936d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jan 7 01:09:05 2024 +0100
+
+    exe file
+
+[33mcommit b26f606cfd94b7e93db4d404ec1a8e99b26df171[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 18:02:14 2024 +0100
+
+    exe file
+
+[33mcommit 7152ae8b1c1d0ec216e06a2d1f03a29c994fa3d3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 18:02:03 2024 +0100
+
+    add some comments and some features
+
+[33mcommit 242a2baf71ae3b9162917bd7dcf3519cf54f65bb[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 17:18:05 2024 +0100
+
+    exe files
+
+[33mcommit a7f3498f210bbb144f08c6b27ccb20b882401266[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 17:17:55 2024 +0100
+
+    fix bugs so it doesn't print the question and answer once
+
+[33mcommit 70d3ce85fd85a5a4ce5341b3c82f35ed4aa7acaf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 15:30:33 2024 +0100
+
+    exe file
+
+[33mcommit af8e3325045fe49954bde82c1a6450b84ce0936d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 15:30:19 2024 +0100
+
+    in progress to a new feature
+
+[33mcommit 260b162a3a5df0fa47022c2ab5745234b0d457ba[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 14:06:39 2024 +0100
+
+    exe file
+
+[33mcommit 65f1843890912ce2bb5d83603a4b790a812da833[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 14:06:17 2024 +0100
+
+    exe file
+
+[33mcommit 742e9cdf40a6be704fa9057f79a323bc234ce28c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 14:06:02 2024 +0100
+
+    update
+
+[33mcommit 601cf124274fd8477b7cfdb82734c58829cedd61[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 14:05:45 2024 +0100
+
+    testing
+
+[33mcommit 152982c0740ea0b93942d19b82dfe7be82b0bd36[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 02:11:40 2024 +0100
+
+    exe file
+
+[33mcommit 8e5ea36f60f2bed6fdfc7d2fbd1de7f4fb71c33d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jan 6 02:11:24 2024 +0100
+
+    fix some bugs and handle some input errors
+
+[33mcommit 681b68f86e752939a84e32589f915c0ce616d117[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 5 23:46:04 2024 +0100
+
+    executable file
+
+[33mcommit afcff5bfdeb11b8251555117fdd992398b958d4c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jan 5 23:45:40 2024 +0100
+
+    update
+
+[33mcommit 625514d95149da88620269c434041fb8ec273799[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 4 10:22:29 2024 +0100
+
+    put bad input into consideration
+
+[33mcommit 02ccfda29afbd97e73957ed29693d23632e07baa[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 4 10:15:31 2024 +0100
+
+    solution to excercise 11 in chapter 5
+
+[33mcommit 8c65e5fb9df609a0ef7fc4b287d773b6a5ae1221[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jan 4 01:33:44 2024 +0100
+
+    updates
+
+[33mcommit 84e7fe2cc2a5988aa112f0201cc62070ab74a43f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 3 18:11:57 2024 +0100
+
+    solution to excercise 9 in chapter 5
+
+[33mcommit f1cb4f8f6940aebe02a179dfb42b1d7763e4825b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 3 18:11:21 2024 +0100
+
+    add some texts result
+
+[33mcommit b3fdf153c040b1e7186145defe7fc1048b7694e3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 3 18:10:46 2024 +0100
+
+    testing
+
+[33mcommit 36a0986fa57c7a1861cab528349ecf89ccd8495b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 3 18:10:30 2024 +0100
+
+    fix bug and add new features
+
+[33mcommit dcadd5a2c178ed07cfa8191d3ac3b7ab0c9858e3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jan 3 01:09:50 2024 +0100
+
+    solution to excercise 8
+
+[33mcommit 7ee23265666e9bd271fcae2568f81fed6394eda8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 2 15:00:35 2024 +0100
+
+    solutions to excercise 7 in chapter 5
+
+[33mcommit 37a1ebdbd3b91d9f3f56d8c02c17d5754927e047[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jan 2 13:44:29 2024 +0100
+
+    fix the bug
+
+[33mcommit ae81d9c179692f96286b5f9f314795b5c321b695[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Dec 29 23:37:14 2023 +0100
+
+    update
+
+[33mcommit 7d2eb2c658e3d8f89df6be12e3828b7b6b8f8c62[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Dec 28 19:01:48 2023 +0100
+
+    updates
+
+[33mcommit eb6d4af09d8653a32973912b21c9289065fcbd18[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Dec 28 19:01:25 2023 +0100
+
+    add solution to excercise 6 in chapter 5
+
+[33mcommit fcc009676e38dca4114d57255e935aebccc2dea8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Dec 27 14:22:06 2023 +0100
+
+    solution to excercise 5 in chapter 5
+
+[33mcommit 0dea17ae741481f175bac14e198019109f7597da[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Dec 27 14:21:42 2023 +0100
+
+    solution to excercise 4 in chapter 5
+
+[33mcommit 8378ee77068401719d4cc29e7a491dce91926eaf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Dec 27 14:21:04 2023 +0100
+
+    solution to excercise 3 in chapter 5
+
+[33mcommit b36fa20e33c485bab70246f2fb0e872d77ad2fda[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Dec 27 14:20:34 2023 +0100
+
+    solution to excercise 2 chapter 5
+
+[33mcommit 65a06b836569518af1f1bd5c3e9f233dc08d7e35[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 23 18:11:20 2023 +0100
+
+    update
+
+[33mcommit e38380a8daa64a704203cd41f5b7a930f9cbdf60[m
+Merge: fb9927f 45792c3
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Dec 22 21:34:21 2023 +0100
+
+    Merge branch 'main' of https://github.com/starkingz/PPP-Projects
+
+[33mcommit fb9927fb0bb2322379b9bbd630c9dfabb8cac1e3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Dec 21 20:02:26 2023 +0100
+
+    add exception to catch errors
+
+[33mcommit 2184404d69e865071ead1e22ba725a203cf25ec9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Dec 21 19:30:10 2023 +0100
+
+    update
+
+[33mcommit 10357b43d18fc9421bca55ec835ebcff5130a656[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Dec 19 23:30:10 2023 +0100
+
+    add two tests
+
+[33mcommit e62437339e9f97767e622f0eb1059b8bd8437a80[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Dec 19 22:35:45 2023 +0100
+
+    add comments
+
+[33mcommit 404116606615ba6593becd67a4220f22954a6e53[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Dec 19 22:14:28 2023 +0100
+
+    add some correction
+
+[33mcommit d8093a13bc5c7f2bb8c682f55e723149a09d738b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 21:45:35 2023 +0100
+
+    add answer(s) to question 21
+
+[33mcommit e5958c36d199510eef3992cd75cd93601f6caf37[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 21:41:23 2023 +0100
+
+    add answer to question 20
+
+[33mcommit bd55e38ee54ba50b85728a40706eb6ad9465b4ee[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 20:11:22 2023 +0100
+
+    add new definition for question 17
+
+[33mcommit 2eea8c572bb6b98a38ef38cb4b58a160b848ac12[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 20:06:06 2023 +0100
+
+    add
+
+[33mcommit b2e852ecefad30082d3bff59a7b56f6a8006c6aa[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 20:04:25 2023 +0100
+
+    add answer to question 18
+
+[33mcommit 3331e53308080392d08764ce5ed1fdbada8cd81d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Dec 9 19:55:16 2023 +0100
+
+    update error-reviews
+
+[33mcommit 45792c37cdeabba9797ab9501a1b516a3312573c[m
+Author: Goodstar Ohia <81324138+starkingz@users.noreply.github.com>
+Date:   Thu Dec 7 02:56:24 2023 +0100
+
+    Update comment
+
+[33mcommit 19cc7cf2df90e9de62279214ff9c0393a062d633[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Nov 23 20:16:58 2023 +0100
+
+    answer to question 17
+
+[33mcommit a208c5ef3c5b53a0491a75e045b20f9c1607f914[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 22 22:15:56 2023 +0100
+
+    answer to question 16
+
+[33mcommit b4bbaaf6f6bf579aa3c510af5b6a752434ae6c1d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 22 21:52:22 2023 +0100
+
+    answer to question 15
+
+[33mcommit 78a79bb64325f8b9b8863f99307ffa5949855576[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 22 21:45:33 2023 +0100
+
+    answer to question 14
+
+[33mcommit 815ed92740ad9f20d372624a194c7152fa803722[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 22 21:06:07 2023 +0100
+
+    answer to question 12 and 13
+
+[33mcommit 6319816ca7652a5f75660593275640ab66263aad[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 21 20:34:31 2023 +0100
+
+    answer to question 11
+
+[33mcommit b13463f09500bbe61f65660912f4f61b3f0beae3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Nov 20 22:16:33 2023 +0100
+
+    answer to question 10
+
+[33mcommit 2d20c13df58061d00c3c883205d73d02742f21ca[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Nov 20 20:20:28 2023 +0100
+
+    answer to question 1 - 9
+
+[33mcommit c8d00a58a071326cbc7908e0582b4ce3c032bb96[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Nov 9 23:40:44 2023 +0100
+
+    add chapter 5 error reviews question & answer
+
+[33mcommit 2a570ee7f9139c2255bdf40bf1254559b4113d61[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 20:55:43 2023 +0100
+
+    fix fragement 25 bug
+
+[33mcommit 89f1a4287c30d8eae8c57468790c38ab0d28d035[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 20:49:52 2023 +0100
+
+    fix fragment 24 bug
+
+[33mcommit 9b10333f3a1c9d8316cbfbbf9539c2889b8c3cd5[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 20:31:35 2023 +0100
+
+    fix fragment 23 bug
+
+[33mcommit bef03ab331ef9e6b50e8927a194df804b78e7167[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 20:11:55 2023 +0100
+
+    fix fragment 22 bug
+
+[33mcommit 2c1f86b347d5035e15daed4e5e466543d82cb6bf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 01:30:24 2023 +0100
+
+    fix fragment 21 bug
+
+[33mcommit b2f9a9ea7b0e53081d462bc2f9ddd063de69fa6d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Nov 8 01:15:38 2023 +0100
+
+    fix fragment 20 bug
+
+[33mcommit 48db03837a6b25a83a6e76f5f8a131ab99b34b20[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:53:04 2023 +0100
+
+    add fragment 18 code
+
+[33mcommit 5b7d3de969ca1f0ec1e65dd75cf591c8ebc9a3ab[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:49:51 2023 +0100
+
+    fix fragment 17 bug
+
+[33mcommit 6901b65d32c064e79ff691d082152af20a7b2727[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:43:46 2023 +0100
+
+    fix fragment 16 bug
+
+[33mcommit f736963c66ff5ecced791bbbdb4f0726e83834d8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:38:36 2023 +0100
+
+    fix fragment 15 bug
+
+[33mcommit 5e1f212e86d316ebc50b6c7c1e23ada59fc3c91d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:32:45 2023 +0100
+
+    fix fragment 14 bug
+
+[33mcommit 36db9972b4e16e7ecb47acef5b0392965f2f8c69[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:24:33 2023 +0100
+
+    fix fragment 13 bug
+
+[33mcommit 6b4f860376ceb382f615dae997cb50bd2da2b728[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 22:14:02 2023 +0100
+
+    fix fragment 12 bug
+
+[33mcommit 71fe1e29ad84cb477ee7f4f532f9752b6639dc31[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Nov 7 21:44:59 2023 +0100
+
+    fix fragment 11 bug
+
+[33mcommit 9e3aaad641cefb7a2b0b7a2b8680bbd857f7ad07[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Nov 6 22:52:01 2023 +0100
+
+    fix fragment 10 err
+
+[33mcommit 8cdabef4a8c81deb71a3f0503a5323676db57063[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Nov 6 20:39:50 2023 +0100
+
+    solved code fragment from 1 - 9
+
+[33mcommit e1fd65e2bc2a81f84a697c42486d126fed50f821[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 31 21:05:18 2023 +0100
+
+    add trythis for excercise 5
+
+[33mcommit b4137070dec46a28c498e815b7a0aaaccace603d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 28 01:20:09 2023 +0100
+
+    fixed error
+
+[33mcommit fa086181b74ef484a735fd55552de50c7eff636a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 28 01:19:11 2023 +0100
+
+    update trythis_19.cpp
+
+[33mcommit a7416b87d13d0e53f1d17ca8b11ce4fd03b22182[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 28 01:14:19 2023 +0100
+
+    added trythis_19.cpp
+
+[33mcommit fbf054159678fb9abfc22d7dda86fc21257a67d1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Oct 25 20:16:25 2023 +0100
+
+    checking for runtime errors
+
+[33mcommit 8140261515c545665d8aaa7ad0ee94788be8b5bd[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 23 23:09:36 2023 +0100
+
+    library used for PPP
+
+[33mcommit e9d059a3aeed990198bcbd3e1fb86c45e58701d1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 14 13:53:05 2023 +0100
+
+    trythis_12 exec file
+
+[33mcommit ba5407a82f00180071c7c9fda69fa92c6a5a41d1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 14 07:35:08 2023 +0100
+
+    trythis test
+
+[33mcommit 4fe031e4b5f8af7b20cf724b7e3a7bbe027ad39e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Oct 13 01:13:02 2023 +0100
+
+    added trythis_9
+
+[33mcommit 7c7aa0b6ad87733ab1960dd3bbf954670285dd92[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 01:55:03 2023 +0100
+
+    excercise 21 solution
+
+[33mcommit 53cdd1e990cdf5491d51fab78140492edfa472bb[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 01:29:39 2023 +0100
+
+    updated comment
+
+[33mcommit 627b230086c1ee8d5c2dc2c303f59b8cab82d287[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 01:27:19 2023 +0100
+
+    excercise 20 solution
+
+[33mcommit c36310cbdc9612d1860525fceeeb0fd25fa5816d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 01:03:19 2023 +0100
+
+    added comments
+
+[33mcommit 2644b8d16d3b9377034e807ab027d527ed46efb1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 00:58:29 2023 +0100
+
+    and added some diff actions
+
+[33mcommit 2b9c74dfae4837251f0cae02269a016641767444[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 00:56:35 2023 +0100
+
+    changed the bool variable name
+
+[33mcommit 2ab5ebc186985ac49d20bf200ee820a49b801984[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Oct 10 00:47:15 2023 +0100
+
+    excercise 19 solution
+
+[33mcommit bfa0822e66d7820d8a4443b9b692b02029cefd30[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 7 21:45:30 2023 +0100
+
+    executable files
+
+[33mcommit 27ea827e4c4e25e478c2eaccd16f1f425db88787[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 7 21:45:05 2023 +0100
+
+    added comments
+
+[33mcommit 264b9ebaacdcee7fb31b8514f35ee49fd1549ae2[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Oct 7 16:56:29 2023 +0100
+
+    update
+
+[33mcommit ac1848e8e96204df1d846c04c47f786e69ffa5b5[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Oct 6 18:00:02 2023 +0100
+
+    added comment
+
+[33mcommit 6102bcd675463872cb7f52ccfee9293bc5f64c8c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Oct 5 19:41:30 2023 +0100
+
+    changed the indentation
+
+[33mcommit 835f6faaa66da324bc4bb94befc7fcde7da43e54[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Oct 5 19:39:42 2023 +0100
+
+    excercise 18 solution
+
+[33mcommit ce949d6160a90cfd15c7690d56356d156261cf04[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 20:20:23 2023 +0100
+
+    solution for excercise 17
+
+[33mcommit dd1af19189f9ebe484446fc5d7b8d28c896b1b03[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 17:31:03 2023 +0100
+
+    Excercise 14 solution
+
+[33mcommit d2f962390dfe8ee6475d1d5a28f04593025b7bcf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 16:20:31 2023 +0100
+
+    added effect if value is negative to code
+
+[33mcommit 2e5cf8664164bb3a0e643c8669e3ce0654e4983f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 15:49:55 2023 +0100
+
+    removed commented code
+
+[33mcommit c6ae38381d512363b2ae318000e4407b5352d866[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 15:48:51 2023 +0100
+
+    Excercise 16 solution
+
+[33mcommit 52a848dea22e68c93ed5fda92ab0216bd9a8226a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 15:48:07 2023 +0100
+
+    added executable file
+
+[33mcommit 4745de53db9b33c51d98dfff21ee18c672264d5e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 15:47:51 2023 +0100
+
+    added executable file
+
+[33mcommit 965b13ed97b1489de4dab33a403daf773bf66711[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Oct 2 15:47:33 2023 +0100
+
+    update
+
+[33mcommit f3b7785a3d8d5c55039ec3a72c5bf9ce21fd58ba[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Oct 1 06:12:32 2023 +0100
+
+    excercise 12
+
+[33mcommit 14fb7d9ccd47d2c422d0bb6755c11e0e3112688f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Oct 1 05:45:04 2023 +0100
+
+    update comments
+
+[33mcommit d78c3a4edc758bfff5d8eaf834bd348717fe9455[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Oct 1 05:44:48 2023 +0100
+
+    update and add comments
+
+[33mcommit 2288a29540cbc19cfd8de7ea068d2b356e9be1c6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 20:36:48 2023 +0100
+
+    update
+
+[33mcommit bba76e244dadc12502ee9cb6b12b143b5955cbc9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 02:37:45 2023 +0100
+
+    fixed a missing semi-colon
+
+[33mcommit 155bdcfbd220e0b320a17e0f35e14b92125fa2ad[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 02:36:27 2023 +0100
+
+    added excercise 11
+
+[33mcommit 70e087a87f5f51c4d1a9ee0f306d92a4cf478c67[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 02:22:16 2023 +0100
+
+    added executable file
+
+[33mcommit 9575c6d152c58a19ffe6f225ec9123b49d42ad76[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 02:21:43 2023 +0100
+
+    Commented code
+
+[33mcommit c5cde35ae4e4c25aefd5a36ad16a637c6027f1eb[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Sep 30 00:09:24 2023 +0100
+
+    added scoreboard
+
+[33mcommit abbda99f66b6dd1835193c2c8b26bfcb3226d06c[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 23:58:33 2023 +0100
+
+    fixed error
+
+[33mcommit 8b05852c715cf70db82f6aa3a828d90d6c13f8a6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 23:49:16 2023 +0100
+
+    change get_number() data type
+
+[33mcommit 34b188ab16c8ceee35c048d3a32f8872fded4eef[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 23:47:30 2023 +0100
+
+    add executable file
+
+[33mcommit 47ed1e657299e15685bb168958c351769fde46ca[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 23:47:12 2023 +0100
+
+    added a function
+
+[33mcommit 709643a685514e2a0d4f72eec5a0bb1066699de7[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 22:56:34 2023 +0100
+
+    corrected the prompt
+
+[33mcommit 2e803608c03295d0ff6d2bebc5682699b9dec8cc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 22:52:41 2023 +0100
+
+    made some changes
+
+[33mcommit 85e395ddb30f410ff55ad770603bc93f15704efc[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 22:34:53 2023 +0100
+
+    remove else
+
+[33mcommit 95e766888e5ca35f0d84467953e4a06f7ca44ed3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:42:04 2023 +0100
+
+    added end line
+
+[33mcommit e45ef57dd7639ca023cf48dfe76bc5d7b403b61b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:39:06 2023 +0100
+
+    fixed code
+
+[33mcommit e0cf805efa645f39aa2ae33b5b45bfb70a314285[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:38:01 2023 +0100
+
+    fixed errors
+
+[33mcommit e27a6a7a877a4729b6d2e2986720600300e460ff[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:34:55 2023 +0100
+
+    added missed semi-colon
+
+[33mcommit 965d27d953714d3c4832ada84fb8cdb86a3fa187[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:34:02 2023 +0100
+
+    added a return value
+
+[33mcommit c25226a3800604180377f32111651cb51cf975e6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:33:06 2023 +0100
+
+    updated code
+
+[33mcommit d946b32a3f541e497a9316348907fa2c7c0a7aa8[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:07:10 2023 +0100
+
+    executable file
+
+[33mcommit 5aeaf17a04c3b1c4994271136e51d1280e37af02[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:03:46 2023 +0100
+
+    corrected variable read by cin
+
+[33mcommit 587b386afcab856ad05a0666cd4ffbec1972f388[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 21:02:08 2023 +0100
+
+    update
+
+[33mcommit 1e24f22c06785e202f777f48b8e596ea4f44c003[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 20:58:24 2023 +0100
+
+    excercise 8 solution
+
+[33mcommit b4634c75543f77cefcb6889862df5a0b2e2cc55e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 18:16:54 2023 +0100
+
+    executable file
+
+[33mcommit a2e1d2facec1ab1c0e53fb596fb98dc5a1e06800[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 04:15:04 2023 +0100
+
+    added comments to code
+
+[33mcommit c65f88d5dd4fc21147334bd7b9c77b637f372fb5[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 04:10:22 2023 +0100
+
+    change data type to int
+
+[33mcommit 04b36c907e12b136c76dbffb42121f91dbcc5cce[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 04:02:18 2023 +0100
+
+    added assign current var to previous
+
+[33mcommit b7eb42a1a403eebe5a5b21ebfe77c9b276400caf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 04:01:10 2023 +0100
+
+    added a conditional statement
+
+[33mcommit 40e90e35526befdea94ae009f6de4006d0678d94[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:56:50 2023 +0100
+
+    revert change
+
+[33mcommit 12abb4cea06a66f243105cf361c220ded629a620[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:42:50 2023 +0100
+
+    changed initialized value in previous
+
+[33mcommit 011513d9475709d2ae05316039d266abf72fecb7[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:41:19 2023 +0100
+
+    move output upward
+
+[33mcommit cfe8251d80c96fce2fc40057845c9492f3f2b164[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:39:39 2023 +0100
+
+    added a end line
+
+[33mcommit 76588a2f7eef829fc42074d577c0b16670f52da7[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:37:51 2023 +0100
+
+    executable file
+
+[33mcommit 71d810023744e286e84da7ec8f6c915f3f9d505b[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 03:37:37 2023 +0100
+
+    added new program
+
+[33mcommit a643af83184cfce0814fed44cf47c13d1220a541[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 29 02:37:47 2023 +0100
+
+    executed file
+
+[33mcommit 9ea9c1e0808e4ad6ae4cd022b465f749495ab645[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:55:08 2023 +0100
+
+    made few changes
+
+[33mcommit ba0f00eddecdd9661c459724fb1aa4116140cc12[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:15:24 2023 +0100
+
+    removed whitespace from the output
+
+[33mcommit 86987b9da9135af051c9108b4192fb6130eddcc0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:13:31 2023 +0100
+
+    executed file
+
+[33mcommit deef9e505a21dec6656e3ce7cc969f7bae0f872e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:10:45 2023 +0100
+
+    run and compile file
+
+[33mcommit 5f940aa084f4a2b7b5fd9ca056c05159a7f21dd0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:10:21 2023 +0100
+
+    added endline to the output
+
+[33mcommit 5467bad2f85ee727291bcdf51b3de2bff0d5cadb[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:09:09 2023 +0100
+
+    commented a line causing error
+
+[33mcommit b88930572eb40095a1745d1f70895f69a4ac6082[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 22:06:49 2023 +0100
+
+    Added new output
+
+[33mcommit 50c37ee04c21074532d1b244474d6fe34294df8f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Sep 28 21:58:50 2023 +0100
+
+    Edited some comment words
+
+[33mcommit fc936bcfeee0f6e6bf2b4e7282ce340af90be7b0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Sep 26 01:55:19 2023 +0100
+
+    simple calculator that performs simple operations
+
+[33mcommit 3448c68dd45d1fa7c56e28d8f808710a3c6ca44d[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Sep 26 01:53:02 2023 +0100
+
+    simple calculator that accepts only single-digits
+
+[33mcommit a70a251e43de732409e7d400c2aedee5fad1fb93[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 03:53:10 2023 +0100
+
+    Added sort algorithm
+
+[33mcommit 858ff0d82a36447655730f402818e884fcee3046[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 03:39:39 2023 +0100
+
+    Added new features
+
+[33mcommit faa6aa65d88a579bea496be2a614fc351c36ab75[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 03:06:48 2023 +0100
+
+    Added comments
+
+[33mcommit 27b900c151fa6fbdaba9f5b89583d6774c762d8f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 03:00:19 2023 +0100
+
+    Fixed largest_num printing smallest_num
+
+[33mcommit f90f0db9cfc913f84320420041f4dbc4dac32970[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 02:53:51 2023 +0100
+
+    Change variable names
+
+[33mcommit 76e3dbfce818ec8bc743c96dfa4cf798d3192c0a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Sep 15 02:25:43 2023 +0100
+
+    Drills solutions
+
+[33mcommit 3a4f47d26fa3521efae570db3c23108eca9f0237[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Sep 6 21:20:22 2023 +0100
+
+    re-checked code and edited it properly
+
+[33mcommit cd5340d46823fefe6fb1397dedf4b89fc36f1405[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Mon Aug 21 21:28:04 2023 +0100
+
+    Added a new comment block
+
+[33mcommit dc9f376b368dd884d72d20075e3a43a02faef030[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Aug 12 14:02:23 2023 +0100
+
+    comment break from loop
+
+[33mcommit db899c29b2204fa04556b68fd1ee66a03bc5a0c0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Aug 12 13:17:40 2023 +0100
+
+    Removed 'read' in comment block
+
+[33mcommit 612b201c687cb9acf96c2f28b881326b23396c76[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Aug 6 21:43:57 2023 +0100
+
+    add new executanle file
+
+[33mcommit e96b5b5e47629ebbb8477e0ce3badcdf184b3eb6[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Aug 2 00:43:41 2023 +0100
+
+    In progress.......
+
+[33mcommit f8d948047de1265bb9bb5a13efd1508fb0ffbf14[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Aug 2 00:42:54 2023 +0100
+
+    Commented the codes (Uncomment to compile)
+
+[33mcommit dfc192ffe226996163e374ccbd8b281b497cde80[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Aug 2 00:41:18 2023 +0100
+
+    Added new string values for case test
+
+[33mcommit eaa1e8184f221c65c6a8491e1543b9cbec31ebb1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Aug 2 00:27:56 2023 +0100
+
+    Made several changes to test.cpp(uncomment)
+
+[33mcommit d33c480932b5dfcf0f8222f1d16a7542a1b6ea24[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jul 22 19:13:25 2023 +0100
+
+    Adjusted right curly bracket in the right place
+
+[33mcommit b9eb775ca886b5356cdcad342c4b7e8170df39c0[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jul 20 01:28:07 2023 +0100
+
+    added new lines of code
+
+[33mcommit 5d0ca1214afcc32ad4d2bb8716002984ec2bc2e7[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Tue Jul 18 23:32:14 2023 +0100
+
+    added new lines of code
+
+[33mcommit 3c6e340be80642f3fc43a6e1fae218c4e78967e9[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jul 15 21:36:31 2023 +0100
+
+    Computation drill file
+
+[33mcommit ce15fda9fb14d6a70504db9ef52c99bdeee5e03e[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sat Jul 15 00:18:37 2023 +0100
+
+    simple program that bleeps out disliked words
+
+[33mcommit 4d082561e6829c8ae36bb12ba656ff76e4f97441[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Fri Jul 14 00:38:59 2023 +0100
+
+    a line of code that sorts words
+
+[33mcommit c57cd46761f38b7bbc1863ce3763fc59788b01a1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jul 13 01:03:10 2023 +0100
+
+    lines of code that calculates temperature elements
+
+[33mcommit 809a6fccf14ebb1cb6c9633d5a6bce41962b6fff[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jul 13 01:02:02 2023 +0100
+
+    lines of code that calculate a temperature element
+
+[33mcommit ed20ea5c51daa0759038ee00a8466c1ef40af253[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Wed Jul 12 23:05:59 2023 +0100
+
+    added a code showing 'how to grow a vector'
+
+[33mcommit 2877fea6416852658a3e2685fdc1dcc454f6a048[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jul 6 06:09:03 2023 +0100
+
+    traversing a vector
+
+[33mcommit b18cb6b6c1a057a5d998340a588866e9636769de[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Thu Jul 6 00:18:34 2023 +0100
+
+    convert a digit to word
+
+[33mcommit 92d359da9448f69fe1eca9905c975b354c3312c3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 14:27:13 2023 +0100
+
+    delete .html file
+
+[33mcommit f74ddc6ef3e25692896528643bf9eb863e046639[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 12:17:00 2023 +0100
+
+    Update readme.md
+
+[33mcommit 3305aebd43fb593e3d7d4f12894b8b16e43d168a[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 12:06:19 2023 +0100
+
+    comment the purpose of the code
+
+[33mcommit 49d94e28a98cff8a5993f112cf66fef8c93d62cf[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 12:02:43 2023 +0100
+
+    comment codes
+
+[33mcommit 89e54c17642c56aa3682b2024ccefa057968279f[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 12:00:40 2023 +0100
+
+    Added a new comment
+
+[33mcommit 6e3f59305f432580d0f72983f51f86bbdaf3fdd1[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 11:53:42 2023 +0100
+
+    Added a comment block
+
+[33mcommit aa3e2f0cd8366acf4da0803f6d91dbb94d92ecc3[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 11:47:04 2023 +0100
+
+    corrected output
+
+[33mcommit 153e3f6ab86541adb9be19d5422838c8c7fcb493[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 11:15:11 2023 +0100
+
+    Added a terminating semi-colon
+
+[33mcommit 1ff5a64b0ee1789fd0e8bd9e191a69ee7c251604[m
+Author: Goodstar Ohia <goodstarohia@gmail.com>
+Date:   Sun Jul 2 11:12:24 2023 +0100
+
+    New files
+
+[33mcommit 5c2771ff6e8d360cacc7dba31edfe8d2c7a6e57e[m
+Author: Goodstar Ohia <81324138+starkingz@users.noreply.github.com>
+Date:   Sun Jul 2 10:56:07 2023 +0100
+
+    Initial commit
