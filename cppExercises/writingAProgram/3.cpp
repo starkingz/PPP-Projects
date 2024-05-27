@@ -71,7 +71,7 @@ try {
                 {
                         for (int i = 0; i < len; i++)
                         {
-                                cout << "(" << ns[i].name << ', '
+                                cout << "(" << ns[i].name << ", "
                                      << ns[i].value << ")" << endl;
                         }
                 }

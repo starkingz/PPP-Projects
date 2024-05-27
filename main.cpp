@@ -39,63 +39,88 @@
 /**
  * main - play bulls and cows guessing game
 */
+// int main()
+// {
+//         vector <int> comg;
+//         vector <int> userg;
+//         int count = 0;
+//         int bullz = 0;
+//         int cowz = 0;
+//         int knownval = 0;
+//         bool restart = true;
+//         int i, j, len;
+
+//         comg.push_back(1);
+//         comg.push_back(2);
+//         comg.push_back(3);
+//         comg.push_back(4);
+
+//         cout << "=========== Cows and Bulls guessing game ==========\n";
+//         len = comg.size();
+//         while (restart == true)
+//         {
+//                 cout <<  "Guess only four integers (from 0 to 9): ";
+//                 for (int val; cin >> val;)
+//                 {
+//                         if (val > 9 || val < 0)
+//                                 error("Input range is greater than 9 or lesser than 0");
+//                         userg.push_back(val); // put val into vector
+//                         if (count == 3)
+//                                 break;
+//                         ++count;
+
+//                         for (i = 0; i < len; ++i)
+//                         {
+//                                 for (j = 0; j < len; ++j)
+//                                 {
+//                                         if (val == comg[j])
+//                                         {
+//                                                 ++knownval;
+//                                                 if (val == comg[i])
+//                                                         ++bullz;
+//                                                 else
+//                                                         ++cowz;
+//                                         }
+//                                 }
+//                         }
+//                 }
+//                 // if (!cin)
+//                 //         error("Could'nt read an int");
+
+                
+//                 // int len2 = userg.size();
+                
+//                 cout << bullz << " bulls and " << cowz << " cows\n";
+//                 if (bullz == 4)
+//                         restart = false;
+//                 else
+//                         cout << "Play again!!!\n";
+//                 bullz = 0;
+//                 cowz = 0;
+//         }
+// }
+
 int main()
 {
-        vector <int> comg;
-        vector <int> userg;
-        int count = 0;
-        int bullz = 0;
-        int cowz = 0;
-        int knownval = 0;
-        bool restart = true;
-        int i, j, len;
+        double left = 1;
+        cin >> left;
+        char c = 'a';
+        cin >> c;
+        
 
-        comg.push_back(1);
-        comg.push_back(2);
-        comg.push_back(3);
-        comg.push_back(4);
-
-        cout << "=========== Cows and Bulls guessing game ==========\n";
-        len = comg.size();
-        while (restart == true)
-        {
-                cout <<  "Guess only four integers (from 0 to 9): ";
-                for (int val; cin >> val;)
-                {
-                        if (val > 9 || val < 0)
-                                error("Input range is greater than 9 or lesser than 0");
-                        userg.push_back(val); // put val into vector
-                        if (count == 3)
-                                break;
-                        ++count;
-
-                        for (i = 0; i < len; ++i)
+        // int n = left;
+                switch (c) {
+                        case '!':
                         {
-                                for (j = 0; j < len; ++j)
+                                // left = n;
+                                for (int i = left - 1; i >= 1; i--)
                                 {
-                                        if (val == comg[j])
-                                        {
-                                                ++knownval;
-                                                if (val == comg[i])
-                                                        ++bullz;
-                                                else
-                                                        ++cowz;
-                                        }
+                                        left *= i;
                                 }
+                                if (left == 0)
+                                        left = 1;
+                                break;
                         }
                 }
-                // if (!cin)
-                //         error("Could'nt read an int");
-
-                
-                // int len2 = userg.size();
-                
-                cout << bullz << " bulls and " << cowz << " cows\n";
-                if (bullz == 4)
-                        restart = false;
-                else
-                        cout << "Play again!!!\n";
-                bullz = 0;
-                cowz = 0;
-        }
+        // cout << left << endl;
 }
