@@ -1,3 +1,4 @@
+
 /*
   Revised by Ohia Goodstar
 
@@ -213,10 +214,14 @@ double primary()
 	case sqr_t:		// handle square root
 	{
 		t = ts.get();
+
 		if (t.kind != '(')
 			error("sqrt() '(' missing");
       		ts.unget(t);
 		double d = primary();
+
+		if (d < 0)
+			error("cannot find sqrt(x) for negative number", d);
 		return sqrt(d);	// call sqrt() from external library
 	}
 	case '-':
@@ -359,7 +364,7 @@ void calculate()
 int main()
 try {
 	cout << "Available predefined variable names: k"
-	     << "\nAvailable functions: sqrt()" << endl;
+	     << "\nAvailable functions: sqrt(x)" << endl;
 	// predefine name
 	define_name("k", 1000);
 
