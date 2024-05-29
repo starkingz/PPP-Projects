@@ -239,7 +239,9 @@ double factorial()
                                         left = left * i;
                                 }
                                 if (left == 0)
-                                        left = 1;
+					left = 1;
+				if (left < 0)
+					error("Overflow");
                                 t = ts.get();
                                 break;
                         }
