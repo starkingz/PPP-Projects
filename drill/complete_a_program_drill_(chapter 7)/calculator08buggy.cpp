@@ -1,4 +1,3 @@
-
 /*
   Revised by Ohia Goodstar
 
@@ -194,8 +193,39 @@ Token_stream ts;
 
 double expression();
 
+double primary();
+
 /**
- * primary - deal with (), square root, negative and positive number and name
+ * get_function - handle functions for sqrt(x)
+ *
+ * Return: left
+ */
+double get_function()
+{
+	Token t = ts.get();
+
+	switch(t.kind) {
+	case sqr_t:
+	{
+       		t = ts.get();
+
+		if (t.kind != '(')
+			error("sqrt(x) '(' missing");
+		ts.unget(t);
+		double d = primary();
+
+		if (d < 0)
+			error("cannot find sqrt(-x)", d);
+		return sqrt(d);	// call sqrt() from external library
+	}
+	default:
+		return 0;
+	}
+}
+
+
+/**
+ * primary - deal with parenthesis, numbers, sqrt(x), +/-(n) and names
  *
  * Return: Token(val) or d
  */
@@ -211,19 +241,9 @@ double primary()
 			error("')' expected");
 		return d;
 	}
-	case sqr_t:		// handle square root
-	{
-		t = ts.get();
-
-		if (t.kind != '(')
-			error("sqrt() '(' missing");
-      		ts.unget(t);
-		double d = primary();
-
-		if (d < 0)
-			error("cannot find sqrt(x) for negative number", d);
-		return sqrt(d);	// call sqrt() from external library
-	}
+	case sqr_t:	// deal with sqrt(x) function
+		ts.unget(t);
+		return get_function();
 	case '-':
 		return -primary();
 	case '+':
@@ -247,7 +267,7 @@ double term()
 {
 	double left = primary();
 	while (true) {
-		Token t = ts.get(); // read next Token from input stream
+		Token t = ts.get(); // read next Token from Token stream
 		switch (t.kind) {
 		case '*':
 			left *= primary();
@@ -276,7 +296,7 @@ double expression()
 {
 	double left = term();
 	while (true) {
-		Token t = ts.get(); // read next Token from input stream
+		Token t = ts.get(); // read next Token from Token stream
 		switch (t.kind) {
 		case '+':
 			left += term();
