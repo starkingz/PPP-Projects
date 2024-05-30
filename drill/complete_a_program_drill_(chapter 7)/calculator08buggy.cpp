@@ -41,7 +41,7 @@ public:
 };
 
 // defined keywords
-const char let = 'L';
+const char declkey = '#';
 const char quit = 'Q';
 const char print = ';';
 const char number = '8';
@@ -66,6 +66,7 @@ Token Token_stream::get()
 	switch (ch) {
 	case print:
 	case quit:
+	case declkey:
 	case '(':
 	case ')':
 	case '+':
@@ -100,14 +101,12 @@ Token Token_stream::get()
 			while (cin.get(ch) && (isalpha(ch) || isdigit(ch)))
 				s += ch;
 			cin.unget();
-			if (s == "let")
-				return Token(let);
 			if (s == "sqrt")
 				return Token(sqr_t);
 			if (s == "pow")
 				return Token(pow_r);
-			if (s == "quit")
-				return Token(name);
+			if (s == "exit")
+				return Token(quit);
 			return Token(name, s);
 		}
 		error("Bad token");
@@ -358,7 +357,7 @@ double statement()
 {
 	Token t = ts.get();
 	switch (t.kind) {
-	case let:
+	case declkey:
 		return declaration();
 	default:
 		ts.unget(t);	// put back t into Token stream
@@ -406,8 +405,10 @@ void calculate()
  */
 int main()
 try {
-	cout << "Available predefined variable names: k"
-	     << "\nAvailable functions: sqrt(x), pow(x, i)" << endl;
+	cout << "Available predefined variable names: k\n"
+	     << "Available functions: sqrt(x), pow(x, i)\n"
+	     << "How to declare a variable?: #a=10;\n"
+	     << "Use ; to print and exit or Q to quit program" << endl;
 	// predefine name
 	define_name("k", 1000);
 
