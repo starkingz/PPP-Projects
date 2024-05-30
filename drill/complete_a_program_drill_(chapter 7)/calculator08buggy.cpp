@@ -47,6 +47,7 @@ const char print = ';';
 const char number = '8';
 const char name = 'a';
 const char sqr_t = 'S';
+const char pow_r = 'P';
 
 /**
  * get: Read input and store its corresponding value in Token
@@ -73,6 +74,7 @@ Token Token_stream::get()
 	case '/':
 	case '%':
 	case '=':
+	case ',':
 		return Token(ch);
 	case '.':
 	case '0':
@@ -102,6 +104,8 @@ Token Token_stream::get()
 				return Token(let);
 			if (s == "sqrt")
 				return Token(sqr_t);
+			if (s == "pow")
+				return Token(pow_r);
 			if (s == "quit")
 				return Token(name);
 			return Token(name, s);
@@ -218,6 +222,24 @@ double get_function()
 			error("cannot find sqrt(-x)", d);
 		return sqrt(d);	// call sqrt() from external library
 	}
+	case pow_r:
+	{
+		t = ts.get();
+
+		if (t.kind != '(')
+			error("pow(x) '(' missing");
+		double d = expression();
+
+		t = ts.get();
+		if (t.kind != ',')
+			error("pow(x, i) ',' missing");
+		int i = narrow_cast <int> (expression()); // number should be an integer
+
+		t = ts.get();
+		if (t.kind != ')')
+			error("pow(x, i) ')' missing");
+		return pow(d, i); // get pow(x, i) from external library
+	}
 	default:
 		return 0;
 	}
@@ -242,6 +264,7 @@ double primary()
 		return d;
 	}
 	case sqr_t:	// deal with sqrt(x) function
+	case pow_r:
 		ts.unget(t);
 		return get_function();
 	case '-':
@@ -384,7 +407,7 @@ void calculate()
 int main()
 try {
 	cout << "Available predefined variable names: k"
-	     << "\nAvailable functions: sqrt(x)" << endl;
+	     << "\nAvailable functions: sqrt(x), pow(x, i)" << endl;
 	// predefine name
 	define_name("k", 1000);
 
