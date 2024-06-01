@@ -9,3 +9,6 @@ Ans.	*    To improve code readability
 	*    Improving user interface
 	*    Adding useful and cool features
 	*    Restructuring code for ease of understanding and modification
+
+2.	Why does 1+2; q typed into the calculator not quit after it receives an error
+	*  When we call expression() we don't check for q
