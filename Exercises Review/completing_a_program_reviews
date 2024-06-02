@@ -1,0 +1,14 @@
+/**
+ *	Chapter 7 Review
+ *	Revised by Ohia Goodstar 30 may 2024
+ */
+
+1.	What is the purpose of working on the program after the first version works? Give a list of reasons
+Ans.	*    To improve code readability
+	*    To work seriously on error handling
+	*    Improving user interface
+	*    Adding useful and cool features
+	*    Restructuring code for ease of understanding and modification
+
+2.	Why does 1+2; q typed into the calculator not quit after it receives an error
+Ans.	*  After the program receives an error it calls keep_window_open() function from std_lib_facilities.h library to keep the window alive and ask user for an input to quit the program
