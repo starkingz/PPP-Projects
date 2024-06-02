@@ -19,3 +19,8 @@ Ans.	*  After the program receives an error it calls keep_window_open()
 Ans.	Well that choice was made because we want to avoid 'magic constants' and
 	... avoid over commenting(using comments to remind ourselves that '8' is a
 	... number that manipulates Token) and using '8' was hard to remember
+
+4.	We split main() into two seperate functions. What does the new function ...
+	... do and why did we split main()?
+Ans.	*   The new function calculate() deals with the calculation (expression) loop
+	*   Well we split main() because it performs two seperate logical tasks
