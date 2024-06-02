@@ -11,4 +11,11 @@ Ans.	*    To improve code readability
 	*    Restructuring code for ease of understanding and modification
 
 2.	Why does 1+2; q typed into the calculator not quit after it receives an error
-Ans.	*  After the program receives an error it calls keep_window_open() function from std_lib_facilities.h library to keep the window alive and ask user for an input to quit the program
+Ans.	*  After the program receives an error it calls keep_window_open()
+	   ... function from std_lib_facilities.h library to keep the window alive
+	   ... and ask user for an input to quit the program
+
+3.	Why did we choose to make a constant character called number?
+Ans.	Well that choice was made because we want to avoid 'magic constants' and
+	... avoid over commenting(using comments to remind ourselves that '8' is a
+	... number that manipulates Token) and using '8' was hard to remember
