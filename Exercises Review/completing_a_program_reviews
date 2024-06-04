@@ -24,3 +24,16 @@ Ans.	Well that choice was made because we want to avoid 'magic constants' and
 	... do and why did we split main()?
 Ans.	*   The new function calculate() deals with the calculation (expression) loop
 	*   Well we split main() because it performs two seperate logical tasks
+
+5. 	Why do we split code into multiple functions? State principles.
+Ans.	* Makes it easier to spot errors
+	* Makes the code logically seperate
+	* Ease testing
+	* Makes the functions re-usable
+	* It improves the readability of the code and program in its entirety
+	* It helps the code maintainer in identifying the uses of the code.....
+	......through its function name
+	* It structures the code in a unique manner
+	* It gives you an area to focus and help you understand the code.....
+	......properly without distraction (it saves you from unecessary distraction).
+	* It makes code easier to maintain
