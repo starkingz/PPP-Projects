@@ -199,9 +199,9 @@ double expression();
 double primary();
 
 /**
- * get_function - handle functions for sqrt(x)
+ * get_function - handle functions for sqrt(x) and pow(x, i)
  *
- * Return: left
+ * Return: sqrt(d) or pow(d, i)
  */
 double get_function()
 {
