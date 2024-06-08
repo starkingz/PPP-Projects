@@ -37,3 +37,11 @@ Ans.	* Makes it easier to spot errors
 	* It gives you an area to focus and help you understand the code.....
 	......properly without distraction (it saves you from unecessary distraction).
 	* It makes code easier to maintain
+
+6.	What is the purpose of commenting and how should it be done?
+Ans.	It gives appropriate and necessary informations about the code or the program ...
+	...and comments are for things that are not clearly said in code or for things...
+	...that can't be written in code.\
+	* It should be done in a way that is adequate for the reader
+	* In a way that it does'nt confuse the reader
+	* Not so verbose that it distracts from the code
