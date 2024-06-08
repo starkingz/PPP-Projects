@@ -1,11 +1,12 @@
 /*
+  Revised by Ohia Goodstar
+
   calculator08buggy.cpp
 
   Helpful comments removed.
 
   We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
-
 #include "../../std_lib_facilities.h" // external library
 
 /**
@@ -39,12 +40,14 @@ public:
 	void ignore(char);
 };
 
-// keywords
-const char let = 'L';
+// defined keywords
+const char declkey = '#';
 const char quit = 'Q';
 const char print = ';';
 const char number = '8';
 const char name = 'a';
+const char sqr_t = 'S';
+const char pow_r = 'P';
 
 /**
  * get: Read input and store its corresponding value in Token
@@ -63,6 +66,7 @@ Token Token_stream::get()
 	switch (ch) {
 	case print:
 	case quit:
+	case declkey:
 	case '(':
 	case ')':
 	case '+':
@@ -71,6 +75,7 @@ Token Token_stream::get()
 	case '/':
 	case '%':
 	case '=':
+	case ',':
 		return Token(ch);
 	case '.':
 	case '0':
@@ -87,7 +92,7 @@ Token Token_stream::get()
 		cin.unget();	// put input back to input stream
 		double val;
 	       	cin >> val;
-       		return Token(number, val + 0);
+       		return Token(number, val);
 	}
 	default:
 		if (isalpha(ch)) {
@@ -96,10 +101,12 @@ Token Token_stream::get()
 			while (cin.get(ch) && (isalpha(ch) || isdigit(ch)))
 				s += ch;
 			cin.unget();
-			if (s == "let")
-				return Token(let);
-			if (s == "quit")
-				return Token(name);
+			if (s == "sqrt")
+				return Token(sqr_t);
+			if (s == "pow")
+				return Token(pow_r);
+			if (s == "exit")
+				return Token(quit);
 			return Token(name, s);
 		}
 		error("Bad token");
@@ -140,7 +147,7 @@ double get_value(string s)
 			return names[i].value;
 	}
 	error("get: undefined name ", s);
-	// return 0;
+	return 0;
 }
 
 void set_value(string s, double d)
@@ -154,6 +161,12 @@ void set_value(string s, double d)
 	error("set: undefined name ", s);
 }
 
+/**
+ * is_declared - search vector<Variable>names if Variable has been declered
+ * @s: name to search
+ *
+ * Return: true if dclared already or false
+ */
 bool is_declared(string s)
 {
 	int len = names.size();
@@ -165,12 +178,91 @@ bool is_declared(string s)
 	return false;
 }
 
+/**
+ * define_name - add {var, val} to names
+ * @var: name to be added
+ * @val: value to be added
+ *
+ * Return: void
+ */
+void define_name(string var, double val)
+{
+	if (is_declared(var))
+		error("decleared twice, ", var);
+	names.push_back(Variable{var, val});
+}
+
 Token_stream ts;
 
 double expression();
 
+double primary();
+
 /**
- * primary - deal with '(' Expression ')'
+ * sqrtx - find the square roots of x
+ *
+ * Return: sqrt(d)
+ */
+double sqrtx()
+{
+	Token t = ts.get();
+
+	if (t.kind != '(')
+		error("sqrt(x) '(' missing");
+	ts.unget(t);
+	double d = primary();
+
+	if (d < 0)
+		error("cannot find sqrt(-x)", d);
+	return sqrt(d);	// call sqrt() from external library
+}
+
+/**
+ * xpoweri - Find pow(x, i) by Multiplying x, i times
+ *
+ * Return: pow(x, i)
+ */
+double xpoweri()
+{
+	Token t = ts.get();
+
+	if (t.kind != '(')
+		error("pow(x) '(' missing");
+	double d = expression();
+
+	t = ts.get();
+	if (t.kind != ',')
+		error("pow(x, i) ',' missing");
+	int i = narrow_cast <int> (expression()); // number should be an integer
+
+	t = ts.get();
+	if (t.kind != ')')
+		error("pow(x, i) ')' missing");
+	return pow(d, i); // get pow(x, i) from external library
+}
+
+/**
+ * get_function - handle functions for sqrt(x) and pow(x, i)
+ *
+ * Return: sqrt(d) or pow(d, i)
+ */
+double get_function()
+{
+	Token t = ts.get();
+
+	switch(t.kind) {
+	case sqr_t:
+		return sqrtx();
+	case pow_r:
+		return xpoweri();
+	default:
+		return 0;
+	}
+}
+
+
+/**
+ * primary - deal with parenthesis, numbers, sqrt(x), +/-(n) and names
  *
  * Return: Token(val) or d
  */
@@ -183,9 +275,13 @@ double primary()
 		double d = expression();
 	       	t = ts.get();
        		if (t.kind != ')')
-			error("'(' expected");
+			error("')' expected");
 		return d;
 	}
+	case sqr_t:	// deal with sqrt(x) function
+	case pow_r:
+		ts.unget(t);
+		return get_function();
 	case '-':
 		return -primary();
 	case '+':
@@ -209,7 +305,7 @@ double term()
 {
 	double left = primary();
 	while (true) {
-		Token t = ts.get(); // read next Token from input stream
+		Token t = ts.get(); // read next Token from Token stream
 		switch (t.kind) {
 		case '*':
 			left *= primary();
@@ -238,7 +334,7 @@ double expression()
 {
 	double left = term();
 	while (true) {
-		Token t = ts.get(); // read next Token from input stream
+		Token t = ts.get(); // read next Token from Token stream
 		switch (t.kind) {
 		case '+':
 			left += term();
@@ -277,7 +373,7 @@ double statement()
 {
 	Token t = ts.get();
 	switch (t.kind) {
-	case let:
+	case declkey:
 		return declaration();
 	default:
 		ts.unget(t);	// put back t into Token stream
@@ -325,6 +421,13 @@ void calculate()
  */
 int main()
 try {
+	cout << "Available predefined variable names: k\n"
+	     << "Available functions: sqrt(x), pow(x, i)\n"
+	     << "How to declare a variable?: #a=10;\n"
+	     << "Use ; to print and exit or Q to quit program" << endl;
+	// predefine name
+	define_name("k", 1000);
+
 	calculate();
 	keep_window_open("~");	// cope with window console mode
        	return 0;

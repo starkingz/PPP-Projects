@@ -10,6 +10,22 @@
  */
 int main()
 {
+	cout << "Enter a double value: ";
+	char ch;
+	cin >> ch;
+
+	double val;
+	if (ch == '2')
+	{
+		cin.unget();
+		cin >> val;
+		// cin.putback(ch);
+	}
+	if (!cin)
+		cout << "Not read" << endl;
+       	cout << "result: " << val << endl;
+
+
 	// double left = 0;
 	// cout << "Enter two integers to calculate modulo: ";
 	// double d = 0;
@@ -23,6 +39,6 @@ int main()
 	// cout << "Result: " << left << endl;
 	// return 0;
 
-	int a = narrow_cast <int> (2);
-	cout << a << endl;
+	// int a = narrow_cast <int> (2);
+	// cout << a << endl;
 }

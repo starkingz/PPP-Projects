@@ -1,0 +1,82 @@
+/**
+ *	Chapter 7 Review
+ *	Revised by Ohia Goodstar 30 may 2024
+ */
+
+1.	What is the purpose of working on the program after the first version works? Give a list of reasons
+Ans.	*    To improve code readability
+	*    To work seriously on error handling
+	*    Improving user interface
+	*    Adding useful and cool features
+	*    Restructuring code for ease of understanding and modification
+
+2.	Why does 1+2; q typed into the calculator not quit after it receives an error
+Ans.	*  After the program receives an error it calls keep_window_open()
+	   ... function from std_lib_facilities.h library to keep the window alive
+	   ... and ask user for an input to quit the program
+
+3.	Why did we choose to make a constant character called number?
+Ans.	Well that choice was made because we want to avoid 'magic constants' and
+	... avoid over commenting(using comments to remind ourselves that '8' is a
+	... number that manipulates Token) and using '8' was hard to remember
+
+4.	We split main() into two seperate functions. What does the new function ...
+	... do and why did we split main()?
+Ans.	*   The new function calculate() deals with the calculation (expression) loop
+	*   Well we split main() because it performs two seperate logical tasks
+
+5. 	Why do we split code into multiple functions? State principles.
+Ans.	* Makes it easier to spot errors
+	* Makes the code logically seperate
+	* Ease testing
+	* Makes the functions re-usable
+	* It improves the readability of the code and program in its entirety
+	* It helps the code maintainer in identifying the uses of the code.....
+	......through its function name
+	* It structures the code in a unique manner
+	* It gives you an area to focus and help you understand the code.....
+	......properly without distraction (it saves you from unecessary distraction).
+	* It makes code easier to maintain
+
+6.	What is the purpose of commenting and how should it be done?
+Ans.	It gives appropriate and necessary informations about the code or the program ...
+	...and comments are for things that are not clearly said in code or for things...
+	...that can't be written in code.\
+	* It should be done in a way that is adequate for the reader
+	* In a way that it does'nt confuse the reader
+	* Not so verbose that it distracts from the code
+
+7.	What does narrow_cast do?
+Ans.	narrow_cast outputs error message ("info loss") when an input looses...
+	...some of its value or is been truncated... for example if a program...
+	...asks for an integer value that would be stored in an int datatype...
+	...and the user inputs a double, narrow_cast would detect...
+	...loss of information and output the error message above
+
+8.	What is the use of symbolic constants?
+Ans.	Symbolic constants are used to give meaning to a non-obvious literals...
+	...in code. For example const double pi = 3.14; is a symbolic constants...
+	...because using the literal 3.14 in code is not clear enough except theirs...
+	...a comment but you don't say in comment what can be said in code. So...
+	...the better option is to use a symbolic constant to give 3.14 a meaning.
+
+9.	Why do we care about code layout?
+Ans.	Code layout seems to be important because it structures the code in...
+	...a way errors could be found easily and errors would have no hiding..
+	...place
+	code layout improves the readability of the codes.
+	It makes it easier for the programmers to understand the code.
+
+10.	How do we handle % (remainder) with floating-point numbers?
+Ans.	There are two ways it could be handled
+	1.    Call fmod(x,i) function from standard library <cmath>...
+	...to handle floating-point numbers.
+	2.    Since floating point numbers lacks total precision we can...
+	...accept only integer values by using narrow_cast to output error if user...
+	...inputs floating-point numbers
+
+11.	What does is_declared() do and how does it work?
+Ans.	is_delared() checks if a name has been declared already in var_table.
+	It takes string argument and checks through the stored Variable names...
+	...and if the argument has been stored already in vector it returns true else it...
+	...returns false

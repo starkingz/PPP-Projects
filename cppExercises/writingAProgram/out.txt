@@ -1,0 +1,2 @@
+Enter character to close the program
+Please enter E to exit program
