@@ -199,6 +199,49 @@ double expression();
 double primary();
 
 /**
+ * sqrtx - find the square roots of x
+ *
+ * Return: sqrt(d)
+ */
+double sqrtx()
+{
+	Token t = ts.get();
+
+	if (t.kind != '(')
+		error("sqrt(x) '(' missing");
+	ts.unget(t);
+	double d = primary();
+
+	if (d < 0)
+		error("cannot find sqrt(-x)", d);
+	return sqrt(d);	// call sqrt() from external library
+}
+
+/**
+ * xpoweri - Find pow(x, i) by Multiplying x, i times
+ *
+ * Return: pow(x, i)
+ */
+double xpoweri()
+{
+	Token t = ts.get();
+
+	if (t.kind != '(')
+		error("pow(x) '(' missing");
+	double d = expression();
+
+	t = ts.get();
+	if (t.kind != ',')
+		error("pow(x, i) ',' missing");
+	int i = narrow_cast <int> (expression()); // number should be an integer
+
+	t = ts.get();
+	if (t.kind != ')')
+		error("pow(x, i) ')' missing");
+	return pow(d, i); // get pow(x, i) from external library
+}
+
+/**
  * get_function - handle functions for sqrt(x) and pow(x, i)
  *
  * Return: sqrt(d) or pow(d, i)
@@ -209,36 +252,9 @@ double get_function()
 
 	switch(t.kind) {
 	case sqr_t:
-	{
-       		t = ts.get();
-
-		if (t.kind != '(')
-			error("sqrt(x) '(' missing");
-		ts.unget(t);
-		double d = primary();
-
-		if (d < 0)
-			error("cannot find sqrt(-x)", d);
-		return sqrt(d);	// call sqrt() from external library
-	}
+		return sqrtx();
 	case pow_r:
-	{
-		t = ts.get();
-
-		if (t.kind != '(')
-			error("pow(x) '(' missing");
-		double d = expression();
-
-		t = ts.get();
-		if (t.kind != ',')
-			error("pow(x, i) ',' missing");
-		int i = narrow_cast <int> (expression()); // number should be an integer
-
-		t = ts.get();
-		if (t.kind != ')')
-			error("pow(x, i) ')' missing");
-		return pow(d, i); // get pow(x, i) from external library
-	}
+		return xpoweri();
 	default:
 		return 0;
 	}
