@@ -101,3 +101,7 @@ Ans.	Its a good idea because it makes the program easier to build.
 
 15.	When do you start to test?
 Ans.	Basically when we have a first working program.
+
+16.	When do you retest?
+Ans.	Immediately after making an improvement or modifying the program, you...
+	...need to retest. After cleaning up the code you need to retest.
