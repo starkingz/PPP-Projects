@@ -98,3 +98,6 @@ Ans.	A sequence of letter and digits but starting with a letter. example ab, x a
 Ans.	Its a good idea because it makes the program easier to build.
 	It makes the programmer not to add all features once and not make the program verbose
 	It helps you test the program incremmentally
+
+15.	When do you start to test?
+Ans.	Basically when we have a first working program.
