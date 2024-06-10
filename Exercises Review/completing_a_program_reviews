@@ -105,3 +105,7 @@ Ans.	Basically when we have a first working program.
 16.	When do you retest?
 Ans.	Immediately after making an improvement or modifying the program, you...
 	...need to retest. After cleaning up the code you need to retest.
+
+17.	How do you decide what should be a seperate a function?
+Ans.	You decide when you want the function to perform a logically seperate thing,
+	or when the code is larger than 1 or 2 screen full.
