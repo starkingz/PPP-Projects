@@ -88,3 +88,8 @@ Ans.	get() reads the first character from let... then it checks if l (first char
 	...and t is been read and stored in a string. Then get() compares the...
 	...string with a string literal "let" if the string matches the string...
 	...literal, get() returns L (unique name representing let) as a single character to Token.
+
+13.	What are the rules for what names can and cannot be accepted by the calculator program?
+Ans.	A sequence of letter and digits but starting with a letter. example ab, x abcdiuereu132
+	Names with special character can not be accepted like space underscore pound and characters
+	that are not letters or digits
