@@ -93,3 +93,7 @@ Ans.	get() reads the first character from let... then it checks if l (first char
 Ans.	A sequence of letter and digits but starting with a letter. example ab, x abcdiuereu132
 	Names with special character can not be accepted like space underscore pound and characters
 	that are not letters or digits
+
+14.	Why is it a good idea to build a program incrementally?
+Ans.	Its a good idea because it makes the program easier to build.
+	It makes the programmer not to add all features once and not make the program verbose
