@@ -114,3 +114,8 @@ Ans.	You decide when you want the function to perform a logically seperate thing
 Ans.	You use names relating to the function statement or variable type
 	Names that are self documenting
 	Names that are not easy to misread or mistype
+
+19.	Why do you add comments?
+Ans.	Comments are added to tell the reader what is happening in that line of code
+	or to give some informations about the program also to document the program
+	i add comments when what i wrote in code is not clearly said
