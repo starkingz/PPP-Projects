@@ -124,3 +124,7 @@ Ans.	Comments are added to tell the reader what is happening in that line of cod
 Ans.	The name of the program, the purpose of the program, who wrote the code
 	and when, version numbers, what complicated code fragments are supposed to do.
 	You should not add comments to a code that is clearly understood
+
+21.	When do you consider a program finished?
+Ans.	A program can be considered finished when we have it in suitable state in ..
+	...which someone else can take over maintenence.
