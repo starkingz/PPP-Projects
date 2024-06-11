@@ -119,3 +119,8 @@ Ans.	You use names relating to the function statement or variable type
 Ans.	Comments are added to tell the reader what is happening in that line of code
 	or to give some informations about the program also to document the program
 	i add comments when what i wrote in code is not clearly said
+
+20.	What should be in comments and what should not?
+Ans.	The name of the program, the purpose of the program, who wrote the code
+	and when, version numbers, what complicated code fragments are supposed to do.
+	You should not add comments to a code that is clearly understood
