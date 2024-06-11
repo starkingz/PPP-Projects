@@ -96,7 +96,7 @@ Ans.	A sequence of letter and digits but starting with a letter. example ab, x a
 
 14.	Why is it a good idea to build a program incrementally?
 Ans.	Its a good idea because it makes the program easier to build.
-	It makes the programmer not to add all features once and not make the program verbose
+	It helps avoid feature creep and not make the program verbose
 	It helps you test the program incremmentally
 
 15.	When do you start to test?
@@ -109,3 +109,8 @@ Ans.	Immediately after making an improvement or modifying the program, you...
 17.	How do you decide what should be a seperate a function?
 Ans.	You decide when you want the function to perform a logically seperate thing,
 	or when the code is larger than 1 or 2 screen full.
+
+18.	How do you choose names for variables and functions? List possible reasons.
+Ans.	You use names relating to the function statement or variable type
+	Names that are self documenting
+	Names that are not easy to misread or mistype
