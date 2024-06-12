@@ -784,28 +784,16 @@ using namespace std;
 //         return 0;
 // }
 
-class Fullname
-{
-        public:
-        string fname;        // Data member
-        string lname;
-
-        void printname();  // Member function
-};
-
-void Fullname::printname()
-{
-        cout << "My name is " << fname << " " << lname;
-}
-
 int main()
 {
-        // ClassName objName
-        Fullname name;
+        cout << "Enter sentence to count each words: \n";
+        char ch;
+        
+        int count = 0;
+        while(cin.get(ch) && ch == ' ')
+                count++;
 
-        name.fname = "Goodstar";
-        name.lname = "Ohia";
+        cout << "Words count: " << count << endl;
 
-        name.printname();
         return 0;
 }
