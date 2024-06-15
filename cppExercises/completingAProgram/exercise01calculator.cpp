@@ -116,6 +116,23 @@ const char let = 'L';	// let represents declaration Token
 const char name = 'a';	// name Token
 const string declkey = "let";	// declaration keyword
 
+/**
+ * isname - check ch for the specified name
+ * @ch: character to check
+ *
+ * Return: true or false
+ */
+bool isname(char ch)
+{
+	if (isalpha(ch))
+		return true;
+	if (isdigit(ch))
+		return true;
+	if (ch == '_')
+		return true;
+	return false;
+}
+
 Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
@@ -156,7 +173,7 @@ Token Token_stream::get()
 		    string s;
 		    s += ch;
 
-		    while (cin.get(ch) && isalpha(ch) || isdigit(ch))
+		    while (cin.get(ch) && isname(ch))
 			    s += ch;
 		    cin.putback(ch);
 		    if (s == declkey)
