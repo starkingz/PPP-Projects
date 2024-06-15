@@ -24,8 +24,8 @@
  ** Print
  ** Quit
  *
- * Print: =
- * Quit: x
+ * Print: ;
+ * Quit: Q
  *
  * Expression:
  *** Term
@@ -60,12 +60,15 @@
 
 class Token{
 public:
-    char kind;        // what kind of token
-    double value;     // for numbers: a value
-    Token(char ch)    // make a Token from a char
-        :kind(ch), value(0) { }
-    Token(char ch, double val)     // make a Token from a char and a double
-        :kind(ch), value(val) { }
+	char kind;        // what kind of token
+	double value;     // for numbers: a value
+	string name;	  // for word
+	Token(char ch)    // make a Token from a char
+		:kind(ch), value(0) { }
+	Token(char ch, double val)     // make a Token from a char and a double
+		:kind(ch), value(val) { }
+	Token(char ch, string n) // make a Token from char and string
+		:kind(ch), name(n) { }
 };
 
 //------------------------------------------------------------------------------
@@ -107,8 +110,11 @@ void Token_stream::putback(Token t)
 
 // keywords
 const char number = '8'; // t.kind means it a number Token
-const char quit = 'x'; 	// t.kind==quit means that t is a quit Token
-const char print = '='; // t.kind==print means that t is a print Token
+const char quit = 'Q'; 	// t.kind==quit means that t is a quit Token
+const char print = ';'; // t.kind==print means that t is a print Token
+const char let = 'L';	// let represents declaration Token
+const char name = 'a';	// name Token
+const string declkey = "let";	// declaration keyword
 
 Token Token_stream::get()
 {
@@ -124,6 +130,7 @@ Token Token_stream::get()
     switch (ch) {
     case print:
     case quit:
+    case '=':
     case '(':
     case ')':
     case '+':
@@ -145,8 +152,19 @@ Token Token_stream::get()
         return Token(number, val);
     }
     default:
-        error("Bad token");
-        return 0;
+	    if (isalpha(ch)) {
+		    string s;
+		    s += ch;
+
+		    while (cin.get(ch) && isalpha(ch) || isdigit(ch))
+			    s += ch;
+		    cin.putback(ch);
+		    if (s == declkey)
+			    return Token{let};
+		    return Token{name, s};
+	    }
+	    error("Bad token");
+	    return 0;
     }
 }
 // -----------------------------------------------------------------------------
@@ -170,6 +188,21 @@ void Token_stream::ignore(char c) // c represents the kind of Token
 	}
 }
 
+/**
+ * Variable - store sequence of name and value
+ *
+ */
+class Variable {
+public:
+	string name;
+	double value;
+
+	Variable (string n, double v)
+		:name(n), value(v) { }
+};
+
+vector <Variable> var_table;
+
 //------------------------------------------------------------------------------
 
 Token_stream ts;        // provides get() and putback()
@@ -183,6 +216,50 @@ double expression();    // declaration so that primary() can call expression()
 double factorial();		// declaration so that primary() can call factorial()
 
 // -----------------------------------------------------------------------------
+
+/**
+ * is_declared - check var_table if name has been declared already
+ * @name: name to check
+ *
+ * Return: true or false
+ */
+bool is_declared(string name)
+{
+	for (Variable& v : var_table)
+	{
+		if (name == v.name)
+			return true;
+	}
+	return false;
+}
+
+/**
+ * define_name - add {var, val} to var_table
+ * @var: Variable name to add
+ * @val: value to add
+ *
+ */
+void define_name(string var, double val)
+{
+	if (is_declared(var))
+		error(var, " declared twice");
+	var_table.push_back(Variable{var, val});
+}
+
+/**
+ * get_value - search var_table and fetch declared Variable value
+ * @s: name to search
+ *
+ * Return: v.value
+ */
+double get_value(string s)
+{
+	for (Variable& v : var_table) {
+		if (v.name == s)
+			return v.value;
+	}
+	error ("get: undefined variable ", s);
+}
 
 // deal with numbers and parentheses
 double primary()
@@ -212,6 +289,8 @@ double primary()
 	    return -factorial();	// handle negative number/factorial elegantly
     case '+':
 	    return +primary();	// handle positive number elegantly
+    case name:
+	    return get_value(t.name); // return stored variable value
     default:
         error("primary expected");
     }
@@ -323,6 +402,48 @@ void clean_up_mess()
 }
 // -----------------------------------------------------------------------------
 
+/**
+ * declaration - declare a variable called "name" with the initial value "expression"
+ *
+ * return: d
+ */
+double declaration()
+{
+	Token t = ts.get();
+
+	if (t.kind != name)
+		error("name expected in declaration");
+	string var_name = t.name;
+
+	Token t2 = ts.get();
+
+	if (t2.kind != '=')
+		error ("= expected in declaration of ", var_name);
+
+	double d = expression();
+
+	define_name(var_name, d);
+	return d;
+}
+
+/**
+ * statement - check if user is declaring a Variable
+ *
+ * return: declaration() or expression()
+ */
+double statement()
+{
+	Token t = ts.get();
+
+	switch(t.kind) {
+	case let:
+		return declaration();
+	default:
+		ts.putback(t);
+		return expression();
+	}
+}
+
 const string prompt = "> "; // indicate the program is asking for an input
 const string result = "= "; // used to indicate that what follows is result
 // -----------------------------------------------------------------------------
@@ -338,7 +459,7 @@ void calculate()		// expression evaluation loop
                 if (t.kind == quit)        // 'x' to "exit"
 			return;
                 ts.putback(t);
-                cout << result << expression() << endl;
+                cout << result << statement() << endl;
         }
 	catch(exception& e) {
 		cerr << e.what() << '\n';
@@ -354,7 +475,8 @@ try
 	cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
-             << "Enter '=' to print now or 'x' to quite program\n";
+             << "Enter " << print << " to print now or " << quit
+	     << " to quit program\n";
 
 	calculate();		// cope with windows console mode
         keep_window_open("~");
