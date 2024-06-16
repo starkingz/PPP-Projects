@@ -1,0 +1,6 @@
+// Date: 15.06.2024
+// Exercise 02
+// Discuss why changing the value of the variable can be useful and how it can be a source of problem
+
+* It can useful when you want to change the value of the variable you are using and it makes the calculator program seemless and fast .
+* And it can be a source of problems when you un-intentionally change the value while you actually want to declare a new variable which changes your previous value stored in that variable, so it can cause loss of data. For example if you forget to add the let declaration keyword while trying to declare a variable and that same variable name has already been declared already it would change the value instead of outputting an error message
