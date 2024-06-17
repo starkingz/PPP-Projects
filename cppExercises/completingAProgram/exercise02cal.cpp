@@ -6,6 +6,8 @@
  * Simple calculator
  *
  * Revision history:
+ *********** Facilities added by Ohia Goodstar 15 June 2024 (assignment operator)
+ *********** Facilities added by Ohia Goodstar 13 June 2024 (underscore)
  *********** Revised by Ohia Goodstar June 2024
  *********** Revised by Ohia Goodstar May 2024
  *********** Revised by Bjarne Stroustrup November 2013
