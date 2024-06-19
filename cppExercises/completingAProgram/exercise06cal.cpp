@@ -1,5 +1,5 @@
 // Chapter 6 - Completing a program
-// Exercise 5
+// Exercise 6
 // Date: 19.06.2024
 
 /*
