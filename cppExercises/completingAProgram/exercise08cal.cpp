@@ -529,7 +529,6 @@ double declaration()
 	return d;
 }
 
-void calculate();
 /**
  * statement - check if user is declaring a Variable, a const or an expression
  *
