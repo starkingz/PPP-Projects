@@ -513,7 +513,6 @@ double declaration()
 	return d;
 }
 
-void calculate();
 /**
  * statement - check if user is declaring a Variable, a const or an expression
  *
@@ -544,7 +543,7 @@ void print_message()
              << "Please enter expressions using floating-point numbers.\n\n"
              << "Available operators: '*', '/', '+', '-', '!', '%'\n\n"
 	     << "Usage: \n\n"
-             << "Use ENTER key to print now or type " << quitkey
+             << "Use ENTER key to print or type " << quitkey
 	     << " to exit program\n\n"
 	     << "Want to declare Variable? let \"name\" = expression\n\n"
 	     << "Want to declare constant? const \"name\" = expression\n\n"
