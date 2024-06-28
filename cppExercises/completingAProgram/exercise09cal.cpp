@@ -175,6 +175,7 @@ Token Token_stream::get()
 
 	switch (ch) {
 	case '=':
+	case '^':
 	case '(':
 	case ')':
 	case '+':
@@ -283,7 +284,7 @@ double expression();    // declaration so that primary() can call expression()
 
 //------------------------------------------------------------------------------
 
-double factorial();		// declaration so that primary() can call factorial()
+double factor();// declaration so that primary() can call factorial()
 
 // -----------------------------------------------------------------------------
 
@@ -390,7 +391,7 @@ double primary()
 	case number:
 		return t.value;  // return the number's value
 	case '-':
-		return -factorial();	// handle negative number/factorial elegantly
+		return -factor();	// handle negative number/factorial elegantly
 	case '+':
 		return +primary();	// handle positive number elegantly
 	case name:
@@ -403,8 +404,8 @@ double primary()
 
 //------------------------------------------------------------------------------
 
-// deal with '!'
-double factorial()
+// deal with factorial and raise to power
+double factor()
 {
 	double left = primary();
 	const int inf {170}; // factorial(171) and above prints 'inf'
@@ -429,6 +430,14 @@ double factorial()
 			t = ts.get();
 			break;
 		}
+		case '^':
+		{
+			int d = narrow_cast<int>(primary()); // should be an integer
+
+			left = pow(left, d);
+			t = ts.get();
+			break;
+		}
 		default:
 			ts.putback(t);
 			return left;
@@ -441,19 +450,19 @@ double factorial()
 // deal with *, /, and %
 double term()
 {
-	double left = factorial();
+	double left = factor();
 	Token t = ts.get();        // get the next token from token stream
 
 	while (true) {
 
 		switch (t.kind) {
 		case '*':
-			left *= factorial();
+			left *= factor();
 			t = ts.get();
 			break;
 		case '/':
 		{
-			double d = factorial();
+			double d = factor();
 			if (d == 0)
 				error("divide by zero");
 			left /= d;
@@ -462,7 +471,7 @@ double term()
 		}
 		case '%':
 		{
-			double d = factorial();
+			double d = factor();
 			if (d == 0)
 				error("%: divide by zero");
 			left = fmod(left, d);
@@ -561,10 +570,11 @@ void print_message()
 {
 	cout << "Welcome to our simple calculator.\n\n"
              << "Please enter expressions using floating-point numbers.\n\n"
-             << "Available operators: '*', '/', '+', '-', '!', '%'\n\n"
+             << "Available operators: '*', '/', '+', '-', '!', '%', '^'\n\n"
 	     << "Usage: \n\n"
              << "Use ENTER key to print or type " << quitkey
 	     << " to exit program\n\n"
+	     << "^ used as raised to power\n\n"
 	     << "Want to declare Variable? let \"name\" = expression\n\n"
 	     << "Want to declare constant? const \"name\" = expression\n\n"
 	     << "Note: Using const for declaration means you can't change value of variable\n\n"
