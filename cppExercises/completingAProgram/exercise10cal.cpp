@@ -1,6 +1,8 @@
 // Chapter 6 - Completing a program
 // Exercise 10
 // Date: 24.06.2024
+// operate on int (only) and output error for underflow and overflow.
+// removed floating-point values pre-defined variables
 
 // This is a solution of code from Exercise 1 - 9 of
 // Programming -Principles and Practice using c++ by Bjarne Stroustrup
@@ -8,7 +10,7 @@
  * Simple calculator
  *
  * Revision history
- *********** Facilities added by Ohia Goodstar 27 June 2024 (operate on int)
+ *********** Facilities added by Ohia Goodstar 27 June 2024 (operate on int only)
  *********** Facilities added by Ohia Goodstar 19 June 2024 (help key and q and h to quit and help respectively)
  *********** Facilities added by Ohia Goodstar 18 June 2024 (print as newline)
  *********** Facilities added by Ohia Goodstar 17 June 2024 (constant and Symbol_table)
@@ -601,10 +603,6 @@ int main()
 try
 {
 	cout << "Type " << helpkey << " for Manual\n";
-
-	// predefined names
-	symtab.declare(con, "pi", 3.14); // pi is a constant
-	symtab.declare(con, "e", 2.72); // e is a constant
 
 	calculate();		// cope with windows console mode
         keep_window_open("~");
