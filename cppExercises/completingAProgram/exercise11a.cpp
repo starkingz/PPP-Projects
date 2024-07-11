@@ -11,7 +11,7 @@ using namespace std;
 /*
                   Revised by Ohia Goodstar July 2024
 		  Originally written by Ohia Goodstar october 2023
-		  [Check first program in chapter 4 exercise 18](./../computationExcercise/16.cpp)
+		  [Check first program in chapter 4 exercise 18](./computationExcercise/16.cpp)
 
 		  This program calculates a quadratic equation.
 		  input from cin; output to cout;
