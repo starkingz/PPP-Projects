@@ -6,6 +6,7 @@
  * From the book "principles and practices using c++ by Bjarne Stroustrup"
  * Redo the “Bulls and Cows” game from exercise 12 in Chapter 5 to use
  * four letters rather than four digits.
+ * Revised by Ohia Goodstar 13 july 2024 (fix segmentation fault (dumped core) error)
 */
 
 //Making a prototype of the program
