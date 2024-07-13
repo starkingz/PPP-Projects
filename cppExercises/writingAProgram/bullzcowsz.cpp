@@ -3,7 +3,7 @@
 // Date: 26.03.2024
 
 /**
- * From the book "principles and practices using c++ by Bjarne Stroustrup"     
+ * From the book "principles and practices using c++ by Bjarne Stroustrup"
  * Redo the “Bulls and Cows” game from exercise 12 in Chapter 5 to use
  * four letters rather than four digits.
 */
@@ -11,7 +11,7 @@
 //Making a prototype of the program
 #include "../../std_lib_facilities.h" //external header file
 
-// read and store two sequence of ints 
+// read and store two sequence of ints
 class Game_counts
 {
         public:
@@ -31,7 +31,7 @@ void not_repeat();   // Make sure computer gueses do not repeat
 
 /**
  * init - put computer guesses into comg vector
- * 
+ *
  * Return: void
 */
 void init()
@@ -40,7 +40,6 @@ void init()
         // clear values in vectors when init() is called
         comg.clear();
 
-        srand(time(NULL));
         for (i = 0; i < 4; i++)
         {
                 char cc = 'a' + rand() % 25;
@@ -117,7 +116,7 @@ Game_counts first()
 
         userg.clear();  // clear all values stored in value
         userg.push_back(usg);
-        
+
         if (!is_letter(usg))
                 error("Input not a letter");
 
@@ -207,7 +206,7 @@ Game_counts fourth()
         is_duplicate(usg);  // check if usg is a duplicate
         if (!is_letter(usg))
                 error("Input not a letter");
-                
+
         char uu;
         if (cin >> uu && uu != '|')     // check if length of input is greater than 4
                 error("Length of input is more than 4");
@@ -233,13 +232,17 @@ Game_counts fourth()
 int main()
 try
 {
+	srand(time(NULL));
         init();
+
         cout << "=========== Bulls and Cows guessing game ==========\n";
                 cout << "============= Discover the hidden letters ============\n";
                 cout << "       Bulls == right guess, right position.\n";
                 cout << "       Cows == right guess, wrong position.\n\n";
         while (cin)
         {
+		for (int i = 0; i < comg.size(); i++)
+			cout << comg[i] << endl;
                 cout <<  "Guess only four lowercase letters (from a-z): ";
                 Game_counts count = fourth();
                 cout << count.bullz << " bulls and " << count.cowz << " cows\n";
