@@ -10,21 +10,30 @@
  */
 int main()
 {
-	cout << "Enter a double value: ";
-	char ch;
-	cin >> ch;
+	int j;
+	// cout << "Enter a double value: ";
+	// char ch;
+	// cin >> ch;
 
-	double val;
-	if (ch == '2')
-	{
-		cin.unget();
-		cin >> val;
-		// cin.putback(ch);
-	}
-	if (!cin)
-		cout << "Not read" << endl;
-       	cout << "result: " << val << endl;
+	// double val;
+	// if (ch == '2')
+	// {
+	// 	cin.unget();
+	// 	cin >> val;
+	// 	// cin.putback(ch);
+	// }
+	// if (!cin)
+	// 	cout << "Not read" << endl;
+       	// cout << "result: " << val << endl;
 
+	/**
+	 * test declaration of variable
+	 */
+	constexpr int max = 1000;
+	int k = max;
+
+	cout << "j: " << j << endl;
+	cout << "k: " << k << endl;
 
 	// double left = 0;
 	// cout << "Enter two integers to calculate modulo: ";
