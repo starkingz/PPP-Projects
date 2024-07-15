@@ -6,6 +6,7 @@
  * Simple calculator
  *
  * Revision history
+ *********** Revised by Ohia Goodstar 13 july 2024
  *********** Facilities added by Ohia Goodstar 18 June 2024 (print as newline)
  *********** Facilities added by Ohia Goodstar 17 June 2024 (constant and Symbol_table)
  *********** Facilities added by Ohia Goodstar 15 June 2024 (assignment)
@@ -28,7 +29,7 @@
  ** Print
  ** Quit
  *
- * Print: newline
+ * Print: newline or ;
  * Quit: Q
  *
  * Expression:
@@ -115,7 +116,7 @@ void Token_stream::putback(Token t)
 // keywords
 const char number = '8'; // t.kind means it a number Token
 const char quit   = 'Q'; // t.kind==quit means that t is a quit Token
-const char print  = '\n'; // t.kind==print means that t is a print Token
+const char print  = ';'; // t.kind==print means that t is a print Token
 const char let    = 'L'; // let represents declaration Token
 const char name   = 'a'; // name Token
 const char con    = 'C'; // constant represents const declaration Token
@@ -151,6 +152,7 @@ Token Token_stream::get()
     cin.get(ch);    // read whitespace (space, newline, tab, etc.)
 
     switch (ch) {
+    case print:
     case quit:
     case '=':
     case '(':
@@ -198,7 +200,7 @@ Token Token_stream::get()
 }
 // -----------------------------------------------------------------------------
 
-void Token_stream::ignore(char c) // c represents the kind of Token
+void Token_stream::ignore(char c) // return if whitespace (newline, space, tab, etc)
 {
 	// first look in the buffer
 	if (full && c == buffer.kind) {
@@ -212,7 +214,7 @@ void Token_stream::ignore(char c) // c represents the kind of Token
 	char ch = 0;
 
 	while (cin.get(ch)) {
-		if (ch == c)
+		if (ch == c || ch == '\n')
 			return;
 	}
 }
@@ -555,8 +557,9 @@ try
 	cout << "Welcome to our simple calculator.\n"
              << "Please enter expressions using floating-point numbers.\n"
              << "Available operators: '*', '/', '+', '-', '!'\n"
-             << "Use ENTER key " << " to print now or " << quit
-	     << " to quit program\n";
+             << "Use ENTER key "
+	     << "to print now or ; to seperate sequence of expressions\nand "
+	     << quit << " to quit program\n";
 
 	// predefined names
 	symtab.declare(con, "pi", 3.1415926535); // pi is a constant
