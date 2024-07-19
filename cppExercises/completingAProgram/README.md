@@ -1,14 +1,14 @@
 ## Completing A Program - Chapter 7 of Programming: Principles of programming using c++ book
-# Includes code examples, test, drills and chapter exercises for Chapter 7
-# Executable files can only be run in a unix system ('.out' extension)
-# All executable files compiled using -Wextra -Wall -pedantic flags
+## Includes code examples, test, drills and chapter exercises for Chapter 7
+## Executable files can only be run in a unix system ('.out' extension)
+## All executable files compiled using -Wextra -Wall -pedantic flags
 
 
 ## Guide to the chapter 7 exercise questions and where to find each solution
 
 * [Exercise 1](./exercise01cal.cpp): Allow underscores in the calculator's variable names [exe file](./cal01).
 
-* [Exercise 2])(./exercise02cal.cpp): Provide assignment operator =, so that you can change the value of the variable after introducing it using let. [exe file](./cal02).
+* [Exercise 2](./exercise02cal.cpp): Provide assignment operator =, so that you can change the value of the variable after introducing it using let. [exe file](./cal02).
 
 * [Exerccise 2 discussion](./exercise02discussion.txt): Discuss why changing the value of the variable can be useful and how it can be a source of problems.
 
