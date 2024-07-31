@@ -790,7 +790,7 @@ int main()
         char ch;
         
         int count = 0;
-        while(cin.get(ch) && ch == ' ')
+        while(cin.get(ch))
                 count++;
 
         cout << "Words count: " << count << endl;
