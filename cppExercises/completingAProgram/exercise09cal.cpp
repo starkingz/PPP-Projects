@@ -563,7 +563,7 @@ double statement()
 }
 
 /**
- * print_help - print user instruction(manual) to guide user
+ * print_help - print user instructions(manual) to guide user
  *
  */
 void print_message()
