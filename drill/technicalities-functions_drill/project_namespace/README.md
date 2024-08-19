@@ -1,5 +1,6 @@
-## Drill 3
+# Drill 3
 
+## Problem:
 Write a program using a single file containing three namespaces X, Y, and
 Z so that the following main() works correctly:
 ```
@@ -23,4 +24,5 @@ int main()
 	X::print(); // print X’s var
 }
 ```
-Solution: [xyz.h](./xyz.h) and [use.cpp](use.cpp)
+## Solution:
+[xyz.h](./xyz.h) and [use.cpp](use.cpp)
