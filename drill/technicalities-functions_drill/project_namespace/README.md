@@ -2,7 +2,8 @@
 
 Write a program using a single file containing three namespaces X, Y, and
 Z so that the following main() works correctly:
-```int main()
+```
+int main()
 {
 	X::var = 7;
 	X::print(); // print X’s var
