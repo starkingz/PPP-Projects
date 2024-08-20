@@ -25,4 +25,11 @@ int main()
 }
 ```
 ## Solution:
-[xyz.h](./xyz.h) and [use.cpp](use.cpp)
+Single file containing X, Y and Z namespaces (header file): [xyz.h](./xyz.h)
+
+Main file: [use.cpp](use.cpp)
+Exe file: [use](./use)
+
+Source codes compiled and ran on a linux operating system.
+Exe file seen in this directory works only on a linux ops
+Compile flags: g++ -Wextra -Wall -pedantic -std=c++17
