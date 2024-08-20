@@ -23,5 +23,6 @@ to use cin.
 Header file: [my.h](./my.h)
 Main file: [use.cpp](./use.cpp)
 
-Code run in a linux operating system.
+Source codes compiled and ran on a linux operating system.
+Exe file seen in this directory works only on a linux ops
 Compile flags: g++ -Wextra -Wall -pedantic -std=c++17
