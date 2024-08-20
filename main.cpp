@@ -100,27 +100,49 @@
 //         }
 // }
 
-int main()
-{
-        double left = 1;
-        cin >> left;
-        char c = 'a';
-        cin >> c;
+// int main()
+// {
+//         double left = 1;
+//         cin >> left;
+//         char c = 'a';
+//         cin >> c;
         
 
-        // int n = left;
-                switch (c) {
-                        case '!':
-                        {
-                                // left = n;
-                                for (int i = left - 1; i >= 1; i--)
-                                {
-                                        left *= i;
-                                }
-                                if (left == 0)
-                                        left = 1;
-                                break;
-                        }
-                }
-        // cout << left << endl;
+//         // int n = left;
+//                 switch (c) {
+//                         case '!':
+//                         {
+//                                 // left = n;
+//                                 for (int i = left - 1; i >= 1; i--)
+//                                 {
+//                                         left *= i;
+//                                 }
+//                                 if (left == 0)
+//                                         left = 1;
+//                                 break;
+//                         }
+//                 }
+//         // cout << left << endl;
+// }
+
+double my_abs(int x)
+{
+        if (x < 0)
+                return -x;
+        cout << x << endl;
+        x = 23;
+        return x;
+}
+
+int main()
+try {
+        int x = 232;
+
+        cout << my_abs(x) << endl;
+        cout << x << endl;
+
+        return 0;
+}
+catch (exception& e) {
+        cerr << "Err: " << e.what() << endl;
 }

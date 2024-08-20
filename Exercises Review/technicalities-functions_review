@@ -1,0 +1,14 @@
+/**
+*       Chapter 8 Review
+*       Revised by Ohia Goodstar 19/08/2024
+*
+*/
+
+1.      What is the difference between a declaration and a definition?
+Ans.    * Declaration gives the basic informations for a statement while a definition gives the full informations.
+        * A declaration can be defined more than once while a definition can not.
+        * All definitions is a declaration but only some declarations is a definition.
+        * A decleration is an interface while a definition is an implementation of the interface.
+        * Definition consumes memory whereas declaratoin don't..
+
+
