@@ -11,4 +11,11 @@ Ans.    * Declaration gives the basic informations for a statement while a defin
         * A decleration is an interface while a definition is an implementation of the interface.
         * Definition consumes memory whereas declaratoin don't..
 
-
+2.	How do we syntactically distinguish between a function declaration and
+	a function definition?
+Ans.	* Syntactically a function declaration consists of a return type, an
+	identifier, an argument/parameter list if necessary
+	and a closing semi-colon. e.g void age(int a);
+	while a function definition consists of a return type, an identifier, an
+	argument/parameter list if necessary and a body which is delimited by
+	curly braces. e.g void age(int a){/*.....*/}
