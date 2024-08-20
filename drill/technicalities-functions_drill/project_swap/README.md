@@ -25,7 +25,13 @@ swap_?(7.7,9.9);
 ## Solutions:
 Header file: [swap.h](./swap.h)
 swap_v: [0-swap.cpp](./0-swap.cpp) && [0-use.cpp](./0-use.cpp)
+
 swap_r: [1-swap.cpp](1-swap.cpp) && [1-use.cpp](./2-use.cpp)
+
 swap_cr: [2-swap.cpp](./2-swap.cpp) && [2-use.cpp](./2-use.cpp)
 
 Which functions and calls compiled, and why? [Answer](./answer_to_question.txt)
+
+Source codes compiled and ran on a linux operating system.
+Exe file seen in this directory works only on a linux ops
+Compile flags: g++ -Wextra -Wall -pedantic -std=c++17
