@@ -1,4 +1,5 @@
 #include "my.h"
+#include <iostream>
 
 int foo = 7;
 int main()
