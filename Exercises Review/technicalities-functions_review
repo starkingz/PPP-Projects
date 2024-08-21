@@ -34,3 +34,6 @@ Ans.	That is because the functions in the calculator program all call each other
 	primary() needs to call expression(). So expression() has to be declared
 	above primary() so it can make the call else there would be an
 	'expression' was not declared in this scope error message.
+
+5.	Is int a; a definition or just a declaration?
+Ans.	Well int a; is a definition because it has no extern keyword.
