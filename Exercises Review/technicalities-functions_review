@@ -26,3 +26,11 @@ Ans.	syntactically a variable declaration starts with extern, data type,
 	named object with a closing semi-colon. e.g extern int a;
 	while a variable definition starts with a data type, named object with
 	an initializer and a closing semi-colon. e.g int a {21};
+
+4.	Why can't you use the functions in the calculator program from chapter 6
+	without declaring them first?
+Ans.	That is because the functions in the calculator program all call each other
+	simultaneously. expression() calls term(), term() calls primary() and
+	primary() needs to call expression(). So expression() has to be declared
+	above primary() so it can make the call else there would be an
+	'expression' was not declared in this scope error message.
