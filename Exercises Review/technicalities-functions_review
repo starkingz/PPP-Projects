@@ -19,3 +19,10 @@ Ans.	* Syntactically a function declaration consists of a return type, an
 	while a function definition consists of a return type, an identifier, an
 	argument/parameter list if necessary and a body which is delimited by
 	curly braces. e.g void age(int a){/*.....*/}
+
+3.	How do we syntactically distinguish between a variable declaration and a
+	variable definition?
+Ans.	syntactically a variable declaration starts with extern, data type,
+	named object with a closing semi-colon. e.g extern int a;
+	while a variable definition starts with a data type, named object with
+	an initializer and a closing semi-colon. e.g int a {21};
