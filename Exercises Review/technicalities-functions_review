@@ -37,3 +37,10 @@ Ans.	That is because the functions in the calculator program all call each other
 
 5.	Is int a; a definition or just a declaration?
 Ans.	Well int a; is a definition because it has no extern keyword.
+
+6.	Why is it a good idea to initialize variables as they are declared?
+Ans.	It's a good idea (good practice) to initialize variables because
+	every declared variable have a default value and it differs
+	by machine and you could get an unexpected result when
+	that variable is used without initialization. For example using the
+	variable before you initialize it can cause a serious problem for you.
