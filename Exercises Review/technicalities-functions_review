@@ -44,3 +44,7 @@ Ans.	It's a good idea (good practice) to initialize variables because
 	by machine and you could get an unexpected result when
 	that variable is used without initialization. For example using the
 	variable before you initialize it can cause a serious problem for you.
+
+7.	What can a function declaration consist of?
+Ans.	A function declaration can consist of an extern, a data type,
+	an identifier, an initializer and a closing semi-colon.
