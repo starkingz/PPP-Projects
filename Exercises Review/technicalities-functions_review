@@ -52,3 +52,10 @@ Ans.	A function declaration can consist of an extern, a data type,
 8.	What good does indentation do?
 Ans.	It makes our code readable and a good indented code
 	usually gives bugs no place to hide.
+
+9.	What are the header files used for?
+Ans.	Header files are used to basically store declarations and they
+	play a role in linking the definitions file to the main file.
+	For example variable declaration, function declaration,
+	class declaration etc are stored in the header file. File
+	extension of a header file is (.h).
