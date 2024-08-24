@@ -94,3 +94,8 @@ Ans.	Pass-by-value copies it's value from one object address to another
 Ans.	Pass-by-reference can read and write the value of an object address
 	while pass-by-const-reference can read (only) the value passed by an
 	object address.
+
+16.	What is a swap()?
+Ans.	swap() is a function that can be found in c++ standard library that
+	interchanges argument values with each other. swap() can used for
+	sorting values.
