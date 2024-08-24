@@ -69,3 +69,9 @@ Ans.	The global scopes: int f();
 	A local scopes: delimited by curly braces. { int a{3}; }
 	A namespace scope: namespace X { int f(); }
 	A class scope: class Myclass { int a{3} };
+
+12.	What is the difference between a class scope and local scope?
+Ans.	a class scope is an area of text within a class while a local scope
+	is between curly braces of a block and function parameter/argument list
+	The major difference is a class scope is a scope within a class while a
+	local scope is a scope within a function.
