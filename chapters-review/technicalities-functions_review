@@ -84,10 +84,10 @@ Ans.	In a large/vast program it would be almost impossible to
 	advisable to use just a few global variable, like one or two.
 
 14.	What is the difference between pass-by-value and pass-by-reference?
-Ans.	Pass-by-value copies it's value to the called function argument
-	object while pass-by-reference refer's back to the address of the object
-	and can read/write to the object. Pass-by-reference can modify the
-	object of the callee function while pass-by-value can't.
+Ans.	Pass-by-value copies it's value from one object address to another
+	while pass-by-reference just refers back to the object address that
+	that needs to be passed. Pass-by-reference can modify the
+	object address while pass-by-value can't.
 
 15.	What is the difference between pass-by-reference and
 	pass-by-const-reference?
