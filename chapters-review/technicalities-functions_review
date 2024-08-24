@@ -75,3 +75,10 @@ Ans.	a class scope is an area of text within a class while a local scope
 	is between curly braces of a block and function parameter/argument list
 	The major difference is a class scope is a scope within a class while a
 	local scope is a scope within a function.
+
+13.	Why should a programmer minimize the number of global variables?
+Ans.	In a large/vast program it would be almost impossible to
+	find the translation unit that implemented the global variable, there is
+	no known technique used in finding where the global variable has been
+	read or where its value has been altered(write). That's why it is
+	advisable to use just a few global variable, like one or two.
