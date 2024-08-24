@@ -99,3 +99,12 @@ Ans.	Pass-by-reference can read and write the value of an object address
 Ans.	swap() is a function that can be found in c++ standard library that
 	interchanges argument values with each other. swap() can used for
 	sorting values.
+
+17.	Would you ever define a function with a vector<double>-by-value
+	parameter?
+Ans.	Depends on the amount of double values that would be stored or that is
+	stored on the vector. It would be costly to define a function with a
+	vector<double>-by-value parameter. if it's one or two doubles then yes
+	else no. And it's unlikely for a vector to hold just one or two values
+	so the answer is a NO. the vector should either be a pass-by-reference
+	or a pass-by-const-reference
