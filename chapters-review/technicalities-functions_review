@@ -82,3 +82,9 @@ Ans.	In a large/vast program it would be almost impossible to
 	no known technique used in finding where the global variable has been
 	read or where its value has been altered(write). That's why it is
 	advisable to use just a few global variable, like one or two.
+
+14.	What is the difference between pass-by-value and pass-by-reference?
+Ans.	Pass-by-value copies it's value to the called function argument
+	object while pass-by-reference refer's back to the address of the object
+	and can read/write to the object. Pass-by-reference can modify the
+	object of the callee function while pass-by-value can't.
