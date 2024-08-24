@@ -1,0 +1,142 @@
+// chapter 5 - errors
+// date: 9.11.2023
+// Answered by Ohia Goodstar(me)
+
+1.      Name four major types of errors and briefly define each one.
+Ans:    * Runtime-error: This is an error that throws an exception while the system is running.
+        * Compiletime_error: This is an error that is found by the compiler.
+        * linker error: This is an error that occures when the object file can not link to the executable file.
+        * Logic error: This is a programmer error, it is made by the programmer when you give the computer wrong logic
+
+2.      What kinds of errors can we ignore in student programs?
+        * Errors that can not be fixed
+
+3.      What guarantees should every completed project offer?
+        * Every completed project should be free of errors
+        * Every completed projects should always check for errors catch if necessary
+
+4.      List three approaches we can take to eliminate errors in programs and
+        produce acceptable software
+        * Check for error from callee function
+        * check for error in function calling
+        * catch exceptions
+
+5.      Why do we hate debugging?
+        * we hate debugging because its tedious
+
+6.      What is a syntax error? Give five examples.
+        * syntax error is an error that is found when you write the wrong pattern of a statement or code
+        *       1. for (initialized var; conditional statement; increment) { //... body ...// }
+        *       2. return type identifier(parameter list)
+        *       3. return type identifier(parameter list');
+        *       4. int val = area('0);
+        *       5. int val = area("f");
+
+7.      What is a type error? Give five examples.
+        * Type errors throw an error when you store the wrong value in the wrong data type
+        *       1. int i = "4";
+        *       2. char c = 2;
+        *       3. int a = arena(4); // mispelled function name (arena not declared)
+        *       4. int b = area("two", 2) // expected two int arguments (wrong input in first argument)
+        *       5. int c = area(4)      // wrong number of arguments
+
+8.      What is a linker error? Give three examples.
+        * It throws an error message when object file can not be combined with executable file
+          or a function can not be linked to its libraries
+        *       1. #include <iostraem> // library not found
+        *       2. int a = area(9, 9)  // area not declared in this scope
+        *       3.  #include "main.hhh" // main.hhh does not exist
+
+9.      What is a logic error? Give three examples
+        * This is when your code does not output your expectations or desired result(its likely you wrote the wrong code)
+        *       1. double val = 9 / 2 * 2; cout << val << endl; // Expectations: 9, prints 8 instead of 9
+        *       2. int i = 0; while (i <= 10) cout << i; // Expectations: Range of 0 through 10. Result: prints Overflow (infinite loop)
+        *       3. short int shnum = 2000000000000000000 * 2000000000000000; cout << shnum;
+
+10.     List four potential sources of program errors discussed in the text.
+        * Incomplete program
+        * Logic errors
+        * Poor specifications
+        * Unexpected argument or input
+
+11.     How do you know if a result is plausible? What techniques do you have
+        to answer such questions?
+        * When the result looks fair enough for example an area does not have a negative value
+        * Firstly you need to know what a right answer looks like, then you can use online sources to get at least a plausible result
+
+12.     Compare and contrast having the caller of a function handle a run-time error
+        vs. the called function’s handling the run-time error.
+        * Well i think the good thing about allowing the callee handle the error is because the handling is done in one place and you don't have to handle the error separetely every time you call a function
+        * Good thing about the caller handling the function is that you get to have different error messages with different meaning for every called function 
+        * Letting the caller handle the error can be messy sometimes and making debugging harder and more tedious
+
+13.     Why is using exceptions a better idea than returning an “error value”?
+        * Using exceptions is better because you can catch errors from functions that throws error
+        * Exception can be used to catch any type of error thrown by the function
+        * With exception you don't need to know the return value to handle error
+
+14.     How do you test if an input operation succeeded?
+        * By testing cin
+
+15.     Describe the process of how exceptions are thrown and caught.
+        * Exceptions are been caught by the main function and thrown by the called function, 
+          while trying to catch an exception you use a try keyword before the curly bracket block in main function.
+          The exception checks for any thrown error and catches it then write the error to 
+          the screen/console and returns failure then terminates the program
+
+16.     Why, with a vector called v, is v[v.size()] a range error? What would be
+        the result of calling this?
+        * These is because the member function v.size() accesses a non valid index in the vector element,
+          the vector starts its index from 0 so v.size() accesses an element out side the vector range
+        * Its likely to print 0 or any random value.
+
+17.     Define pre-condition and post-condition; give an example (that is not the area()
+        function from this chapter), preferably a computation that requires a loop.
+        * pre-condition is a condition that checks the individual arguments for error before it sends its result
+                EDiT -> pre-condition is checking for bad arguments based on the function requirements
+        * post-condition is a condition that checks if the requirments of the arguments result are met
+        * // A program that takes an argument, add them in a loop and prints only the absolute value
+        * // pre-condition: n is positive
+        * // post-condition: print out the positive result
+        *       void print_out()
+                {
+                        cout << "Enter a condition to loop (int value): ";
+                        int n {0};
+                        cin >> n;
+
+                        if (i < 0)
+                                        error("Error: Negative value\n");
+                        for (int i = 0; i <= n; i++) {
+                                
+                                int result = i + i;
+                                if (result < 0)
+                                        error("Error: Negative value not allowed\n");
+                                cout << "Result: " << n << endl;
+                        }
+
+                }
+                // main function
+                int main()
+                {
+                        print_out();
+                }
+
+
+18.     When would you not test a pre-condition?
+        When you have a good reason not to
+
+19.     When would you not test a post-condition?
+        When there's no return value
+
+20.     What are the steps in debugging a program?
+        1.      Get the program to compile. (pass the compile time error)
+        2.      get it to run.  (pass the link time error and run time error)
+        3.      get it to do what its supposed to do. (pass the logic errors)
+
+21.     Why does commenting help when debugging?
+        Commenting helps you know the requirement of the function (i.e specific argument(s) needed by the function)
+        and what a function does and also helps documenting the decisions made in a program.
+
+22.     How does testing differ from debugging?
+        Debugging is a process of finding system bugs(errors) while testing is a process of using test cases to find system bugs(errors) or
+        testing can be said to be a way of using every possible input to check for vulnerebility in a system
