@@ -46,8 +46,9 @@ Ans.	It's a good idea (good practice) to initialize variables because
 	variable before you initialize it can cause a serious problem for you.
 
 7.	What can a function declaration consist of?
-Ans.	A function declaration can consist of an extern, a data type,
-	an identifier, an initializer and a closing semi-colon.
+Ans.	A function declaration consists of a data type/void(when no datatype
+	is specified), an identifier, a parameter list if needed and a closing
+	semi-colon. Function declaration does not include a function body.
 
 8.	What good does indentation do?
 Ans.	It makes our code readable and a good indented code
