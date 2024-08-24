@@ -61,7 +61,7 @@ Ans.	Header files are used to basically store declarations and they
 	extension of a header file is (.h).
 
 10.	What is the scope of a declaration?
-Ans.	declaration is a global scope and can also be a local scope
+Ans.	declaration is a global scope.
 
 11.	What kinds of scope are there? Give an example each.
 Ans.	The global scopes: int f();
