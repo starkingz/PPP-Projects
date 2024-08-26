@@ -109,3 +109,12 @@ Ans.	Depends on the amount of double values that would be stored or that is
 	else no. And it's unlikely for a vector to hold just one or two values
 	so the answer is a NO. the vector should either be a pass-by-reference
 	or a pass-by-const-reference
+
+18.	Give an example of undefined order of evaluation? Why can undefined
+	order of evaluation be a problem?
+Ans.	Example: v[i] = i++;
+	Undefined order of evaluation could be a problem because it's hard to
+	determine the sub-expression that executes first, it could be the lvalue
+	or the rvalue that executes first, it depends on the compiler or optimization
+	settings. The results are not quaranteed to be the same in different
+	compilers.
