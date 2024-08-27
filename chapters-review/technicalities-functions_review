@@ -118,3 +118,12 @@ Ans.	Example: v[i] = i++;
 	or the rvalue that executes first, it depends on the compiler or optimization
 	settings. The results are not quaranteed to be the same in different
 	compilers.
+
+19.	What do x && y and x || y, respectively mean?
+Ans.	This is a boolean expression.
+	x && y: here if x is true and y is true the expression is true
+	else if either x or y is false the expression results to false.
+	x || y: here if either x or y is true the expression results to true
+	but if both x and y is false the expression results to false.
+	true and false can be represented with 1 and 0 respectively, while true
+	can be any digit with 0 as an exception.
