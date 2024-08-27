@@ -132,3 +132,7 @@ Ans.	This is a boolean expression.
 	functions, functions within classes, classes within classes, classes
 	within functions?
 Ans.	functions within classes.
+
+21.	What goes into an activation record?
+Ans.	function parameter/argument list, local variables and
+	implementation stuffs.
