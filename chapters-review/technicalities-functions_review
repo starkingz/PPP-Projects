@@ -127,3 +127,8 @@ Ans.	This is a boolean expression.
 	but if both x and y is false the expression results to false.
 	true and false can be represented with 1 and 0 respectively, while true
 	can be any digit with 0 as an exception.
+
+20.	Which of the following is standard-conforming c++: functions within
+	functions, functions within classes, classes within classes, classes
+	within functions?
+Ans.	functions within classes.
