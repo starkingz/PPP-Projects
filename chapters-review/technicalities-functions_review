@@ -140,4 +140,5 @@ Ans.	function parameter/argument list, local variables and
 22.	What is a call stack and why do we need one?
 Ans.	A call stack is a data structure that grows and shrinks at one end,
 	according to the rule "last in, first out"
-	A call stack is used to know how a function call is implemented.
+	A call stack is used to know the details of how a function call is
+	implemented.
