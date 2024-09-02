@@ -142,3 +142,6 @@ Ans.	A call stack is a data structure that grows and shrinks at one end,
 	according to the rule "last in, first out"
 	A call stack is used to know the details of how a function call is
 	implemented.
+
+23.	What is the purpose of a namespace?
+Ans.	Namespace is used to group a classes and function.
