@@ -144,7 +144,8 @@ Ans.	A call stack is a data structure that grows and shrinks at one end,
 	implemented.
 
 23.	What is the purpose of a namespace?
-Ans.	Namespace is used to group a classes and function.
+Ans.	Namespace is used to group/organize classes, funtions, datas, types,
+	etc.
 
 23.	How does a namespace differ from a class?
 Ans.	A namespace can only be accessed by using declaration, by using
