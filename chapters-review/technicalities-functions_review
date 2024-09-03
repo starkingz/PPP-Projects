@@ -153,3 +153,7 @@ Ans.	A namespace can only be accessed by using declaration, by using
 	it's object by using a '.'. A namespace can organize a class, functions,
 	data, types while a class can organize data members and function
 	members.
+
+24.	What is a using declaration?
+Ans.	This is one of the way to access a namespace. It is used to gain access
+	to a specified namespace identifier for example using std::string;
