@@ -147,13 +147,21 @@ Ans.	A call stack is a data structure that grows and shrinks at one end,
 Ans.	Namespace is used to group/organize classes, funtions, datas, types,
 	etc.
 
-23.	How does a namespace differ from a class?
+24.	How does a namespace differ from a class?
 Ans.	A namespace can only be accessed by using declaration, by using
 	directive or by using a fully qualified name while a class can access
 	it's object by using a '.'. A namespace can organize a class, functions,
 	data, types while a class can organize data members and function
 	members.
 
-24.	What is a using declaration?
+25.	What is a using declaration?
 Ans.	This is one of the way to access a namespace. It is used to gain access
 	to a specified namespace identifier for example using std::string;
+
+26.	Why should you avoid using directives in a header?
+Ans.	using directives can cause name clashes because it's possible you won't
+	know which namespace member is for which namespace directive. for
+	example Graph_lib consists of a Line class and TextLib also consists of
+	a Line class, using directive in this case would make Graph_lib::Line
+	clash with TextLib::Line. So its more advisable to only use using
+	directives for std namespace.
