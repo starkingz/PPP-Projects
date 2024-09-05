@@ -165,3 +165,8 @@ Ans.	using directives can cause name clashes because it's possible you won't
 	a Line class, using directive in this case would make Graph_lib::Line
 	clash with TextLib::Line. So its more advisable to only use using
 	directives for std namespace.
+
+27.	What is namespace std?
+Ans.	std short form of standard contains standard library and buit-in classes
+	and declared functions. Examples of std namespaces are std::cout and
+	std::cin.
