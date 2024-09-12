@@ -15,11 +15,11 @@ void print(vector <int> v, std::string s)
 {
 	int len = v.size();
 
-	std::cout << s << std::endl << "{";
+	std::cout << s << ":" << std::endl << "{";
 	for (int i = 0; i < len; i++) {
 		std::cout << v[i];
 		if (i != len - 1)
 			std::cout << ", ";
 	}
-	std::cout << "}" << std::endl;
+	std::cout << "};" << std::endl;
 }
