@@ -34,7 +34,7 @@ try {
 
 	keep_window_open("~");	// for windows
 
-	return 1;
+	return 0;
 }
 catch (runtime_error& e) {
 	cerr << "error: " << e.what() << endl;
