@@ -18,7 +18,7 @@ try {
 	int y {0};
 	int n {0};
 
-	while (std::cin >> x >> y >> n) {
+	while (std::cin >> x >> y >> n) { // allow negative input
 		vector <int> v;
 
 		fibonacci(x, y, v, n);
