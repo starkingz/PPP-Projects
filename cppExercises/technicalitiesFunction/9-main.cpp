@@ -1,3 +1,9 @@
+// Originally written by Ohia Goodstar
+// Chapter 8 - Technicalities - functions, etc.
+// Exercise 8
+// Date: 18.19.2024
+// The first working version of this program computes for only
+// one alternative.
 #include "chapter8header.h"
 // Program does not check for bad input
 /**

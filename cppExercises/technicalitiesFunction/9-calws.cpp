@@ -1,3 +1,7 @@
+// Originally written by Ohia Goodstar
+// Chapter 8 - Technicalities - functions, etc.
+// Exercise 9
+// Date: 18.10.2024
 #include "chapter8header.h"
 
 /**
