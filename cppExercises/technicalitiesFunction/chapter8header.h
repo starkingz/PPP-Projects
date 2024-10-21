@@ -107,3 +107,14 @@ void printd(const vector <string>& s, const vector <double>& d, string label);
  * Return: nothing
  */
 void srt(vector <string>& names, vector <double>& ages);
+
+/**
+ * calws - calculate weighted sum
+ * Description: scores of alternatives are multiplied by the weightings and...
+ * ...summed to calculate the overall performance
+ * @rating: evaluated point values based on the criteria
+ * @weighting: co-efficient assigned to each criterion
+ *
+ * Return: sum of all
+ */
+double calws(const vector <double>& rating, const vector<double>& weighting);
