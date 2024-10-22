@@ -19,7 +19,7 @@ double calws(const vector <double>& rating, const vector<double>& weighting)
 	int wlen = weighting.size();
 
 	if (rlen != wlen)
-		error("wrong sizes");
+		error("wrong length");
 
 	double sum {0};
 
