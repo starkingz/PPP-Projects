@@ -1,0 +1,132 @@
+// chapter 6 - Writing a program
+// date: 22.02.2024
+// Answered by Ohia Goodstar(me)
+
+1.      What do we mean by “Programming is understanding”?
+Ans.    Programming is understanding because you need to basically understand the requirements to write a computer program or implement code
+
+2.      The chapter details the creation of a calculator program. Write a short
+        analysis of what the calculator should be able to do.
+Ans.    The calculator would handle only + - * / and would be read as an expression
+
+3.      How do you break a problem up into smaller manageable parts?
+Ans.    Using pseudo code
+
+4.      Why is creating a small, limited version of a program a good idea?
+Ans.    To avoid feature creep and it helps buiding a program become less tedious and make you feel less overwhelmed
+
+5.      Why is feature creep a bad idea?
+Ans.    Feature creep is a bad idea because it makes it tedious and makes the original idea of a program seem    useless
+
+6.      What are the three main phases of software development?
+Ans.    Analysis, design and implementation
+
+7.      What is a “use case”?
+Ans.    This is a way a system can be used to achieve a task
+
+8.      What is the purpose of testing?
+Ans.    Testing is used to check if the requirements/specifications of a program are all met
+
+9.      According to the outline in the chapter, describe the difference between a
+        Term, an Expression, a Number, and a Primary.
+Ans.    a. Terms handles only multiplication, division and modulo operators and it is first calculated before an expression
+        b. An expression calculates only addition and subtraction Numbers, and it binds less tighter than term
+        c. Number reads a floating point value
+        d. Primary handles an expression in a bracket before it handles any other operations
+
+10.     In the chapter, an input was broken down into its component Terms, Expressions,
+        Primarys, and Numbers. Do this for (17+4)/(5–1).
+Ans.    (21)/(4) = 21 / 4 = 5.25
+
+11.     Why does the program not have a function called number()?
+Ans.    Thats because we already have floating point type as an external function
+
+12.     What is a token?
+Ans.    Token is a sequence of characters that reads characters and a number
+
+13.     What is a grammar? A grammar rule?
+Ans.    A grammar lets us transform a program into a syntax tree
+        Grammar rule is a rule that reads a stream of tokens and search through the tokens to find a match
+
+14.     What is a class? What do we use classes for?
+Ans.    A class is a user defined data type that groups data and functionalities
+        ........ A class is used to group data and functions and it is also used to create an object
+
+15.     How can we provide a default value for a member of a class?
+Ans.    using initializer list
+
+16.     In the expression function, why is the default for the switch-statement to “put back” the token?
+Ans.    That is because we need to store Token in input stream so they can be used in main function to know if the user wants to print or quit the program
+
+17.     What is “look-ahead”?
+Ans.    To foresee into the expression
+
+18.     What does putback() do and why is it useful?
+Ans.    Putback() puts a value that has already been read by cin back into istream... So it can be read by another variable using cin
+        putback() is useful when trying to determine if a value is a number or word then it brings back the value that has already been read by char so it can be read again by a double or a string if necessary.
+
+19.     Why is the remainder (modulus) operation, %, difficult to implement in the term()?
+Ans.    modulus operator is difficult to implement because we need to determine the input given is an integer and not a floating point number.
+
+20.     What do we use the two data members of the Token class for
+Ans.    The two data members which are kind and value. Kind is used to store characters like operators while value is used to store floating point literals
+
+21.     Why do we (sometimes) split a class’s members into private and public members?
+Ans.    Makes interface simpler and more secured
+
+22.     What happens in the Token_stream class when there is a token in the
+buffer and the get() function is called?
+Ans.    it removes the token from buffer by assigning false to buffer (i.e full = false) and returns buffer
+
+23.     Why were the ';' and 'q' characters added to the switch-statement in the
+get() function of the Token_stream class?
+Ans.    ';' was added so if get() returns ';' then the program prints the answer, while 'q' was to quit / end / kill the program processes
+
+24.     When should we start testing our program?
+Ans.    After writing the code
+
+25.     What is a “user-defined type”? Why would we want one?
+Ans.    A user defined type is a type created by the user using classes, enumerators etc.
+
+26.     What is the interface to a C++ “user-defined type”?
+Ans.    Public:
+
+27.     Why do we want to rely on libraries of code?
+Ans.    To make writing code less tedious and making our code more efficient
+
+// chapter 6 - Writing a program
+// date: 09.03.2024
+// Answered by Ohia Goodstar
+// CHAPTER TERMS
+
+*Analysis:       This is a process of setting requirements / specification for a new or ongoing program. Its a way of looking-ahead to know the necessary requirements that is needed for the program..
+
+*Class:         Class is a user defined type that groups data members and member functions.
+
+Class member:   This consists of varibles and functions that been declared in a class.
+
+Data member:    This is an initialization of variable in a class.
+
+Design:         Is the structuring of a system.
+
+Divide by zero: This simply means a number can not be divided by a 0, so there should always be check while dividing
+
+Grammar:        Is a way of structuring a language to follow a certain rules.
+
+Implementation: Write the code, debug and test it to know if you doing what its supposed to do.
+
+Interface:      Interface is defined to describe the behaviour of a class without taking action of that class
+
+Private:        This is the implementation part of a class.
+
+Prototype:      Is a limited initial version of a program aimed at experimentation
+
+Pseudo code:    Pseudo code is a way of writing algorithm in a plain language that can be understood by a programmer.
+
+Public:         Is an interface that is shown or can by accessed by other functions outside the class.
+
+Syntax analyser:Is a process of confirming the rules and structure of a formal grammar.
+
+Token:          Is a sequence of character that represents a unit.
+
+use case:       This is a way a system can be used to achieve a task

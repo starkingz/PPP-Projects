@@ -1,0 +1,8 @@
+// Originally written by Ohia Goodstar
+// Chapter 8 - Technicalities - functions, etc.
+// Exercise 4
+// Date: 10.09.2024
+
+* Using fibonacci() function in exercise 3 find the maximum number that an int
+  can approximately hold.
+Ans.  With fibonacci() an int could appoximately hold up to 1836311903.

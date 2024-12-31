@@ -1,6 +1,5 @@
 #include "../../../std_lib_facilities.h"
 #include "my.h"
-
 /**
  * print_foo - print the value of foo using cout
  *

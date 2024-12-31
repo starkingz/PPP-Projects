@@ -1,0 +1,8 @@
+*Answer to question asked in drill 2 of exercise 8*
+Question 1: Which functions and calls compiled, and why?
+Answer:
+swap_v function compiled with all calls successfully
+
+swap_r() function could only compile in the first call, couldn't compile in the second because it's argument is a magic literal, same with all calls with magic literals. Also swap.cpp could not change the value of 01-use.cpp constant expression. Since pass-by-reference changes the value of its called arguments and a const expression can not change its value, so the call did not compile. Call of swap_r() with int& parameters can not read a double argument.
+
+swap_cr() function is a read only function so it can not change assign a value to its parameters or arguments

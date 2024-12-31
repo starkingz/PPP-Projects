@@ -1,0 +1,172 @@
+/**
+*       Chapter 8 Review
+*       Revised by Ohia Goodstar 19/08/2024
+*
+*/
+
+1.      What is the difference between a declaration and a definition?
+Ans.    * Declaration gives the basic informations for a statement while a definition gives the full informations.
+        * A declaration can be defined more than once while a definition can not.
+        * All definitions is a declaration but only some declarations is a definition.
+        * A decleration is an interface while a definition is an implementation of the interface.
+        * Definition consumes memory whereas declaratoin don't..
+
+2.	How do we syntactically distinguish between a function declaration and
+	a function definition?
+Ans.	* Syntactically a function declaration consists of a return type, an
+	identifier, an argument/parameter list if necessary
+	and a closing semi-colon. e.g void age(int a);
+	while a function definition consists of a return type, an identifier, an
+	argument/parameter list if necessary and a body which is delimited by
+	curly braces. e.g void age(int a){/*.....*/}
+
+3.	How do we syntactically distinguish between a variable declaration and a
+	variable definition?
+Ans.	syntactically a variable declaration starts with extern, data type,
+	named object with a closing semi-colon. e.g extern int a;
+	while a variable definition starts with a data type, named object with
+	an initializer and a closing semi-colon. e.g int a {21};
+
+4.	Why can't you use the functions in the calculator program from chapter 6
+	without declaring them first?
+Ans.	That is because the functions in the calculator program all call each other
+	simultaneously. expression() calls term(), term() calls primary() and
+	primary() needs to call expression(). So expression() has to be declared
+	above primary() so it can make the call else there would be an
+	'expression' was not declared in this scope error message.
+
+5.	Is int a; a definition or just a declaration?
+Ans.	Well int a; is a definition because it has no extern keyword.
+
+6.	Why is it a good idea to initialize variables as they are declared?
+Ans.	It's a good idea (good practice) to initialize variables because
+	every declared variable have a default value and it differs
+	by machine and you could get an unexpected result when
+	that variable is used without initialization. For example using the
+	variable before you initialize it can cause a serious problem for you.
+
+7.	What can a function declaration consist of?
+Ans.	A function declaration consists of a data type/void(when no datatype
+	is specified), an identifier, a parameter list if needed and a closing
+	semi-colon. Function declaration does not include a function body.
+
+8.	What good does indentation do?
+Ans.	It makes our code readable and a good indented code
+	usually gives bugs no place to hide.
+
+9.	What are the header files used for?
+Ans.	Header files are used to basically store declarations and they
+	play a role in linking the definitions file to the main file.
+	For example variable declaration, function declaration,
+	class declaration etc are stored in the header file. File
+	extension of a header file is (.h).
+
+10.	What is the scope of a declaration?
+Ans.	declaration is a global scope.
+
+11.	What kinds of scope are there? Give an example each.
+Ans.	The global scopes: int f();
+	A statements scopes: for (int i = 0; i < 3; i++)
+	A local scopes: delimited by curly braces. { int a{3}; }
+	A namespace scope: namespace X { int f(); }
+	A class scope: class Myclass { int a{3} };
+
+12.	What is the difference between a class scope and local scope?
+Ans.	a class scope is an area of text within a class while a local scope
+	is between curly braces of a block and function parameter/argument list
+	The major difference is a class scope is a scope within a class while a
+	local scope is a scope within a function.
+
+13.	Why should a programmer minimize the number of global variables?
+Ans.	In a large/vast program it would be almost impossible to
+	find the translation unit that implemented the global variable, there is
+	no known technique used in finding where the global variable has been
+	read or where its value has been altered(write). That's why it is
+	advisable to use just a few global variable, like one or two.
+
+14.	What is the difference between pass-by-value and pass-by-reference?
+Ans.	Pass-by-value copies it's value from one object address to another
+	while pass-by-reference just refers back to the object address that
+	that needs to be passed. Pass-by-reference can modify the
+	object address while pass-by-value can't.
+
+15.	What is the difference between pass-by-reference and
+	pass-by-const-reference?
+Ans.	Pass-by-reference can read and write the value of an object address
+	while pass-by-const-reference can read (only) the value passed by an
+	object address.
+
+16.	What is a swap()?
+Ans.	swap() is a function that can be found in c++ standard library that
+	interchanges argument values with each other. swap() can used for
+	sorting values.
+
+17.	Would you ever define a function with a vector<double>-by-value
+	parameter?
+Ans.	Depends on the amount of double values that would be stored or that is
+	stored on the vector. It would be costly to define a function with a
+	vector<double>-by-value parameter. if it's one or two doubles then yes
+	else no. And it's unlikely for a vector to hold just one or two values
+	so the answer is a NO. the vector should either be a pass-by-reference
+	or a pass-by-const-reference
+
+18.	Give an example of undefined order of evaluation? Why can undefined
+	order of evaluation be a problem?
+Ans.	Example: v[i] = i++;
+	Undefined order of evaluation could be a problem because it's hard to
+	determine the sub-expression that executes first, it could be the lvalue
+	or the rvalue that executes first, it depends on the compiler or optimization
+	settings. The results are not quaranteed to be the same in different
+	compilers.
+
+19.	What do x && y and x || y, respectively mean?
+Ans.	This is a boolean expression.
+	x && y: here if x is true and y is true the expression is true
+	else if either x or y is false the expression results to false.
+	x || y: here if either x or y is true the expression results to true
+	but if both x and y is false the expression results to false.
+	true and false can be represented with 1 and 0 respectively, while true
+	can be any digit with 0 as an exception.
+
+20.	Which of the following is standard-conforming c++: functions within
+	functions, functions within classes, classes within classes, classes
+	within functions?
+Ans.	functions within classes.
+
+21.	What goes into an activation record?
+Ans.	function parameter/argument list, local variables and
+	implementation stuffs.
+
+22.	What is a call stack and why do we need one?
+Ans.	A call stack is a data structure that grows and shrinks at one end,
+	according to the rule "last in, first out"
+	A call stack is used to know the details of how a function call is
+	implemented.
+
+23.	What is the purpose of a namespace?
+Ans.	Namespace is used to group/organize classes, funtions, datas, types,
+	etc.
+
+24.	How does a namespace differ from a class?
+Ans.	A namespace can only be accessed by using declaration, by using
+	directive or by using a fully qualified name while a class can access
+	it's object by using a '.'. A namespace can organize a class, functions,
+	data, types while a class can organize data members and function
+	members.
+
+25.	What is a using declaration?
+Ans.	This is one of the way to access a namespace. It is used to gain access
+	to a specified namespace identifier for example using std::string;
+
+26.	Why should you avoid using directives in a header?
+Ans.	using directives can cause name clashes because it's possible you won't
+	know which namespace member is for which namespace directive. for
+	example Graph_lib consists of a Line class and TextLib also consists of
+	a Line class, using directive in this case would make Graph_lib::Line
+	clash with TextLib::Line. So its more advisable to only use using
+	directives for std namespace.
+
+27.	What is namespace std?
+Ans.	std short form of standard contains standard library and buit-in classes
+	and declared functions. Examples of std namespaces are std::cout and
+	std::cin.

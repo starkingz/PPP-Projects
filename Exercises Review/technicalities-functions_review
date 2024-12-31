@@ -19,3 +19,46 @@ Ans.	* Syntactically a function declaration consists of a return type, an
 	while a function definition consists of a return type, an identifier, an
 	argument/parameter list if necessary and a body which is delimited by
 	curly braces. e.g void age(int a){/*.....*/}
+
+3.	How do we syntactically distinguish between a variable declaration and a
+	variable definition?
+Ans.	syntactically a variable declaration starts with extern, data type,
+	named object with a closing semi-colon. e.g extern int a;
+	while a variable definition starts with a data type, named object with
+	an initializer and a closing semi-colon. e.g int a {21};
+
+4.	Why can't you use the functions in the calculator program from chapter 6
+	without declaring them first?
+Ans.	That is because the functions in the calculator program all call each other
+	simultaneously. expression() calls term(), term() calls primary() and
+	primary() needs to call expression(). So expression() has to be declared
+	above primary() so it can make the call else there would be an
+	'expression' was not declared in this scope error message.
+
+5.	Is int a; a definition or just a declaration?
+Ans.	Well int a; is a definition because it has no extern keyword.
+
+6.	Why is it a good idea to initialize variables as they are declared?
+Ans.	It's a good idea (good practice) to initialize variables because
+	every declared variable have a default value and it differs
+	by machine and you could get an unexpected result when
+	that variable is used without initialization. For example using the
+	variable before you initialize it can cause a serious problem for you.
+
+7.	What can a function declaration consist of?
+Ans.	A function declaration can consist of an extern, a data type,
+	an identifier, an initializer and a closing semi-colon.
+
+8.	What good does indentation do?
+Ans.	It makes our code readable and a good indented code
+	usually gives bugs no place to hide.
+
+9.	What are the header files used for?
+Ans.	Header files are used to basically store declarations and they
+	play a role in linking the definitions file to the main file.
+	For example variable declaration, function declaration,
+	class declaration etc are stored in the header file. File
+	extension of a header file is (.h).
+
+10.	What is the scope of a declaration?
+Ans.	declaration is a global scope and can also be a local scope
