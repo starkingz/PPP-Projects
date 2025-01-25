@@ -1,0 +1,49 @@
+/**
+*       Chapter 8 (PPP3) - Technicalities-classes, etc. Review
+*       Revised by Ohia Goodstar 24/01/2025
+*
+*/
+
+1. What are the two parts of a class, as described in this chapter?
+Ans. Public interface identified as public label and implementation identified as private.
+
+2.   What is the difference between interface and implementation in a class?
+Ans. interface is the users view of the class while implementation is the implementers view of the class.
+     Also interface is the part of a class declaration that users can access directily while implementation
+     is the part of a class declaration that users can access only indirectly through the interface.
+
+3.   What are the limitations and problems of the struct Date from ch{PPP3}8.4.8?
+Ans. You know since the struct Date members are public by default, that is they can be accessed from outside the class, the users by mistake misrepresented Date which is tedious and error-prone and everything that's tedious is error-prone.
+
+4.   Why is a constructor used for the Date type instead of init_day() function?
+Ans. While evolving the Date type we noticed that a user got to use Dates object before calling init_day which can cause serious error. They do this because they either forget to use init_day() or because they haven't heard of it but using a constructor to construct/initialize objects of Date would produce a compile-time error if user forgets to initialize it an instance, in otherwords constructor is used to provide good error-checking. Constructor is also used to define invariants.
+
+5.   What is an invariant? Give examples.
+Ans. An invariant is a rule for what constituents a valid value.
+     The notion of a valid Date is an important special case of the idea of a valid value.
+     Examples:
+
+6.   When should functions be in the class definition and when should they be placed outside the class? why?
+Ans. Functions should be kept in the class definition only when the implementer knows he needs the performance boost from inlining tiny functions.
+     And functions should be placed outside the class when the function is more than five lines of code cuz five or more lines of code don't benefit from inlining and keepin functions outside the class makes it look simpler.
+
+7.   What is a default constructor and when do we need one?
+Ans. Default constructor is a costructor with no argument. We need one whenever we want to give meaning to the creation of an object without an explicit initializer.
+
+8.   What is a default member initializer?
+Ans  Default member initializer is an initializer for a class member specified as part of the member declaration.
+
+9.   When should operator overloading be used in a program? Give a list of operators that you might want to overload (each with reason). Which one can you define in c++?
+Ans  We use operator overloading when we want a conventional c++ notation for a type we design.......
+
+10.  Why should the public interface to a class be as small as possible?
+Ans. Small interface are easier to learn and remember and the class implementer doesn't waste a lot of time implementing unneccessary and rarely used facilities?
+
+11.  What does adding const to a class member function do?
+Ans. It makes that member function immutable. And it tells the compiler that the member function won't modify the object.
+
+12.  Why are "helper functions" best placed outside the class definition?
+Ans. That way a bug in that function cannot directly corrupt the data in a class object
+
+13.  How does an enum class differ from a "plain" enum?
+Ans. They do differ in syntax and the class in enum class means its enumerators are in the scope of the enumeration, that is the enumerators of enum can only be accessed using the scope resolution notation while plain enum is not that way. It can be accessed without using the scope resolution and can explicitly converts to int
