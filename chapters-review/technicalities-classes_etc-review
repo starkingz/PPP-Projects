@@ -1,4 +1,4 @@
-/**
+**
 *       Chapter 8 (PPP3) - Technicalities-classes, etc. Review
 *       Revised by Ohia Goodstar 24/01/2025
 *
@@ -47,3 +47,55 @@ Ans. That way a bug in that function cannot directly corrupt the data in a class
 
 13.  How does an enum class differ from a "plain" enum?
 Ans. They do differ in syntax and the class in enum class means its enumerators are in the scope of the enumeration, that is the enumerators of enum can only be accessed using the scope resolution notation while plain enum is not that way. It can be accessed without using the scope resolution and can explicitly converts to int
+
+
+
+// chapter 8 (PPP3) - Technicalities-classes, etc.
+// date: 25.01.2025
+// Answered by Ohia Goodstar
+// CHAPTER TERMS
+
+1. 	   built-in types - Types are known to built-in if the compiler knows how to represent objects of the type and which operations that can be done on it without being told by declaration supplied by a programmer in source code
+
+2. 	   helper function - A function that fulfills the needs of a class
+
+3. 	   structure - The manner of construction of something and the arrangement of its part
+
+4. 	   destructor - The is an operation that destroys an object
+
+5. 	   interface - part of a class declaration that users can directly access
+
+6. 	   operator overloading - used to provide conventional c++ notation a type we design
+
+7. 	   enumerator - set of constant values
+
+8. 	   struct - a class in which its member is public by default
+
+9. 	   constructor - a member function that has same name with its class and it is used for construction(initialization) of objects of the type
+
+10.	   inlining - defining a function within a class definition is called inlining
+
+11.	   enumeration - is a simple user-defined type, specifying its set of values as symbolic constants
+
+12.	   default member initializer - an initializer for a class member specified as part of the member declaration
+
+13.	   representation - a type knows how to represent the data in an object
+
+14.	   const - c++ keyboard that specify an object as immutable
+
+15.	   in-class initializer - also called default member initializer is an initializer for a class member specified as part of the member declaration
+
+16.	   valid state - a state in which something has a legally acceptable data to represent and set of operations that can be applied
+
+17.	   invariant - a rule for what constituents a valid value
+
+18.	   class - a user-defined type that specifies how an object of its type are represented, how those objects can be created, how they can be used and how they ca
+n be destroyed
+
+19.	   implementation - a part of a class declaration that users can access only indirectly through the interface
+
+20.	   user-defined types - consists of built-in types, other user-defined types and functions
+
+21.	   enum - an abreviation for enumeration
+
+22.	   enum class - the class in the enum means enumerators are in the scope of the enumeration and can only referred to using the scope resolution notation
